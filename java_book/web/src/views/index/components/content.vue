@@ -2,19 +2,19 @@
   <div class="content">
     <div class="content-left">
       <div class="left-search-item">
-        <h4>图书分类</h4>
+        <h4>数据分类</h4>
         <a-tree
           :tree-data="contentData.cData" :selected-keys="contentData.selectedKeys" @select="onSelect"
           style="min-height: 220px;" />
       </div>
-      <div class="left-search-item"><h4>热门标签</h4>
+      <!-- <div class="left-search-item"><h4>热门标签</h4>
         <div class="tag-view tag-flex-view">
           <span
             class="tag" :class="{'tag-select': contentData.selectTagId===item.id}"
             v-for="item in contentData.tagData" :key="item.id"
             @click="clickTag(item.id)">{{ item.title }}</span>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="content-right">
       <div class="top-select-view flex-view">
