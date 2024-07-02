@@ -45,10 +45,10 @@
       <img :src="logoImage" class="search-icon" @click="$router.push({name:'portal'})">
     </div> -->
      
-    <div class="search-entry" style="margin-top: 5%;">
+    <!-- <div class="search-entry" style="margin-top: 5%;">
       <img :src="SearchIcon" class="search-icon">
       <input placeholder="输入关键词" ref="keywordRef" @keyup.enter="search" />
-    </div>
+    </div> -->
 </template>
 
 <script setup lang="ts">

@@ -1,8 +1,4 @@
 <template>
-   <div class="search-entry" style="margin-top: 5%;">
-      <img :src="SearchIcon" class="search-icon">
-      <input placeholder="输入关键词" ref="keywordRef" @keyup.enter="search" />
-    </div>
   <div class="content">
     <div class="content-left">
       <div class="left-search-item">
@@ -66,12 +62,11 @@ import {listApi as listClassificationList} from '/@/api/classification'
 import {listApi as listTagList} from '/@/api/tag'
 import {listApi as listThingList} from '/@/api/thing'
 import {BASE_URL} from "/@/store/constants";
-import SearchIcon from '/@/assets/images/search-icon.svg';
 import {useUserStore} from "/@/store";
-const keywordRef = ref()
+
 const userStore = useUserStore()
 const router = useRouter();
-const route = useRoute();
+
 const contentData = reactive({
   selectX: 0,
   selectTagId: -1,
@@ -96,15 +91,7 @@ onMounted(() => {
   initSider()
   getThingList({})
 })
-const search = () => {
-  const keyword = keywordRef.value.value
-  if (route.name === 'search') {
-    router.push({name: 'search', query: {keyword: keyword}})
-  } else {
-    let text = router.resolve({name: 'search', query: {keyword: keyword}})
-    window.open(text.href, '_blank')
-  }
-}
+
 const initSider = () => {
   contentData.cData.push({key:'-1', title:'全部'})
   listClassificationList().then(res => {
@@ -188,38 +175,6 @@ const getThingList = (data) => {
 </script>
 
 <style scoped lang="less">
-.search-entry {
-  margin-top: 10px;
-  Margin: auto;
-  position: relative;
-  width: 400px;
-  min-width: 200px;
-  height: 32px;
-  background: #ecf3fc;
-  padding: 0px 12px;
-  border-radius: 16px;
-  font-size: 0;
-  cursor: pointer;
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  .search-icon {
-    width: 18px;
-    margin: 7px 8px 0 0;
-  }
-  input {
-    position: absolute;
-    top:4px;
-    width: 85%;
-    height: 24px;
-    border: 0px;
-    outline:none;
-    color: #000;
-    background: #ecf3fc;
-    font-size: 14px;
-  }}
 .content {
   display: flex;
   flex-direction: row;
