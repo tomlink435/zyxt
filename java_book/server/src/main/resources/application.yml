@@ -1,6 +1,6 @@
 
 #server.port: 9100
-#server.servlet.context-path: /api
+server.servlet.context-path: /api
 
 BASE_LOCATION: /Users/teresa/Program/Code/java_book/
 #DB_NAME: java_book
