@@ -11,14 +11,7 @@
           :tree-data="contentData.cData" :selected-keys="contentData.selectedKeys" @select="onSelect"
           style="min-height: 220px;" />
       </div>
-      <!-- <div class="left-search-item"><h4>热门标签</h4>
-        <div class="tag-view tag-flex-view">
-          <span
-            class="tag" :class="{'tag-select': contentData.selectTagId===item.id}"
-            v-for="item in contentData.tagData" :key="item.id"
-            @click="clickTag(item.id)">{{ item.title }}</span>
-        </div>
-      </div> -->
+      
     </div>
     <div class="content-right">
       <div class="top-select-view flex-view">
@@ -40,9 +33,10 @@
         <div class="pc-book-list flex-view">
           <div v-for="item in contentData.pageData" :key="item.id" @click="handleDetail(item)" class="book-item item-column-3"><!---->
             <div class="img-view">
-              <img :src="item.cover"/>
+                <img :src="item.cover"/>
             </div>
             <div class="info-view">
+            
               <h3 class="book-name">{{item.title}}</h3>
               <p class="authors"> {{item.author}} </p>
               <p class="translators" v-if="item.translator"> {{item.translator}} （译者）</p></div>
@@ -171,7 +165,10 @@ const getThingList = (data) => {
     contentData.loading = false
     res.data.forEach((item, index) => {
       if (item.cover) {
+        // item.cover = BASE_URL + '/api/staticfiles/image/' +  item.cover
         item.cover = BASE_URL + '/api/staticfiles/image/' +  item.cover
+        console.log('item.cover:'+item.cover)
+        // debugger
       }
     })
     console.log(res)
@@ -431,6 +428,7 @@ li {
 
   .flex-view {
     display: flex;
+    flex-direction: column;
   }
 
   .top-select-view {
@@ -510,8 +508,7 @@ li {
     flex-wrap: wrap;
 
     .book-item {
-      min-width: 255px;
-      max-width: 255px;
+      width: 800px;
       position: relative;
       flex: 1;
       margin-right: 20px;
@@ -522,16 +519,19 @@ li {
       cursor: pointer;
 
       .img-view {
+        width: 30%;
         background: #eaf1f5;
         font-size: 0;
         text-align: center;
         height: 156px;
         padding: 8px 0;
+        float: left;
+    
 
         img {
           height: 100%;
           display: block;
-          margin: 0 auto;
+          margin: auto;
           border-radius: 4px;
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -541,7 +541,7 @@ li {
       .info-view {
         background: #f6f9fb;
         text-align: center;
-        height: 108px;
+        height: 156px;
         overflow: hidden;
         padding: 0 16px;
 

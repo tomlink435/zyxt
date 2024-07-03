@@ -96,7 +96,8 @@ public class ThingController {
             String oldFileName = file.getOriginalFilename();
             String randomStr = UUID.randomUUID().toString();
             newFileName = randomStr + oldFileName.substring(oldFileName.lastIndexOf("."));
-            String filePath = uploadPath + File.separator + "image" + File.separator + newFileName;
+//            String filePath = uploadPath + File.separator + "image" + File.separator + newFileName;
+            String filePath = uploadPath + "/image" + '/'+ newFileName;  //mac用户
             File destFile = new File(filePath);
             if(!destFile.getParentFile().exists()){
                 destFile.getParentFile().mkdirs();

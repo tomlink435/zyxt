@@ -2,7 +2,8 @@
 #server.port: 9100
 server.servlet.context-path: /api
 
-BASE_LOCATION: /Users/teresa/Program/Code/java_book/
+
+BASE_LOCATION: /Users/teresa/Program/Code/zyxt/java_book
 #DB_NAME: java_book
 
 springfox:
@@ -14,7 +15,9 @@ springfox:
 
 
 File:
-  uploadPath: ${BASE_LOCATION}\server\upload
+#  uploadPath: ${BASE_LOCATION}\server\upload
+  uploadPath: ${BASE_LOCATION}/server/upload
+#  /Users/teresa/Program/Code/zyxt/java_book/server/upload
 #
 mybatis:
   configuration:
@@ -51,7 +54,7 @@ server:
 
 spring:
   datasource:
-    url : jdbc:mysql://localhost:3306/java_book
+    url : jdbc:mysql://123.60.10.11:3306/java_book2
     username : root
-    password : 12345678
+    password : Zhlyc123.
     driverClassName : com.mysql.cj.jdbc.Driver
