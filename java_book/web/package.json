@@ -13,6 +13,7 @@
     "@vueuse/core": "^9.10.0",
     "ant-design-vue": "^3.2.20",
     "axios": "^1.2.2",
+    "echarts": "^5.5.1",
     "element-plus": "^2.7.6",
     "pinia": "^2.0.28",
     "pinia-plugin-persistedstate": "^3.0.2",
