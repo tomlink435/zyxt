@@ -151,6 +151,7 @@ const handleDetail = (item) => {
   // 跳转新页面
   let text = router.resolve({name: 'detail', query: {id: item.id}})
   window.open(text.href, '_blank')
+  console.log('--------',text.href)
 }
 // 分页事件
 const changePage = (page) => {

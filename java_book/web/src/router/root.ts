@@ -29,7 +29,14 @@ const constantRouterMap = [
       {
         path: 'detail',
         name: 'detail',
-        component: () => import('/@/views/index/detail.vue')
+        component: () => import('/@/views/index/detail.vue'),
+
+      },
+      {
+        path: 'order',
+        name: 'order',
+        component: () => import('/@/views/index/order.vue')
+   
       },
       {
         path: 'search',
