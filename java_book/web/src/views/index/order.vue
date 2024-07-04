@@ -64,7 +64,7 @@
       <!-- 按钮区域 -->
       <div class="button-container">
         <el-button type="primary" @click="onSubmit">提交</el-button>
-        <el-button type="warning" @click="onReset">清空</el-button>
+        <!-- <el-button type="warning" @click="onReset">清空</el-button> -->
       </div>
     </el-form>
   </div>
@@ -108,7 +108,7 @@ export default {
     },
     // 清空表单
     onReset() {
-      this.$refs.form.resetFields();
+      this.$refs.form.onReset();
     },
   },
 };
