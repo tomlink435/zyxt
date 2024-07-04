@@ -1,13 +1,19 @@
 <template>
   <div class="content-list">
-    <div class="list-title">我的借阅</div>
+    <div class="list-title">我的申请</div>
     <a-tabs default-active-key="1" @change="onTabChange">
       <a-tab-pane key="1" tab="全部">
       </a-tab-pane>
-      <a-tab-pane key="2" tab="在借">
+      <a-tab-pane key="2" tab="待提交审核">
       </a-tab-pane>
-      <a-tab-pane key="3" tab="已还">
+      <a-tab-pane key="3" tab="待审核">
       </a-tab-pane>
+	  <a-tab-pane key="4" tab="审核中">
+	  </a-tab-pane>
+	<a-tab-pane key="5" tab="审核通过">
+	</a-tab-pane>
+	<a-tab-pane key="6" tab="审核未通过">
+	</a-tab-pane>
     </a-tabs>
     <div class="list-content">
       <div class="order-item-view" v-for="(item, index) in borrowData" :key="index">
