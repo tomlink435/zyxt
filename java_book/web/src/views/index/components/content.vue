@@ -39,7 +39,13 @@
             
               <h3 class="book-name">{{item.title}}</h3>
               <p class="authors"> {{item.author}} </p>
-              <p class="translators" v-if="item.translator"> {{item.translator}} （译者）</p></div>
+              <p class="translators" v-if="item.description"> {{item.description}} </p>
+              <div class="button-container">
+            <el-button type="success" icon="el-icon-shopping-cart">加入资源车</el-button>
+            <el-button type="primary" @click="downloadFile">在线下载</el-button>
+            <el-button type="warning">收藏数据集</el-button>
+          </div></div>
+              
           </div>
           <div v-if="contentData.pageData.length <= 0 && !contentData.loading" class="no-data" style="">暂无数据</div>
         </div>
@@ -570,6 +576,23 @@ li {
         }
 
         .translators {
+          color: #6f6f6f;
+          font-size: 12px;
+          line-height: 14px;
+          margin-top: 4px;
+          overflow: hidden;
+          width: auto;
+          height: auto;
+          // white-space:normal;
+          -webkit-line-clamp:3;
+          text-overflow: ellipsis; 
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3; 
+       
+        }
+
+        .publisher {
           color: #6f6f6f;
           font-size: 12px;
           line-height: 14px;
