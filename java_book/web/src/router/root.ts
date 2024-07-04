@@ -37,6 +37,11 @@ const constantRouterMap = [
         name: 'order',
         component: () => import('/@/views/index/order.vue')
    
+      }, {
+        path: 'done',
+        name: 'done',
+        component: () => import('/@/views/index/done.vue')
+   
       },
       {
         path: 'search',

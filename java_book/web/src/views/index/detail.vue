@@ -373,18 +373,6 @@ const downloadFile=()=> {
     router.push({name: 'login'})
   }
 
-
-
-	// router.push({ name: 'order' });
-	// console.log('下载文件')
-	// const src = BASE_URL + '/api/staticfiles/image/' + detailData.value.cover
-    //   const link = document.createElement('a');
-    //   link.href = '/download';
-    //   link.setAttribute('download', 'your-file.pdf'); // This attribute is not necessary, it's optional
-    //   document.body.appendChild(link);
-    //   link.click();
-    //   document.body.removeChild(link);
-	// window.open(src='java_book/server/upload/image/1c3f9fe6-6680-4da3-a217-0ed37042de81.jpeg')
     }
 
 </script>

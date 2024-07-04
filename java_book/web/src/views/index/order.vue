@@ -74,6 +74,7 @@
 <script>
 import Header from '/@/views/index/components/header.vue'
 import Footer from '/@/views/index/components/footer.vue'
+import router from '/@/router';
 export default {
   components: {
     Header,
@@ -100,7 +101,12 @@ export default {
         if (valid) {
           alert('提交成功！');
           console.log('提交的数据：', this.form);
-        } else {
+
+    router.push({ name: 'done' });
+	console.log('提交成功，跳转到完成页面')
+ 
+    }
+       else {
           console.log('提交失败，请检查表单。');
           return false;
         }
