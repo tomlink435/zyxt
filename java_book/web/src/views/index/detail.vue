@@ -11,7 +11,7 @@
 
     <el-row :gutter="20">
       <el-col :span="8">
-        <img src="/java_book/server/src/main/resources/static/1.png" alt="map image" class="image" />
+        <!-- <img src="E:\zh\code\zyxt\java_book\server\src\main\resources\static\1.png" alt="map image" class="image" /> -->
       </el-col>
       <el-col :span="16">
         <div class="info">

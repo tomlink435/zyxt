@@ -18,18 +18,24 @@
             <home-outlined/>
             <span>总览</span>
           </a-menu-item>
-          <a-menu-item key="borrow">
-            <control-outlined/>
-            <span>借阅管理</span>
-          </a-menu-item>
-          <a-menu-item key="thing">
-            <database-outlined/>
-            <span>图书管理</span>
-          </a-menu-item>
-          <a-menu-item key="comment">
-            <comment-outlined/>
-            <span>评论管理</span>
-          </a-menu-item>
+		  <a-sub-menu>
+		    <template #icon>
+		      <folder-outlined/>
+		    </template>
+		    <template #title>资源管理</template>
+		    <a-menu-item key="ad">
+		      <appstore-outlined/>
+		      <span>资源审批</span>
+		    </a-menu-item>
+		    <a-menu-item key="notice">
+		      <appstore-outlined/>
+		      <span>数据审批</span>
+		    </a-menu-item>
+			<a-menu-item key="back">
+			  <appstore-outlined/>
+			  <span>审批回退</span>
+			</a-menu-item>
+		  </a-sub-menu>
           <a-menu-item key="classification">
             <layout-outlined/>
             <span>分类管理</span>
@@ -42,20 +48,10 @@
             <user-outlined/>
             <span>用户管理</span>
           </a-menu-item>
-          <a-sub-menu>
-            <template #icon>
-              <folder-outlined/>
-            </template>
-            <template #title>运营管理</template>
-            <a-menu-item key="ad">
-              <appstore-outlined/>
-              <span>广告管理</span>
-            </a-menu-item>
-            <a-menu-item key="notice">
-              <appstore-outlined/>
-              <span>通知公告</span>
-            </a-menu-item>
-          </a-sub-menu>
+		  <a-menu-item key="pay">
+		    <home-outlined/>
+		    <span>支付</span>
+		  </a-menu-item>
           <a-sub-menu>
             <template #icon>
               <folder-outlined/>
@@ -69,11 +65,8 @@
               <appstore-outlined/>
               <span>操作日志</span>
             </a-menu-item>
-            <a-menu-item key="errorLog">
-              <appstore-outlined/>
-              <span>错误日志</span>
-            </a-menu-item>
           </a-sub-menu>
+		  
           <a-menu-item key="sysInfo">
             <info-circle-outlined/>
             <span>系统信息</span>
@@ -118,7 +111,6 @@ const router = useRouter()
 const route = useRoute()
 
 const handleClick = ({item, key, keyPath}) => {
-  console.log('点击路由===>', key)
   router.push({
     name: key,
   })
@@ -130,7 +122,6 @@ const handlePreview = () => {
 }
 
 onMounted(() => {
-  console.log('当前路由===>', route.name)
   selectedKeys.value = [route.name]
 })
 
