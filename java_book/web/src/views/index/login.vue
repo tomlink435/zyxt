@@ -25,7 +25,7 @@
             <p class="err-view">
             </p>
           </div>
-<!--          <img src="@/assets/pwd-hidden.svg" class="right-icon">-->
+         <!-- <img src="@/assets/pwd-hidden.svg" class="right-icon"> -->
           <!---->
         </div>
         <div class="next-btn-view">

@@ -1,12 +1,66 @@
 <template>
   <div class="detail">
     <Header/>
+
+	<div class="container">
+    <el-row>
+      <el-col :span="24">
+        <h1>2018–2024年中国10米空间分辨率冬小麦识别数据集</h1>
+      </el-col>
+    </el-row>
+
+    <el-row :gutter="20">
+      <el-col :span="8">
+        <img src="/java_book/server/src/main/resources/static/1.png" alt="map image" class="image" />
+      </el-col>
+      <el-col :span="16">
+        <div class="info">
+          <p>CSTR标识符: <a href="#">15732.11.nesdc.ecodb.rs.2023.016</a></p>
+          <p>DOI标识符: <a href="#">10.12199/nesdc.ecodb.rs.2023.016</a></p>
+          <div class="button-container">
+            <el-button type="success" icon="el-icon-shopping-cart">加入资源车</el-button>
+            <el-button type="primary">在线下载</el-button>
+            <el-button type="warning">收藏数据集</el-button>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
+
+    <el-row>
+      <el-col :span="24">
+        <h2>摘要</h2>
+        <p>
+          及时准确的冬小麦空间分布信息对于粮食安全和作物生产管理至关重要。
+          由于训练数据的获取成本高、效率低、大尺度、高质量、高空间分辨率的冬小麦分类产品依然匮乏。
+          因此，我们提出了一种融合冬小麦物候、光谱和农化信息的训练数据自动化提取方法（Automated training data generation, ATDG），
+          用于生成高质量的冬小麦训练样本，从而开展基于机器学习方法的冬小麦遥感制图。
+          此外，基于生成的训练数据预训练分类模型，然后结合模型年际迁移方法（Model transfer, MT）实现了冬小麦生长季内制图。
+          通过联合ATDG和MT，结合光学和雷达影像，我们生产了2018–2024年10米空间分辨率的中国冬小麦制图数据集（ChinaWheat10）。
+          实地调查数据表明ChinaWheat10的总体精度在94%以上，在省内两级与统计数据的相关性（R2）分别在0.95和0.91以上，
+          而且ChinaWheat10数据集中冬小麦自动化制图中具有巨大潜力。
+        </p>
+      </el-col>
+    </el-row>
+
+    <el-row>
+      <el-col :span="8">
+        <div class="icon-text"><el-icon><Share/></el-icon>公开共享</div>
+      </el-col>
+      <el-col :span="8">
+        <div class="icon-text"><el-icon><View/></el-icon>访问量：749</div>
+      </el-col>
+      <el-col :span="8">
+        <div class="icon-text"><el-icon><Download/></el-icon>下载量：191</div>
+      </el-col>
+    </el-row>
+  </div>
+
 		<div>
-			<div class="content-head">
+			<!-- <div class="content-head"> -->
 				<div class="content-title">
 					<!-- 内容的详细说明 -->
 					<!-- 内容标题  和按钮在一行'-->
-					<div class="first-hang">
+					<!-- <div class="first-hang">
 						<div class="title">
 							<h1>数据信息标题</h1>
 							<div class="first-second">
@@ -23,27 +77,16 @@
 								<label for=""></label>
 							</div>
 						</div>
-						<!-- 四个按钮存在的位置 -->
-						<div class="content-button-group">
-							<div class="content-button-item">
-								<button>按钮一</button>
-							</div>
-							<div class="content-button-item">
-								<button>按钮一</button>
-							</div>
-							<div class="content-button-item">
-								<button>按钮一</button>
-							</div>
-							<div class="content-button-item">
-								<button>按钮一</button>
-							</div>
-							<div class="content-button-item">
-								<button>按钮一</button>
-							</div>
+						四个按钮存在的位置
+						 <div class="content-button-group">
+							<el-button type="success" icon="el-icon-shopping-cart">加入资源车</el-button>
+    <el-button type="primary">在线下载</el-button>
+    <el-button type="warning">收藏数据集</el-button>
+							
 						</div>
-					</div>
+					</div> -->
 				</div>
-			</div>
+			<!-- </div> -->
 			<div class="content-body">
 				<div class="navbar">
 					<el-menu
