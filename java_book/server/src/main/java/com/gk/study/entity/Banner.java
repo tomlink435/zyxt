@@ -22,5 +22,4 @@ public class Banner implements Serializable {
     public Long thingId;
     @TableField
     public String createTime;
-
 }

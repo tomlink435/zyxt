@@ -1,5 +1,6 @@
 package com.gk.study.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.gk.study.entity.Application;
 import com.gk.study.mapper.ApplicationMapper;
 import com.gk.study.service.ApplicationService;

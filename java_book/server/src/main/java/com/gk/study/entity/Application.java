@@ -25,11 +25,13 @@ public class Application implements Serializable {
     @TableField
     public String description;
     @TableField
-    public String project;
+    public String company;
     @TableField
-    public String courseName;
+    public String purpose;
     @TableField
-    public Long classificationId;
+    public String projectLeader;
+    @TableField
+    public String projectType;
     @TableField
     public String status;
 }

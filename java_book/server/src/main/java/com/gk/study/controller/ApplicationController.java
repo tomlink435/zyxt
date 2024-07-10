@@ -20,20 +20,15 @@ public class ApplicationController {
 
     @Autowired
     private ApplicationService applicationService;
-
     /**
      * 保存表单
      * @param application
      * @return
      */
-    @PostMapping
+    @PostMapping(value = "/save")
     public APIResponse post(@RequestBody Application application){
         log.info("保存申请{}", application);
         applicationService.save(application);
         return new APIResponse(ResponeCode.SUCCESS, "保存成功");
-    }
-    @GetMapping
-    public APIResponse test(){
-        return new APIResponse(ResponeCode.SUCCESS, "测试成功");
     }
 }
