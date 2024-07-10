@@ -97,8 +97,6 @@ const route = useRoute();
           console.log('提交的数据：', form);
           // this.$router.push({ name: 'done', params: { form: this.form } });
           router.push({ name: 'done', query: { form: JSON.stringify(form) } });
-          
-    
       }
     
 
