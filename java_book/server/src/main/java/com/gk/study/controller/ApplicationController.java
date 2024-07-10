@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * 提交申请
  */
@@ -31,4 +33,40 @@ public class ApplicationController {
         applicationService.save(application);
         return new APIResponse(ResponeCode.SUCCESS, "保存成功");
     }
+
+    /**
+     * 查询表单
+     * @return
+     */
+    @GetMapping(value = "/list")
+    public APIResponse list(){
+        List<Application> applicationList = applicationService.list();
+        return new APIResponse(ResponeCode.SUCCESS, "查询成功", applicationList);
+    }
+
+    /**
+     * 对表单进行审核
+     * 表单状态: 0 未审核, 1 审核通过, 2 审核未通过
+     */
+
+    /**
+     * 审核通过
+     */
+    @PutMapping(value = "/{id}/pass")
+    public APIResponse pass(@PathVariable Long id){
+        log.info("审核通过application_id{}", id);
+        applicationService.pass(id);
+        return new APIResponse(ResponeCode.SUCCESS);
+    }
+
+    /**
+     * 审核拒绝
+     */
+    @PutMapping(value = "/{id}/reject")
+    public APIResponse reject(@PathVariable Long id){
+        log.info("审核拒绝application_id{}", id);
+        applicationService.reviewPass(id);
+        return new APIResponse(ResponeCode.SUCCESS);
+    }
+
 }

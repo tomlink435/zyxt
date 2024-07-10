@@ -31,11 +31,6 @@ public class Application implements Serializable {
     public String purpose;
     @TableField
     public String projectLeader;
-<<<<<<< HEAD
-    @TableField
-    public String projectType;
-=======
->>>>>>> a6c6d20dc8266d408650a3566c089724c06280ee
     @TableField
     public String projectType;
     @TableField
