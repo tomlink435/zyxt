@@ -4,7 +4,7 @@
     <nav>
       <ul>
         <li><router-link to="/">首页</router-link></li>
-        <li><router-link to="/data-resources">数据资源</router-link></li>
+        <li><router-link to="echarts">数据资源</router-link></li>
         <li><router-link to="/physical-resources">实物资源</router-link></li>
         <li><router-link to="/physical-resources">服务案例</router-link></li>
         <li><router-link to="/physical-resources">服务成效</router-link></li>
