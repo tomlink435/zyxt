@@ -3,7 +3,7 @@
 server.servlet.context-path: /api
 
 
-BASE_LOCATION: /Users/teresa/Program/Code/zyxt/java_book
+BASE_LOCATION: D:\code\Java\code\JavaWeb
 #DB_NAME: java_book
 
 springfox:
@@ -11,8 +11,6 @@ springfox:
     swagger-ui:
       # 生产环境需要关闭
       enabled: true
-
-
 
 File:
 #  uploadPath: ${BASE_LOCATION}\server\upload

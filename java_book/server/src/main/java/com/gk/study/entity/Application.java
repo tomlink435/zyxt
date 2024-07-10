@@ -19,6 +19,7 @@ public class Application implements Serializable {
     public String name;
     @TableField
     public String email;
+    public String phone;
     @TableField
     public String address;
     @TableField
@@ -31,6 +32,4 @@ public class Application implements Serializable {
     public Long classificationId;
     @TableField
     public String status;
-
-
 }

@@ -32,7 +32,6 @@ public class CommentController {
         return new APIResponse(ResponeCode.SUCCESS, "查询成功", list);
     }
 
-
     // 商品的所有评论
     @RequestMapping(value = "/listThingComments", method = RequestMethod.GET)
     public APIResponse listThingComments(String thingId, String order){
