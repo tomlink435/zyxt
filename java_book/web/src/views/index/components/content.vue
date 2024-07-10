@@ -156,6 +156,7 @@ const selectTab = (index) => {
 const handleDetail = (item) => {
   // 跳转新页面
   let text = router.resolve({name: 'detail', query: {id: item.id}})
+  // let text = router.resolve({name: 'detail', query: {item: JSON.stringify(item)}})
   window.open(text.href, '_blank')
   console.log('--------',text.href)
 }

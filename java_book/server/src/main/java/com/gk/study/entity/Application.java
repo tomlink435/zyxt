@@ -11,55 +11,26 @@ import java.io.Serializable;
 import java.util.List;
 
 @Data
-@TableName("b_thing")
-public class Thing implements Serializable {
+@TableName("b_application")
+public class Application implements Serializable {
     @TableId(value = "id",type = IdType.AUTO)
     public Long id;
     @TableField
-    public String title;
+    public String name;
     @TableField
-    public String cover;
+    public String email;
+    @TableField
+    public String address;
     @TableField
     public String description;
     @TableField
-    public String price;
+    public String project;
     @TableField
-    public String status;
-    @TableField
-    public String createTime;
-    @TableField
-    public String repertory;
-    @TableField
-    public String translator;
-    @TableField
-    public String isbn;
-    @TableField
-    public String layout;
-    @TableField
-    public String author;
-    @TableField
-    public String press;
-    @TableField
-    public String pubDate;
-    @TableField
-    public String score;
-    @TableField
-    public String pageCount;
-    @TableField
-    public String pv;
-    @TableField
-    public String recommendCount;
-    @TableField
-    public String wishCount;
-    @TableField
-    public String collectCount;
+    public String courseName;
     @TableField
     public Long classificationId;
+    @TableField
+    public String status;
 
-    @TableField(exist = false)
-    public List<Long> tags; // 标签
-
-    @TableField(exist = false)
-    public MultipartFile imageFile;
 
 }

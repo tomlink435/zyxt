@@ -65,6 +65,10 @@ watch(() => route.query, (newPath, oldPath) => {
 
 const search = () => {
   tData.keyword = route.query.keyword.trim()
+  console.log('keyword',tData.keyword)
+  if (tData.keyword) {
+    
+  }
   getThingList({'keyword': tData.keyword})
 }
 

@@ -5,12 +5,13 @@
 	<div class="container">
     <el-row>
       <el-col :span="24">
-        <h1>2018–2024年中国10米空间分辨率冬小麦识别数据集</h1>
+        <h1 style="text-align: center; font-size: 24px; margin-top: 20px">{{ detailData.title }}</h1>
       </el-col>
     </el-row>
 
     <el-row :gutter="20">
       <el-col :span="8">
+        <img :src="detailData.cover" style="width: 70%;padding-left: 10%;"/>
         <!-- <img src="E:\zh\code\zyxt\java_book\server\src\main\resources\static\1.png" alt="map image" class="image" /> -->
       </el-col>
       <el-col :span="16">
@@ -28,16 +29,17 @@
 
     <el-row>
       <el-col :span="24">
-        <h2>摘要</h2>
-        <p>
-          及时准确的冬小麦空间分布信息对于粮食安全和作物生产管理至关重要。
+        <h2 style="text-align: center; font-size: 24px; margin-top: 20px;">摘要</h2>
+        <p style="padding:30px; text-indent: 2em; line-height: 1.5em; font-size: 16px; margin-bottom: 20px">
+          <!-- 及时准确的冬小麦空间分布信息对于粮食安全和作物生产管理至关重要。
           由于训练数据的获取成本高、效率低、大尺度、高质量、高空间分辨率的冬小麦分类产品依然匮乏。
           因此，我们提出了一种融合冬小麦物候、光谱和农化信息的训练数据自动化提取方法（Automated training data generation, ATDG），
           用于生成高质量的冬小麦训练样本，从而开展基于机器学习方法的冬小麦遥感制图。
           此外，基于生成的训练数据预训练分类模型，然后结合模型年际迁移方法（Model transfer, MT）实现了冬小麦生长季内制图。
           通过联合ATDG和MT，结合光学和雷达影像，我们生产了2018–2024年10米空间分辨率的中国冬小麦制图数据集（ChinaWheat10）。
           实地调查数据表明ChinaWheat10的总体精度在94%以上，在省内两级与统计数据的相关性（R2）分别在0.95和0.91以上，
-          而且ChinaWheat10数据集中冬小麦自动化制图中具有巨大潜力。
+          而且ChinaWheat10数据集中冬小麦自动化制图中具有巨大潜力。 -->
+          {{detailData.description}}
         </p>
       </el-col>
     </el-row>
@@ -194,7 +196,25 @@
 	        updateDate: '2024-06-22',
 	        description: '药品生产许可证信息查询'
 	      })
+        const item = reactive({
+  selectX: 0,
+  selectTagId: -1,
+  cData: [],
+  selectedKeys: [],
+  tagData: [],
+  loading: false,
 
+  tabData: ['最新', '最热', '推荐'],
+  selectTabIndex: 0,
+  tabUnderLeft: 12,
+
+  thingData: [],
+  pageData: [],
+
+  page: 1,
+  total: 0,
+  pageSize: 12,
+})
 import {message} from "ant-design-vue";
 import Header from '/@/views/index/components/header.vue'
 import Footer from '/@/views/index/components/footer.vue'
@@ -213,13 +233,12 @@ import {createApi as createBorrowApi} from '/@/api/borrow'
 import {wishApi} from '/@/api/thingWish'
 import {collectApi} from '/@/api/thingCollect'
 import {BASE_URL} from "/@/store/constants";
-import {useRoute, useRouter} from "vue-router/dist/vue-router";
 import {useUserStore} from "/@/store";
 import {getFormatTime} from "/@/utils";
 
-const router = useRouter()
-const route = useRoute()
-const userStore = useUserStore();
+const userStore = useUserStore()
+const router = useRouter();
+const route = useRoute();
 
 
 let thingId = ref('')
@@ -237,6 +256,7 @@ let commentRef = ref()
 
 onMounted(()=>{
   thingId.value = route.query.id.trim()
+
   getThingDetail()
   getRecommendThing()
   getCommentList()
@@ -249,7 +269,10 @@ const selectTab =(index)=> {
 
 const getThingDetail =()=> {
   detailApi({id: thingId.value}).then(res => {
+   
     detailData.value = res.data
+    console.log(detailData.value)
+    debugger
     detailData.value.cover = BASE_URL + '/api/staticfiles/image/' + detailData.value.cover
   }).catch(err => {
     message.error('获取详情失败')
@@ -364,9 +387,13 @@ const sortCommentList =(sortType)=> {
   getCommentList()
 }
 const downloadFile=()=> {
+
 	let userId = userStore.user_id
   if (userId) {
-    router.push({ name: 'order' });
+    router.push({name: 'order'});
+    // router.push({name: 'login'})
+
+    // router.push({ name: 'order',query: {thingId: thingId.value} });
 	console.log('下载文件')
   } else {
     message.warn('请先登录！')

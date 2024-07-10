@@ -18,7 +18,7 @@
           <h3>使用目的</h3>
           <el-form label-position="left" label-width="140px">
             <el-form-item label="申请用途">
-              <el-input v-model="form.usage" disabled></el-input>
+              <el-input v-model="form.purpose" disabled></el-input>
             </el-form-item>
             <el-form-item label="拟支持项目/课题名称">
               <el-input v-model="form.projectName" disabled></el-input>
@@ -38,34 +38,45 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted } from 'vue';
+
 import Header from '/@/views/index/components/header.vue'
 import Footer from '/@/views/index/components/footer.vue'
 import { Check } from '@element-plus/icons-vue';
+import { reactive } from 'vue';
+const router = useRouter();
+const route = useRoute();
+const form = reactive({
+      name: '',
+        email: '',
+        phone: '',
+        company: '',
+        purpose: '',
+        projectName: '',
+        projectLeader: '',
+        projectType: '',
+     })
 
-export default {
-  components: {
-    Header,
-    Footer,
-    Check
-  },
-  data() {
-    return {
-      form: {
-        usage: '111111111111111111111',
-        projectName: '11',
-        projectLeader: '11',
-        projectType: '科技部-国家科技重大专项'
+      onMounted(() => {
+        goToList()
+      
+     
+    });
+
+    const goToList = () => {
+
+      const formQuery = route.query.form;
+      if (formQuery) {
+        Object.assign(form, JSON.parse(formQuery));
       }
+      console.log('-----', form);
+
+
+
+    
     };
-  },
-  methods: {
-    goToList() {
-      // 跳转到资源列表页面的逻辑
-      alert('跳转到资源列表');
-    }
-  }
-};
+  
 </script>
 
 <style scoped>

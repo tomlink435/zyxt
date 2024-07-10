@@ -18,24 +18,28 @@
             <home-outlined/>
             <span>总览</span>
           </a-menu-item>
-		  <a-sub-menu>
-		    <template #icon>
+		  <!-- <a-sub-menu> -->
+		    <!-- <template #icon>
 		      <folder-outlined/>
-		    </template>
-		    <template #title>资源管理</template>
-		    <a-menu-item key="ad">
+		    </template> -->
+		    <!-- <template #title>资源管理</template> -->
+		    <!-- <a-menu-item key="ad">
 		      <appstore-outlined/>
 		      <span>资源审批</span>
-		    </a-menu-item>
-		    <a-menu-item key="notice">
+		    </a-menu-item> -->
+		    <!-- <a-menu-item key="notice">
 		      <appstore-outlined/>
 		      <span>数据审批</span>
-		    </a-menu-item>
-			<a-menu-item key="back">
+		    </a-menu-item> -->
+			<!-- <a-menu-item key="back">
 			  <appstore-outlined/>
 			  <span>审批回退</span>
-			</a-menu-item>
-		  </a-sub-menu>
+			</a-menu-item> -->
+		  <!-- </a-sub-menu> -->
+      <a-menu-item key="notice">
+		      <layout-outlined/>
+		      <span>数据审批</span>
+		    </a-menu-item>
           <a-menu-item key="classification">
             <layout-outlined/>
             <span>分类管理</span>

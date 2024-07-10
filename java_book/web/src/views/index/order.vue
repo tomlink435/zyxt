@@ -1,7 +1,7 @@
 <template>
     <Header/>
   <div class="form-container">
-    <el-form ref="form" :model="form" label-width="100px" label-position="right">
+    <el-form  :model="form" label-width="100px" label-position="right">
       <!-- 基本信息 -->
       <el-card class="box-card" header="基本信息">
         <el-form-item
@@ -71,19 +71,14 @@
   <Footer/>
 </template>
 
-<script>
+<script setup>
 import Header from '/@/views/index/components/header.vue'
 import Footer from '/@/views/index/components/footer.vue'
-import router from '/@/router';
-export default {
-  components: {
-    Header,
-    Footer
-  },
-  data() {
-    return {
-      form: {
-        name: '',
+const router = useRouter();
+const route = useRoute();
+  
+     const form = reactive({
+      name: '',
         email: '',
         phone: '',
         company: '',
@@ -91,33 +86,22 @@ export default {
         projectName: '',
         projectLeader: '',
         projectType: '',
-      },
-    };
-  },
-  methods: {
-    // 提交表单
-    onSubmit() {
-      this.$refs.form.validate((valid) => {
-        if (valid) {
-          alert('提交成功！');
-          console.log('提交的数据：', this.form);
+     })
+        
 
-    router.push({ name: 'done' });
-	console.log('提交成功，跳转到完成页面')
- 
-    }
-       else {
-          console.log('提交失败，请检查表单。');
-          return false;
-        }
-      });
-    },
-    // 清空表单
-    onReset() {
-      this.$refs.form.onReset();
-    },
-  },
-};
+
+    // // 提交表单
+    const onSubmit=()=> {
+      
+          alert('提交成功！');
+          console.log('提交的数据：', form);
+          // this.$router.push({ name: 'done', params: { form: this.form } });
+          router.push({ name: 'done', query: { form: JSON.stringify(form) } });
+          
+    
+      }
+    
+
 </script>
 
 <style scoped>
