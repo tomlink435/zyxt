@@ -47,6 +47,10 @@ const constantRouterMap = [
         path: 'search',
         name: 'search',
         component: () => import('/@/views/index/search.vue')
+      },{
+        path: 'echarts',
+        name: 'echarts',
+        component: () => import('/@/views/index/echarts.vue')
       },
       {
         path: 'usercenter',
