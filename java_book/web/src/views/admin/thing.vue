@@ -56,7 +56,7 @@
           <a-form ref="myform" :label-col="{ style: { width: '80px' } }" :model="modal.form" :rules="modal.rules">
             <a-row :gutter="24">
               <a-col span="24">
-                <a-form-item label="图书名称" name="title">
+                <a-form-item label="名称" name="title">
                   <a-input placeholder="请输入" v-model:value="modal.form.title" />
                 </a-form-item>
               </a-col>
@@ -70,7 +70,7 @@
                     v-model:value="modal.form.classificationId" />
                 </a-form-item>
               </a-col>
-              <a-col span="12">
+              <!-- <a-col span="12">
                 <a-form-item label="标签">
                   <a-select mode="multiple" placeholder="请选择" allowClear v-model:value="modal.form.tags">
                     <template v-for="item in modal.tagData">
@@ -78,7 +78,7 @@
                     </template>
                   </a-select>
                 </a-form-item>
-              </a-col>
+              </a-col> -->
               <a-col span="24">
                 <a-form-item label="封面">
                   <a-upload-dragger
@@ -104,11 +104,11 @@
               </a-col>
 
               <a-col span="24">
-                <a-form-item label="图书简介">
+                <a-form-item label="数据集简介">
                   <a-textarea placeholder="请输入" v-model:value="modal.form.description" />
                 </a-form-item>
               </a-col>
-              <a-col span="12">
+              <!-- <a-col span="12">
                 <a-form-item label="作者">
                   <a-input placeholder="请输入" v-model:value="modal.form.author"></a-input>
                 </a-form-item>
@@ -127,18 +127,18 @@
                 <a-form-item label="定价">
                   <a-input placeholder="请输入" v-model:value="modal.form.price"></a-input>
                 </a-form-item>
-              </a-col>
-              <a-col span="12">
+              </a-col> -->
+              <!-- <a-col span="12">
                 <a-form-item label="出版社">
                   <a-input placeholder="请输入" v-model:value="modal.form.press"></a-input>
                 </a-form-item>
-              </a-col>
+              </a-col> -->
 <!--              <a-col span="12">-->
 <!--                <a-form-item label="出版日期">-->
 <!--                  <a-date-picker style="width:100%;" placeholder="请输入" v-model:value="modal.form.pubDate"/>-->
 <!--                </a-form-item>-->
 <!--              </a-col>-->
-              <a-col span="12">
+              <!-- <a-col span="12">
                 <a-form-item label="装帧">
                   <a-select placeholder="请选择" allowClear v-model:value="modal.form.layout">
                     <a-select-option key="平装" value="平装">平装</a-select-option>
@@ -146,7 +146,7 @@
                     <a-select-option key="其它" value="其它">其它</a-select-option>
                   </a-select>
                 </a-form-item>
-              </a-col>
+              </a-col> -->
               <a-col span="12">
                 <a-form-item label="状态" name="status">
                   <a-select placeholder="请选择" allowClear v-model:value="modal.form.status">
@@ -155,11 +155,11 @@
                   </a-select>
                 </a-form-item>
               </a-col>
-              <a-col span="12">
+              <!-- <a-col span="12">
                 <a-form-item label="页数">
                   <a-input-number placeholder="请输入" :min="0" v-model:value="modal.form.pageCount" style="width: 100%;"></a-input-number>
                 </a-form-item>
-              </a-col>
+              </a-col> -->
               <a-col span="12">
                 <a-form-item label="库存" name="repertory">
                   <a-input-number placeholder="请输入" :min="0" v-model:value="modal.form.repertory" style="width: 100%;"></a-input-number>
@@ -194,26 +194,26 @@ const columns = reactive([
     dataIndex: 'title',
     key: 'title'
   },
-  {
-    title: '作者',
-    dataIndex: 'author',
-    key: 'author'
-  },
-  {
-    title: 'isbn',
-    dataIndex: 'isbn',
-    key: 'isbn'
-  },
-  {
-    title: '出版社',
-    dataIndex: 'press',
-    key: 'press'
-  },
-  {
-    title: '装帧',
-    dataIndex: 'layout',
-    key: 'layout'
-  },
+  // {
+  //   title: '作者',
+  //   dataIndex: 'author',
+  //   key: 'author'
+  // },
+  // {
+  //   title: 'isbn',
+  //   dataIndex: 'isbn',
+  //   key: 'isbn'
+  // },
+  // {
+  //   title: '出版社',
+  //   dataIndex: 'press',
+  //   key: 'press'
+  // },
+  // {
+  //   title: '装帧',
+  //   dataIndex: 'layout',
+  //   key: 'layout'
+  // },
   {
     title: '库存',
     dataIndex: 'repertory',

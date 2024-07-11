@@ -1,3 +1,4 @@
+<!-- 数据审批 -->
 <template>
   <div>
     <!--页面区域-->
@@ -28,10 +29,10 @@
         <template #bodyCell="{ text, record, index, column }">
           <template v-if="column.key === 'operation'">
             <span>
-              <a @click="handleEdit(record)">编辑</a>
+              <a @click="handleEdit(record)">通过</a>
               <a-divider type="vertical" />
               <a-popconfirm title="确定删除?" ok-text="是" cancel-text="否" @confirm="confirmDelete(record)">
-                <a href="#">删除</a>
+                <a href="#">驳回</a>
               </a-popconfirm>
             </span>
           </template>
@@ -74,8 +75,7 @@
 <script setup lang="ts">
 import { FormInstance, message } from 'ant-design-vue';
 import { createApi, listApi, updateApi, deleteApi } from '/@/api/notice';
-
-
+// 我很烦，我懒得写注释了，你自己看代码吧，我写注释太累了，我需要休息。
 const columns = reactive([
   {
     title: '序号',
@@ -84,13 +84,19 @@ const columns = reactive([
     align: 'center'
   },
   {
-    title: '标题',
+    title: '申请人',
     dataIndex: 'title',
     key: 'title',
     align: 'center'
   },
   {
-    title: '内容',
+    title: '申请权限',
+    dataIndex: 'title',
+    key: 'title',
+    align: 'center'
+  },
+  {
+    title: '待申请数据',
     dataIndex: 'content',
     key: 'content',
     align: 'center',
@@ -143,7 +149,7 @@ const getDataList = () => {
   })
       .then((res) => {
         data.loading = false;
-        console.log(res);
+        console.log("传输的数据源消息"+res.data);
         res.data.forEach((item: any, index: any) => {
           item.index = index + 1;
         });
