@@ -1,12 +1,11 @@
-<!-- 数据审批 -->
 <template>
   <div>
     <!--页面区域-->
     <div class="page-view">
       <div class="table-operations">
         <a-space>
-          <a-button type="primary" @click="handleAdd">新增</a-button>
-          <a-button @click="handleBatchDelete">批量删除</a-button>
+          <!-- <a-button type="primary" @click="handleAdd">新增</a-button> -->
+          <!-- <a-button @click="handleBatchDelete">批量删除</a-button> -->
         </a-space>
       </div>
       <a-table
@@ -16,7 +15,7 @@
           :columns="columns"
           :data-source="data.noticeList"
           :scroll="{ x: 'max-content' }"
-          :row-selection="rowSelection"
+          
           :pagination="{
           size: 'default',
           current: data.page,
@@ -31,9 +30,10 @@
             <span>
               <a @click="handleEdit(record)">通过</a>
               <a-divider type="vertical" />
-              <a-popconfirm title="确定删除?" ok-text="是" cancel-text="否" @confirm="confirmDelete(record)">
-                <a href="#">驳回</a>
-              </a-popconfirm>
+              <a @click="reject(record)">否决</a>
+              <!-- <a-popconfirm title="确定删除?" ok-text="是" cancel-text="否" @confirm="confirmDelete(record)"> -->
+                <!-- <a href="#">否决</a> -->
+              <!-- </a-popconfirm> -->
             </span>
           </template>
         </template>
@@ -74,34 +74,65 @@
 
 <script setup lang="ts">
 import { FormInstance, message } from 'ant-design-vue';
-import { createApi, listApi, updateApi, deleteApi } from '/@/api/notice';
-// 我很烦，我懒得写注释了，你自己看代码吧，我写注释太累了，我需要休息。
+// import { createApi, listApi, updateApi, deleteApi } from '/@/api/notice';
+import { listApi ,passApi,rejectApi} from '/@/api/application';
+import { forEach } from 'lodash';
+import { requiredNumber } from 'element-plus/es/components/table-v2/src/common';
+
 const columns = reactive([
-  {
+{
     title: '序号',
     dataIndex: 'index',
     key: 'index',
     align: 'center'
+  }, {
+    title: '姓名',
+    dataIndex: 'name',
+    key: 'name',
+    align: 'center'
+  }, {
+    title: '电话',
+    dataIndex: 'phone',
+    key: 'phone',
+    align: 'center'
+  }, {
+    title: '地址',
+    dataIndex: 'address',
+    key: 'address',
+  
+    align: 'center'
+  }, {
+    title: '描述',
+    dataIndex: 'description',
+    key: 'description',
+    align: 'center'
+  }, {
+    title: '公司',
+    dataIndex: 'company',
+    key: 'company',
+    align: 'center'
+
   },
   {
-    title: '申请人',
-    dataIndex: 'title',
-    key: 'title',
+    title: '目的',
+    dataIndex: 'purpose',
+    key: 'purpose',
     align: 'center'
   },
-  {
-    title: '申请权限',
-    dataIndex: 'title',
-    key: 'title',
-    align: 'center'
-  },
-  {
-    title: '待申请数据',
-    dataIndex: 'content',
-    key: 'content',
-    align: 'center',
-    customRender: ({ text, record, index, column }) => text?.substring(0, 20) + '...',
-  },
+
+  // {
+  //   title: '标题',
+  //   dataIndex: 'title',
+  //   key: 'title',
+  //   align: 'center'
+  // },
+  // {
+  //   title: '内容',
+  //   dataIndex: 'content',
+  //   key: 'content',
+  //   align: 'center',
+  //   customRender: ({ text, record, index, column }) => text?.substring(0, 20) + '...',
+  // },
   {
     title: '操作',
     dataIndex: 'action',
@@ -145,11 +176,12 @@ onMounted(() => {
 const getDataList = () => {
   data.loading = true;
   listApi({
-    keyword: data.keyword,
+    // keyword: data.keyword,
   })
       .then((res) => {
+        res.data=filterData(res.data)
         data.loading = false;
-        console.log("传输的数据源消息"+res.data);
+        console.log('data222222',res.data);
         res.data.forEach((item: any, index: any) => {
           item.index = index + 1;
         });
@@ -181,19 +213,48 @@ const handleAdd = () => {
   }
 };
 const handleEdit = (record: any) => {
-  resetModal();
-  modal.visile = true;
-  modal.editFlag = true;
-  modal.title = '编辑';
-  // 重置
-  for (const key in modal.form) {
-    modal.form[key] = undefined;
-  }
-  for (const key in record) {
-    modal.form[key] = record[key];
-  }
+  console.log(record.id)
+  debugger
+  passApi({id:record.id})
+  .then((res) => {
+    getDataList();
+  })
+  .catch((err) => {
+    message.error(err.msg || '操作失败');
+  });
+  // resetModal();
+  // modal.visile = true;
+  // modal.editFlag = true;
+  // modal.title = '通过';
+  // // 重置
+  // for (const key in modal.form) {
+  //   modal.form[key] = undefined;
+  // }
+  // for (const key in record) {
+  //   modal.form[key] = record[key];
+  // }
 };
-
+const reject = (record: any) => {
+ 
+  rejectApi({id:record.id})
+  .then((res) => {
+    getDataList();
+  })
+  .catch((err) => {
+    message.error(err.msg || '操作失败');
+  });
+  // resetModal();
+  // modal.visile = true;
+  // modal.editFlag = true;
+  // modal.title = '通过';
+  // // 重置
+  // for (const key in modal.form) {
+  //   modal.form[key] = undefined;
+  // }
+  // for (const key in record) {
+  //   modal.form[key] = record[key];
+  // }
+};
 const confirmDelete = (record: any) => {
   console.log('delete', record);
   deleteApi({ ids: record.id })
@@ -266,6 +327,22 @@ const resetModal = () => {
 // 关闭弹窗
 const hideModal = () => {
   modal.visile = false;
+};
+
+/**
+ * 过滤对象数组，去除 status 属性不为 0 的对象
+ * @param {Array<Object>} dataArray - 要过滤的对象数组
+ * @returns {Array<Object>} 过滤后的对象数组
+ */
+ const filterData = (dataArray) => {
+  // forEach(dataArray, (item) => {
+  //   if (item.status !== 0) {
+  //     console.log(item)
+  //     dataArray.push(item)
+     
+  //   }
+  // });
+  return dataArray.filter(item => item.status === 0);
 };
 </script>
 

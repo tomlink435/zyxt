@@ -3,7 +3,7 @@
     <a-layout-header style="background: #fff; padding: 0">
       <div class="header">
         <img class="header-logo" :src="logo">
-        <span class="header-title">图书借阅管理系统</span>
+        <span class="header-title">数据共享管理系统</span>
         <div class="empty"></div>
         <a-button style="margin-right: 24px;" @click="handlePreview">前台预览</a-button>
         <span>管理员[{{ userStore.admin_user_name }}]</span>
@@ -36,18 +36,22 @@
 			  <span>审批回退</span>
 			</a-menu-item> -->
 		  <!-- </a-sub-menu> -->
-      <a-menu-item key="notice">
+      <a-menu-item key="thing">
 		      <layout-outlined/>
-		      <span>数据审批</span>
+		      <span>数据集管理</span>
+		    </a-menu-item>
+        <a-menu-item key="application">
+		      <layout-outlined/>
+		      <span>审批</span>
 		    </a-menu-item>
           <a-menu-item key="classification">
             <layout-outlined/>
             <span>分类管理</span>
           </a-menu-item>
-          <a-menu-item key="tag">
+          <!-- <a-menu-item key="tag">
             <tag-outlined/>
-            <span>标签管理</span>
-          </a-menu-item>
+            <span>审批</span>
+          </a-menu-item> -->
           <a-menu-item key="user">
             <user-outlined/>
             <span>用户管理</span>

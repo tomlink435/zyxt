@@ -4,6 +4,8 @@ import com.gk.study.common.APIResponse;
 import com.gk.study.common.ResponeCode;
 import com.gk.study.entity.Application;
 import com.gk.study.entity.Result;
+import com.gk.study.permission.Access;
+import com.gk.study.permission.AccessLevel;
 import com.gk.study.service.ApplicationService;
 import javassist.tools.rmi.AppletServer;
 import lombok.extern.slf4j.Slf4j;
@@ -43,6 +45,7 @@ public class ApplicationController {
         List<Application> applicationList = applicationService.list();
         return new APIResponse(ResponeCode.SUCCESS, "查询成功", applicationList);
     }
+<<<<<<< HEAD
     /**
      * 对表单进行审核
      * 表单状态: 0 未审核, 1 审核通过, 2 审核未通过
@@ -61,7 +64,44 @@ public class ApplicationController {
     @PutMapping(value = "/reject/{id}/")
     public APIResponse reject(@PathVariable Long id){
         log.info("审核拒绝application_id{}", id);
+=======
+
+//    /**
+//     * 对表单进行审核
+//     * 表单状态: 0 未审核, 1 审核通过, 2 审核未通过
+//     */
+//
+//    /**
+//     * 审核通过
+//     */
+//    @PutMapping(value = "/pass/{id}")
+//    public APIResponse pass(@PathVariable Long id){
+//        log.info("审核通过application_id{}", id);
+//        applicationService.pass(id);
+//        return new APIResponse(ResponeCode.SUCCESS);
+//    }
+//
+//    /**
+//     * 审核拒绝
+//     */
+//    @PutMapping(value = "/reject/{id}/")
+//    public APIResponse reject(@PathVariable Long id){
+//        log.info("审核拒绝application_id{}", id);
+//        applicationService.reject(id);
+//        return new APIResponse(ResponeCode.SUCCESS);
+//    }
+
+    @RequestMapping(value = "/pass", method = RequestMethod.POST)
+    public APIResponse pass(Long id){
+        applicationService.pass(id);
+        return new APIResponse(ResponeCode.SUCCESS);
+
+    }
+    @RequestMapping(value = "/reject", method = RequestMethod.POST)
+    public APIResponse reject(Long id){
+>>>>>>> 1c903eff34b9b1deb7aadcf1015adc3b0173de3f
         applicationService.reject(id);
         return new APIResponse(ResponeCode.SUCCESS);
+
     }
 }
