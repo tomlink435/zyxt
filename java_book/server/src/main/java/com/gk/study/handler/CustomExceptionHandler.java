@@ -2,6 +2,7 @@ package com.gk.study.handler;
 
 
 import com.gk.study.common.APIResponse;
+import com.gk.study.common.BaseException;
 import com.gk.study.service.ErrorLogService;
 import com.gk.study.common.ResponeCode;
 import com.gk.study.entity.ErrorLog;
@@ -54,5 +55,11 @@ public class CustomExceptionHandler {
 
         //保存
         service.createErrorLog(log);
+    }
+
+    @ExceptionHandler
+    public APIResponse exceptionHandler(BaseException e){
+        logger.error("业务异常" + e.getMessage(), e);
+        return new APIResponse(ResponeCode.FAIL, e.getMessage());
     }
 }

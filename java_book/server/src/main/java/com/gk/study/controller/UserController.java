@@ -2,14 +2,20 @@ package com.gk.study.controller;
 
 import com.gk.study.common.APIResponse;
 import com.gk.study.common.BaseContext;
+import com.gk.study.common.JwtProperties;
 import com.gk.study.common.ResponeCode;
 import com.gk.study.entity.User;
 import com.gk.study.permission.Access;
 import com.gk.study.permission.AccessLevel;
+import com.gk.study.pojo.DTO.UserLoginDTO;
+import com.gk.study.pojo.VO.UserLoginVO;
+import com.gk.study.pojo.entity.UserLogin;
 import com.gk.study.service.UserService;
+import com.gk.study.utils.JwtUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +27,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 /**
@@ -31,6 +38,8 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+    @Autowired
+    private JwtProperties jwtProperties;
 
     private final static Logger logger = LoggerFactory.getLogger(UserController.class);
 
@@ -66,30 +75,9 @@ public class UserController {
         }
     }
 
-    // 普通用户登录
-    @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
-    public APIResponse userLogin(User user, HttpSession session){
-        log.info("用户登录{}", user);
-
-        //用户输入账密
-        user.setPassword(DigestUtils.md5DigestAsHex((user.getPassword() + salt).getBytes()));
-        User responseUser =  userService.getNormalUser(user);
-
-        //验证账密
-        if(responseUser != null) {
-            //将数据保存至ThreadLocal
-            BaseContext.setCurrentId(user.getId());
-            //将数据保存至Session
-            session.setAttribute("user_id", user.getId());
-            return new APIResponse(ResponeCode.SUCCESS, "查询成功", responseUser);
-        }else {
-            return new APIResponse(ResponeCode.FAIL, "用户名或密码错误");
-        }
-    }
-
-    // 普通用户登录
-//    @GetMapping("/userLogin")
-//    public APIResponse userLogin(@RequestBody User user, HttpSession session){
+//    // 普通用户登录
+//    @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
+//    public APIResponse userLogin(User user){
 //        log.info("用户登录{}", user);
 //
 //        //用户输入账密
@@ -98,15 +86,41 @@ public class UserController {
 //
 //        //验证账密
 //        if(responseUser != null) {
-//            //将数据保存至ThreadLocal
-//            BaseContext.setCurrentId(user.getId());
-//            //将数据保存返回Session
-//            session.setAttribute("user_id", user.getId());
 //            return new APIResponse(ResponeCode.SUCCESS, "查询成功", responseUser);
 //        }else {
 //            return new APIResponse(ResponeCode.FAIL, "用户名或密码错误");
 //        }
 //    }
+
+    @PostMapping("/userLogin")
+    public APIResponse userLogin(@RequestBody UserLoginDTO userLoginDTO){
+        log.info("用户登录{}", userLoginDTO);
+
+        User user = new User();
+        BeanUtils.copyProperties(userLoginDTO, user);
+
+        //用户输入账密
+        user.setPassword(DigestUtils.md5DigestAsHex((user.getPassword() + salt).getBytes()));
+        User responseUser =  userService.getNormalUser(user);
+
+        //验证账密
+        if(responseUser != null) {
+            //为用户生成Jwt令牌
+            HashMap<String, Object> claims = new HashMap<>();
+            claims.put("userId", responseUser.getId());
+            String token = JwtUtil.createJWT(jwtProperties.getUserSecretKey(), jwtProperties.getUserTtl(), claims);
+
+            UserLoginVO userLoginVO = UserLoginVO.builder()
+                    .username(userLoginDTO.getUsername())
+                    .password(userLoginDTO.getPassword())
+                    .token(token)
+                    .build();
+
+            return new APIResponse(ResponeCode.SUCCESS, "查询成功", userLoginVO);
+        }else {
+            return new APIResponse(ResponeCode.FAIL, "用户名或密码错误");
+        }
+    }
 
     // 普通用户注册
     @RequestMapping(value = "/userRegister", method = RequestMethod.POST)
