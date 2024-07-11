@@ -2866,3 +2866,915 @@ org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multip
 2024-07-11 14:11:24.236 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.UserController : 97 ] - 用户登录UserLoginDTO(username=1, password=1)
 2024-07-11 14:13:18.420 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
 2024-07-11 14:13:18.441 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 14:18:38.794 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 20264 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 14:18:38.796 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 14:18:39.906 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:18:39.907 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 14:18:39.908 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 14:18:39.982 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 14:18:40.065 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 14:18:40.174 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 14:18:40.399 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 14:18:40.400 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 14:18:41.370 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:18:41.767 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.364 seconds (JVM running for 3.915)
+2024-07-11 14:18:55.956 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 14:18:55.997 [ http-nio-9100-exec-1 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 30 ] - error log======>Content type 'multipart/form-data;boundary=----WebKitFormBoundaryLbGTCkAcz48rhVFy;charset=UTF-8' not supported
+org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=----WebKitFormBoundaryLbGTCkAcz48rhVFy;charset=UTF-8' not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:206)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-11 14:19:08.853 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 41 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-07-11 14:19:08.951 [ http-nio-9100-exec-8 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @5158b42f
+2024-07-11 14:19:21.114 [ http-nio-9100-exec-2 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 30 ] - error log======>Content type 'multipart/form-data;boundary=----WebKitFormBoundaryLYKfE2VRea1wfIvP;charset=UTF-8' not supported
+org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=----WebKitFormBoundaryLYKfE2VRea1wfIvP;charset=UTF-8' not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:206)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-11 14:19:25.235 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.UserController : 97 ] - 用户登录UserLoginDTO(username=1, password=1)
+2024-07-11 14:19:33.913 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.UserController : 97 ] - 用户登录UserLoginDTO(username=1, password=1)
+2024-07-11 14:24:30.634 [ http-nio-9100-exec-5 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 30 ] - error log======>Content type 'multipart/form-data;boundary=----WebKitFormBoundaryILkN20DosKFXauVf;charset=UTF-8' not supported
+org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=----WebKitFormBoundaryILkN20DosKFXauVf;charset=UTF-8' not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:206)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-11 14:24:31.459 [ http-nio-9100-exec-4 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 30 ] - error log======>Content type 'multipart/form-data;boundary=----WebKitFormBoundaryeaUl5CixKvioqAY6;charset=UTF-8' not supported
+org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=----WebKitFormBoundaryeaUl5CixKvioqAY6;charset=UTF-8' not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:206)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-11 14:24:31.628 [ http-nio-9100-exec-6 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 30 ] - error log======>Content type 'multipart/form-data;boundary=----WebKitFormBoundary3Vx4u1fbNWYF6XVI;charset=UTF-8' not supported
+org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=----WebKitFormBoundary3Vx4u1fbNWYF6XVI;charset=UTF-8' not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:206)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-11 14:24:35.874 [ http-nio-9100-exec-7 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 30 ] - error log======>Content type 'multipart/form-data;boundary=----WebKitFormBoundaryjOB1vCVepuWsQs2i;charset=UTF-8' not supported
+org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=----WebKitFormBoundaryjOB1vCVepuWsQs2i;charset=UTF-8' not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:206)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-11 14:24:36.001 [ http-nio-9100-exec-8 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 30 ] - error log======>Content type 'multipart/form-data;boundary=----WebKitFormBoundarydj20k9wJvwsXaU7Q;charset=UTF-8' not supported
+org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=----WebKitFormBoundarydj20k9wJvwsXaU7Q;charset=UTF-8' not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:206)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-11 14:24:58.690 [ http-nio-9100-exec-9 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 30 ] - error log======>Content type 'multipart/form-data;boundary=----WebKitFormBoundaryRjQ9dg0xZGCrWIsd;charset=UTF-8' not supported
+org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=----WebKitFormBoundaryRjQ9dg0xZGCrWIsd;charset=UTF-8' not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:206)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-11 14:25:35.026 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 14:25:35.086 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 14:25:40.937 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 19196 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 14:25:40.940 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 14:25:42.054 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:25:42.054 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 14:25:42.055 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 14:25:42.125 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 14:25:42.213 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 14:25:42.313 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 14:25:42.654 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 14:25:42.654 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 14:25:43.600 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:25:43.951 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.391 seconds (JVM running for 3.897)
+2024-07-11 14:25:47.048 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 14:25:47.096 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.UserController : 97 ] - 用户登录UserLoginDTO(username=1, password=1)
+2024-07-11 14:25:48.168 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 41 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-07-11 14:25:48.249 [ http-nio-9100-exec-8 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @5158b42f
+2024-07-11 14:31:54.956 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.UserController : 97 ] - 用户登录UserLoginDTO(username=null, password=null)
+2024-07-11 14:32:35.983 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 14:32:41.157 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 11532 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 14:32:41.162 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 14:32:42.274 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:32:42.275 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 14:32:42.275 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 14:32:42.344 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 14:32:42.430 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 14:32:42.535 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 14:32:42.715 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 14:32:42.715 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 14:32:43.621 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:32:43.966 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.222 seconds (JVM running for 3.775)
+2024-07-11 14:32:47.655 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 14:32:47.690 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.UserController : 97 ] - 用户登录UserLoginDTO(username=null, password=null)
+2024-07-11 14:32:55.750 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 14:32:55.769 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 14:33:00.336 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 19564 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 14:33:00.339 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 14:33:01.451 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:33:01.452 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 14:33:01.453 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 14:33:01.520 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 14:33:01.605 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 14:33:01.713 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 14:33:01.891 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 14:33:01.892 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 14:33:02.852 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:33:03.207 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.272 seconds (JVM running for 3.812)
+2024-07-11 14:33:03.840 [ http-nio-9100-exec-2 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 14:33:03.898 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.UserController : 97 ] - 用户登录UserLoginDTO(username=1, password=1)
+2024-07-11 14:34:10.409 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 14:34:10.454 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 14:34:15.996 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 20476 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 14:34:15.999 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 14:34:17.122 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:34:17.122 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 14:34:17.123 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 14:34:17.194 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 14:34:17.284 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 14:34:17.390 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 14:34:17.566 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 14:34:17.567 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 14:34:18.473 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:34:18.827 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.251 seconds (JVM running for 3.783)
+2024-07-11 14:34:23.130 [ http-nio-9100-exec-2 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 14:34:27.446 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 14:34:27.463 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 14:34:30.201 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 640 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 14:34:30.205 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 14:34:31.335 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:34:31.336 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 14:34:31.336 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 14:34:31.407 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 14:34:31.494 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 14:34:31.603 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 14:34:31.805 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 14:34:31.806 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 14:34:32.833 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:34:33.216 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.458 seconds (JVM running for 4.124)
+2024-07-11 14:34:34.068 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 14:34:43.690 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 14:34:43.709 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 14:35:06.435 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 9792 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 14:35:06.438 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 14:35:07.526 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:35:07.527 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 14:35:07.528 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 14:35:07.595 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 14:35:07.680 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 14:35:07.785 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 14:35:07.957 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 14:35:07.957 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 14:35:08.824 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:35:09.171 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.143 seconds (JVM running for 3.663)
+2024-07-11 14:35:28.054 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 14:35:28.903 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 41 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-07-11 14:35:28.965 [ http-nio-9100-exec-5 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @5158b42f
+2024-07-11 14:43:15.704 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 14:43:29.595 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 11128 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 14:43:29.597 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 14:43:30.846 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:43:30.847 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 14:43:30.847 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 14:43:30.934 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 14:43:31.024 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 14:43:31.148 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 14:43:31.354 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 14:43:31.354 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 14:43:32.333 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 14:43:32.752 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.544 seconds (JVM running for 4.04)
+2024-07-11 14:43:34.632 [ http-nio-9100-exec-2 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 14:45:38.510 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 14:45:38.531 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 15:19:03.682 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 14492 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 15:19:03.685 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 15:19:04.998 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 15:19:04.998 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 15:19:04.998 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 15:19:05.080 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 15:19:05.175 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 15:19:05.298 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 15:19:05.510 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 15:19:05.510 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 15:19:06.077 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 25 ] - 开始注册自定义拦截器
+2024-07-11 15:19:06.396 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 15:19:06.741 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.607 seconds (JVM running for 4.198)
+2024-07-11 15:19:11.309 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 15:19:35.360 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 15:19:35.381 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 15:19:39.748 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 15244 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 15:19:39.750 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 15:19:40.850 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 15:19:40.850 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 15:19:40.851 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 15:19:40.922 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 15:19:41.006 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 15:19:41.111 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 15:19:41.283 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 15:19:41.283 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 15:19:41.832 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 25 ] - 开始注册自定义拦截器
+2024-07-11 15:19:42.122 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 15:19:42.480 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.127 seconds (JVM running for 3.687)
+2024-07-11 15:19:53.676 [ http-nio-9100-exec-2 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 15:20:08.412 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：null
+2024-07-11 15:20:11.543 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：null
+2024-07-11 15:20:19.985 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：null
+2024-07-11 15:20:51.943 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjA2ODk1OTQsInVzZXJJZCI6MTR9.HGcfpytQD98Koy7jHWLVdhjIBErVBemxKq9MuA8Ynqo
+2024-07-11 15:20:51.950 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 46 ] - 当前用户id:14
+2024-07-11 15:20:51.953 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 34 ] - 保存申请Application(id=null, name=张三abc, email=12345, phone=1234, address=蠡湖大道, description=测试描述, company=公司1, purpose=用于测试使用, projectLeader=李四, projectType=1, status=0)
+2024-07-11 15:21:01.155 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：null
+2024-07-11 15:32:19.890 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 15:57:08.691 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 8692 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 15:57:08.694 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 15:57:09.899 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 15:57:09.899 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 15:57:09.900 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 15:57:09.978 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 15:57:10.067 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 15:57:10.176 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 15:57:10.389 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 15:57:10.389 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 15:57:10.964 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 25 ] - 开始注册自定义拦截器
+2024-07-11 15:57:11.269 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 15:57:11.629 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.413 seconds (JVM running for 4.046)
+2024-07-11 15:57:16.865 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 15:57:16.866 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 15:57:20.870 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 12336 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 15:57:20.872 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 15:57:22.014 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 15:57:22.014 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 15:57:22.015 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 15:57:22.085 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 15:57:22.168 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 15:57:22.277 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 15:57:22.457 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 15:57:22.457 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 15:57:23.037 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 25 ] - 开始注册自定义拦截器
+2024-07-11 15:57:23.328 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 15:57:23.725 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.289 seconds (JVM running for 3.851)
+2024-07-11 15:58:02.684 [ http-nio-9100-exec-2 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 15:58:02.699 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：null
+2024-07-11 15:58:47.100 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：null
+2024-07-11 15:59:18.958 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjA2OTE4OTEsInVzZXJJZCI6MTR9.akQZPqudLCv00uSXAPGBfMX_SFA5645_ZSfm6SVPT30
+2024-07-11 15:59:18.965 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 46 ] - 当前用户id:14
+2024-07-11 15:59:18.967 [ http-nio-9100-exec-5 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 30 ] - error log======>Required request body is missing: public com.gk.study.common.APIResponse com.gk.study.controller.ApplicationController.query(com.gk.study.pojo.DTO.ApplicationDTO)
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.gk.study.common.APIResponse com.gk.study.controller.ApplicationController.query(com.gk.study.pojo.DTO.ApplicationDTO)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-11 15:59:38.708 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjA2OTE4OTEsInVzZXJJZCI6MTR9.akQZPqudLCv00uSXAPGBfMX_SFA5645_ZSfm6SVPT30
+2024-07-11 15:59:38.709 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 46 ] - 当前用户id:14
+2024-07-11 15:59:38.710 [ http-nio-9100-exec-6 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 30 ] - error log======>Required request body is missing: public com.gk.study.common.APIResponse com.gk.study.controller.ApplicationController.query(com.gk.study.pojo.DTO.ApplicationDTO)
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.gk.study.common.APIResponse com.gk.study.controller.ApplicationController.query(com.gk.study.pojo.DTO.ApplicationDTO)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-11 15:59:51.571 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 15:59:51.591 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 15:59:55.626 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 16392 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 15:59:55.629 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 15:59:56.862 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 15:59:56.863 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 15:59:56.864 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 15:59:56.939 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 15:59:57.026 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 15:59:57.140 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 15:59:57.335 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 15:59:57.336 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 15:59:58.032 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 25 ] - 开始注册自定义拦截器
+2024-07-11 15:59:58.364 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 15:59:58.869 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.647 seconds (JVM running for 4.158)
+2024-07-11 15:59:58.962 [ http-nio-9100-exec-2 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 15:59:58.981 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjA2OTE4OTEsInVzZXJJZCI6MTR9.akQZPqudLCv00uSXAPGBfMX_SFA5645_ZSfm6SVPT30
+2024-07-11 15:59:59.028 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 46 ] - 当前用户id:14
+2024-07-11 16:00:10.060 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjA2OTE4OTEsInVzZXJJZCI6MTR9.akQZPqudLCv00uSXAPGBfMX_SFA5645_ZSfm6SVPT30
+2024-07-11 16:00:10.061 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 46 ] - 当前用户id:14
+2024-07-11 16:00:17.706 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjA2OTE4OTEsInVzZXJJZCI6MTR9.akQZPqudLCv00uSXAPGBfMX_SFA5645_ZSfm6SVPT30
+2024-07-11 16:00:17.707 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 46 ] - 当前用户id:14
+2024-07-11 16:00:33.020 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjA2OTE4OTEsInVzZXJJZCI6MTR9.akQZPqudLCv00uSXAPGBfMX_SFA5645_ZSfm6SVPT30
+2024-07-11 16:00:33.021 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 46 ] - 当前用户id:14
+2024-07-11 16:00:42.772 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 10520 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 16:00:42.775 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 16:00:43.838 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 16:00:43.838 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 16:00:43.840 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 16:00:43.911 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 16:00:43.990 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 16:00:44.094 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 16:00:44.266 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 16:00:44.266 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 16:00:44.811 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 25 ] - 开始注册自定义拦截器
+2024-07-11 16:00:45.093 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 16:00:45.489 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.116 seconds (JVM running for 3.627)
+2024-07-11 16:00:46.836 [ http-nio-9100-exec-2 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 16:00:46.852 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjA2OTE4OTEsInVzZXJJZCI6MTR9.akQZPqudLCv00uSXAPGBfMX_SFA5645_ZSfm6SVPT30
+2024-07-11 16:00:46.893 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 46 ] - 当前用户id:14
+2024-07-11 16:00:46.904 [ http-nio-9100-exec-2 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 30 ] - error log======>Required request body is missing: public com.gk.study.common.APIResponse com.gk.study.controller.ApplicationController.query(com.gk.study.pojo.DTO.ApplicationDTO)
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.gk.study.common.APIResponse com.gk.study.controller.ApplicationController.query(com.gk.study.pojo.DTO.ApplicationDTO)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-11 16:01:14.749 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 16:01:14.767 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 16:01:19.078 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 16028 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 16:01:19.081 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 16:01:20.169 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 16:01:20.169 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 16:01:20.170 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 16:01:20.237 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 16:01:20.321 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 16:01:20.427 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 16:01:20.605 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 16:01:20.605 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 16:01:21.165 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 25 ] - 开始注册自定义拦截器
+2024-07-11 16:01:21.456 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 16:01:21.929 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.275 seconds (JVM running for 3.791)
+2024-07-11 16:01:24.298 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 16:01:24.321 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjA2OTE4OTEsInVzZXJJZCI6MTR9.akQZPqudLCv00uSXAPGBfMX_SFA5645_ZSfm6SVPT30
+2024-07-11 16:01:24.367 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 46 ] - 当前用户id:14
+2024-07-11 16:01:24.380 [ http-nio-9100-exec-1 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 30 ] - error log======>Required request body is missing: public com.gk.study.common.APIResponse com.gk.study.controller.ApplicationController.query(com.gk.study.pojo.DTO.ApplicationDTO)
+org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.gk.study.common.APIResponse com.gk.study.controller.ApplicationController.query(com.gk.study.pojo.DTO.ApplicationDTO)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-11 16:02:02.582 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 16:02:02.603 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 16:02:07.787 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 7300 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 16:02:07.790 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 16:02:08.957 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 16:02:08.957 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 16:02:08.958 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 16:02:09.043 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 16:02:09.141 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 16:02:09.264 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 16:02:09.488 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 16:02:09.489 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 16:02:10.184 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 25 ] - 开始注册自定义拦截器
+2024-07-11 16:02:10.575 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 16:02:11.058 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.701 seconds (JVM running for 4.201)
+2024-07-11 16:02:11.604 [ http-nio-9100-exec-2 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 16:02:11.620 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjA2OTE4OTEsInVzZXJJZCI6MTR9.akQZPqudLCv00uSXAPGBfMX_SFA5645_ZSfm6SVPT30
+2024-07-11 16:02:11.662 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 46 ] - 当前用户id:14
+2024-07-11 16:02:11.677 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 57 ] - 审核查询ApplicationDTO(userId=1)
+2024-07-11 16:02:20.091 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjA2OTE4OTEsInVzZXJJZCI6MTR9.akQZPqudLCv00uSXAPGBfMX_SFA5645_ZSfm6SVPT30
+2024-07-11 16:02:20.093 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 46 ] - 当前用户id:14
+2024-07-11 16:02:20.093 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 57 ] - 审核查询ApplicationDTO(userId=1)
+2024-07-11 16:02:29.891 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 42 ] - jwt校验：eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MjA2OTE4OTEsInVzZXJJZCI6MTR9.akQZPqudLCv00uSXAPGBfMX_SFA5645_ZSfm6SVPT30
+2024-07-11 16:02:29.893 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.JwtTokenUserInterceptor : 46 ] - 当前用户id:14
+2024-07-11 16:02:29.894 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 57 ] - 审核查询ApplicationDTO(userId=14)
+2024-07-11 16:02:41.443 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 16:02:41.464 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed

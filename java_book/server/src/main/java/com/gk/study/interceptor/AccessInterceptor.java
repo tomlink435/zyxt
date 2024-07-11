@@ -68,7 +68,6 @@ public class AccessInterceptor extends HandlerInterceptorAdapter {
             return true;
         }
 
-        // todo
         // 管理员
 //        if(access.level().getCode() == AccessLevel.ADMIN.getCode()) {
 //            String token = request.getHeader("ADMINTOKEN");

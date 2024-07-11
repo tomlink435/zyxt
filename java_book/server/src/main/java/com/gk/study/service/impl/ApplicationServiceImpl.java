@@ -4,7 +4,9 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.gk.study.common.BaseException;
 import com.gk.study.entity.Application;
+import com.gk.study.entity.ThingTag;
 import com.gk.study.mapper.ApplicationMapper;
+import com.gk.study.pojo.DTO.ApplicationDTO;
 import com.gk.study.service.ApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -64,5 +66,13 @@ public class ApplicationServiceImpl implements ApplicationService {
         //审核状态改为2，表示申请未通过审核
         application.setStatus(2);
         applicationMapper.updateById(application);
+    }
+
+    @Override
+    public List<Application> query(ApplicationDTO applicationDTO) {
+        QueryWrapper<Application> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_id", applicationDTO.getUserId());
+        List<Application> applicationList = applicationMapper.selectList(queryWrapper);
+        return applicationList;
     }
 }

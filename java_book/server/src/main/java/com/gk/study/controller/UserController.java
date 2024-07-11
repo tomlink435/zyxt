@@ -92,13 +92,8 @@ public class UserController {
 //        }
 //    }
 
-    @PostMapping("/userLogin")
-    public APIResponse userLogin(@RequestBody UserLoginDTO userLoginDTO){
-        log.info("用户登录{}", userLoginDTO);
-
-        User user = new User();
-        BeanUtils.copyProperties(userLoginDTO, user);
-
+    @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
+    public APIResponse userLogin(@RequestBody User user){
         //用户输入账密
         user.setPassword(DigestUtils.md5DigestAsHex((user.getPassword() + salt).getBytes()));
         User responseUser =  userService.getNormalUser(user);
@@ -111,8 +106,8 @@ public class UserController {
             String token = JwtUtil.createJWT(jwtProperties.getUserSecretKey(), jwtProperties.getUserTtl(), claims);
 
             UserLoginVO userLoginVO = UserLoginVO.builder()
-                    .username(userLoginDTO.getUsername())
-                    .password(userLoginDTO.getPassword())
+                    .username(user.getUsername())
+                    .password(user.getPassword())
                     .token(token)
                     .build();
 
