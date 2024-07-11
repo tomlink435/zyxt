@@ -64,6 +64,7 @@ public class ApplicationController {
      * @param id
      * @return
      */
+
     @RequestMapping(value = "/pass", method = RequestMethod.POST)
     public APIResponse pass(Long id){
         applicationService.pass(id);

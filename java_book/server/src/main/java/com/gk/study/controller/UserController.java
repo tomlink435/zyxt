@@ -92,8 +92,13 @@ public class UserController {
 //        }
 //    }
 
-    @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
-    public APIResponse userLogin(@RequestBody User user){
+    @PostMapping("/userLogin")
+    public APIResponse userLogin(UserLoginDTO userLoginDTO){
+        log.info("用户登录{}", userLoginDTO);
+
+        User user = new User();
+        BeanUtils.copyProperties(userLoginDTO, user);
+
         //用户输入账密
         user.setPassword(DigestUtils.md5DigestAsHex((user.getPassword() + salt).getBytes()));
         User responseUser =  userService.getNormalUser(user);
@@ -109,6 +114,7 @@ public class UserController {
                     .username(user.getUsername())
                     .password(user.getPassword())
                     .token(token)
+                    .id(responseUser.getId())
                     .build();
 
             return new APIResponse(ResponeCode.SUCCESS, "查询成功", userLoginVO);

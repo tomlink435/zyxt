@@ -3778,3 +3778,38 @@ org.springframework.http.converter.HttpMessageNotReadableException: Required req
 2024-07-11 16:02:29.894 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 57 ] - 审核查询ApplicationDTO(userId=14)
 2024-07-11 16:02:41.443 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
 2024-07-11 16:02:41.464 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 16:05:36.238 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 4576 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 16:05:36.242 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 16:05:37.350 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 16:05:37.351 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 16:05:37.352 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 16:05:37.420 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 16:05:37.498 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 16:05:37.595 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 16:05:37.821 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 16:05:37.821 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 16:05:38.388 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 25 ] - 开始注册自定义拦截器
+2024-07-11 16:05:38.698 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 16:05:39.147 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.303 seconds (JVM running for 3.814)
+2024-07-11 16:05:43.928 [ http-nio-9100-exec-2 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 16:05:43.958 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.UserController : 97 ] - 用户登录UserLoginDTO(username=null, password=null, id=0)
+2024-07-11 16:05:56.518 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.UserController : 97 ] - 用户登录UserLoginDTO(username=null, password=null, id=0)
+2024-07-11 16:06:04.806 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 16:06:04.824 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-07-11 16:06:36.289 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 1900 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-07-11 16:06:36.292 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-07-11 16:06:37.387 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-07-11 16:06:37.387 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-07-11 16:06:37.388 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-07-11 16:06:37.461 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-07-11 16:06:37.547 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-07-11 16:06:37.649 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-07-11 16:06:37.826 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-07-11 16:06:37.826 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-07-11 16:06:38.369 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 25 ] - 开始注册自定义拦截器
+2024-07-11 16:06:38.656 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-07-11 16:06:39.042 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.147 seconds (JVM running for 3.672)
+2024-07-11 16:06:41.120 [ http-nio-9100-exec-2 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-11 16:06:41.180 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.UserController : 97 ] - 用户登录UserLoginDTO(username=1, password=1, id=0)
+2024-07-11 16:06:49.212 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-11 16:06:49.231 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
