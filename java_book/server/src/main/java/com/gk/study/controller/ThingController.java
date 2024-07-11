@@ -6,6 +6,7 @@ import com.gk.study.entity.Thing;
 import com.gk.study.permission.Access;
 import com.gk.study.permission.AccessLevel;
 import com.gk.study.service.ThingService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/thing")
+@Slf4j
 public class ThingController {
 
     private final static Logger logger = LoggerFactory.getLogger(ThingController.class);
@@ -36,15 +38,14 @@ public class ThingController {
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public APIResponse list(String keyword, String sort, String c, String tag){
+        log.info("展示数据key:{}, sort:{}, c:{}, tag:{}", keyword, sort, c, tag);
         List<Thing> list =  service.getThingList(keyword, sort, c, tag);
-
         return new APIResponse(ResponeCode.SUCCESS, "查询成功", list);
     }
 
     @RequestMapping(value = "/detail", method = RequestMethod.GET)
     public APIResponse detail(String id){
         Thing thing =  service.getThingById(id);
-
         return new APIResponse(ResponeCode.SUCCESS, "查询成功", thing);
     }
 
@@ -56,7 +57,6 @@ public class ThingController {
         if(!StringUtils.isEmpty(url)) {
             thing.cover = url;
         }
-
         service.createThing(thing);
         return new APIResponse(ResponeCode.SUCCESS, "创建成功");
     }
@@ -91,7 +91,6 @@ public class ThingController {
         MultipartFile file = thing.getImageFile();
         String newFileName = null;
         if(file !=null && !file.isEmpty()) {
-
             // 存文件
             String oldFileName = file.getOriginalFilename();
             String randomStr = UUID.randomUUID().toString();
