@@ -74,8 +74,6 @@ public class OverViewController {
 
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     public APIResponse count() {
-
-
         Map<String, Object> map = new HashMap<>();
 
         // 图书总数

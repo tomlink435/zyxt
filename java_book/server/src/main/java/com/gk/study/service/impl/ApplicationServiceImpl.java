@@ -2,6 +2,7 @@ package com.gk.study.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.gk.study.common.BaseException;
 import com.gk.study.entity.Application;
 import com.gk.study.mapper.ApplicationMapper;
 import com.gk.study.service.ApplicationService;
@@ -37,7 +38,7 @@ public class ApplicationServiceImpl implements ApplicationService {
         //只有状态处于0(未审核)的数据才能进行审核
 
         if(application==null || application.getStatus() != 0){
-            throw new RuntimeException("该申请状态不正确");
+            throw new BaseException("申请状态不正确");
         }
 
         //审核状态改为1，表示通过审核
@@ -57,7 +58,7 @@ public class ApplicationServiceImpl implements ApplicationService {
 
         //只有状态处于0(未审核)的数据才能进行审核
         if(application==null || application.getStatus() != 0){
-            throw new RuntimeException("该申请状态不正确");
+            throw new BaseException("申请状态不正确");
         }
 
         //审核状态改为2，表示申请未通过审核
