@@ -13,4 +13,5 @@ public class UserLoginVO {
     private String username;
     private String password;
     private String token;
+    private long id;
 }

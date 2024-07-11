@@ -93,7 +93,7 @@ public class UserController {
 //    }
 
     @PostMapping("/userLogin")
-    public APIResponse userLogin(@RequestBody UserLoginDTO userLoginDTO){
+    public APIResponse userLogin(UserLoginDTO userLoginDTO){
         log.info("用户登录{}", userLoginDTO);
 
         User user = new User();
@@ -114,6 +114,7 @@ public class UserController {
                     .username(userLoginDTO.getUsername())
                     .password(userLoginDTO.getPassword())
                     .token(token)
+                    .id(responseUser.getId())
                     .build();
 
             return new APIResponse(ResponeCode.SUCCESS, "查询成功", userLoginVO);

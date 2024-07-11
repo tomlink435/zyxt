@@ -35,4 +35,6 @@ public class Application implements Serializable {
     public String projectType;
     @TableField
     public int status;
+    @TableField
+    public Long userId;
 }
