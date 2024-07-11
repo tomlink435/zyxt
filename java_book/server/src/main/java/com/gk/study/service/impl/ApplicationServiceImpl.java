@@ -47,8 +47,12 @@ public class ApplicationServiceImpl implements ApplicationService {
         applicationMapper.updateById(application);
     }
 
+    /**
+     * 拒绝审核
+     * @param id
+     */
     @Override
-    public void reviewPass(Long id) {
+    public void reject(Long id) {
         Application application = applicationMapper.selectById(id);
 
         //只有状态处于0(未审核)的数据才能进行审核

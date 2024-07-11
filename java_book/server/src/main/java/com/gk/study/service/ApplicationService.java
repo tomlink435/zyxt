@@ -12,5 +12,5 @@ public interface ApplicationService {
 
     void pass(Long id);
 
-    void reviewPass(Long id);
+    void reject(Long id);
 }

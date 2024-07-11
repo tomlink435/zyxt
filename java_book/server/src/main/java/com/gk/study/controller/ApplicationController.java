@@ -52,7 +52,7 @@ public class ApplicationController {
     /**
      * 审核通过
      */
-    @PutMapping(value = "/{id}/pass")
+    @PutMapping(value = "/pass/{id}")
     public APIResponse pass(@PathVariable Long id){
         log.info("审核通过application_id{}", id);
         applicationService.pass(id);
@@ -62,10 +62,10 @@ public class ApplicationController {
     /**
      * 审核拒绝
      */
-    @PutMapping(value = "/{id}/reject")
+    @PutMapping(value = "/reject/{id}/")
     public APIResponse reject(@PathVariable Long id){
         log.info("审核拒绝application_id{}", id);
-        applicationService.reviewPass(id);
+        applicationService.reject(id);
         return new APIResponse(ResponeCode.SUCCESS);
     }
 
