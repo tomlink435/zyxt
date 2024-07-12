@@ -31,19 +31,23 @@
       <a-spin :spinning="contentData.loading" style="min-height: 200px;">
 
         <div class="pc-book-list flex-view">
-          <div v-for="item in contentData.pageData" :key="item.id" @click="handleDetail(item)" class="book-item item-column-3"><!---->
+          <div v-for="item in contentData.pageData" :key="item.id"  class="book-item item-column-3"><!---->
             <div class="img-view">
                 <img :src="item.cover"/>
             </div>
             <div class="info-view">
             
-              <h3 class="book-name">{{item.title}}</h3>
+              <h3 class="book-name" @click="handleDetail(item)">{{item.title}}   <span :class="{'public': item.id % 2 === 0, 'private': item.id % 2 !== 0}">
+                {{ item.id % 2 === 0 ? '公开' : '非公开' }}
+              </span>
+            </h3>
+              
               <p class="authors"> {{item.author}} </p>
               <p class="translators" v-if="item.description"> {{item.description}} </p>
               <div class="button-container">
-            <el-button type="success" icon="el-icon-shopping-cart">加入资源车</el-button>
+            <el-button type="success" icon="el-icon-shopping-cart" @click="addToCart(item)">加入资源车</el-button>
             <el-button type="primary" @click="downloadFile">在线下载</el-button>
-            <el-button type="warning">收藏数据集</el-button>
+            <el-button type="warning">收藏数据集 </el-button>
           </div></div>
               
           </div>
@@ -141,11 +145,13 @@ const clickTag = (index) => {
 
 // 最新|最热|推荐
 const selectTab = (index) => {
+
   contentData.selectTabIndex = index
   contentData.tabUnderLeft = 12 + 50 * index
-  console.log(contentData.selectTabIndex)
+  
   let sort = (index === 0 ? 'recent' : index === 1 ? 'hot' : 'recommend')
   const data = {sort: sort}
+  
   if (contentData.selectTagId !== -1) {
     data['tag'] = contentData.selectTagId
   } else {
@@ -176,7 +182,7 @@ const getThingList = (data) => {
         // item.cover = BASE_URL + '/api/staticfiles/image/' +  item.cover
         item.cover = BASE_URL + '/api/staticfiles/image/' +  item.cover
         console.log('item.cover:'+item.cover)
-        // debugger
+     
       }
     })
     console.log(res)
@@ -187,6 +193,9 @@ const getThingList = (data) => {
     console.log(err)
     contentData.loading = false
   })
+}
+const addToCart=()=>{
+  router.push({name: 'cart'})
 }
 
 
@@ -710,5 +719,12 @@ li {
   color: #0F1111;
   font-size: 21px;
 }
+.public {
+  background-color: rgb(35, 233, 68);
+}
 
+.private {
+  background-color: rgb(223, 148, 151);
+  color: black;
+}
 </style>

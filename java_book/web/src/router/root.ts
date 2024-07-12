@@ -37,6 +37,12 @@ const constantRouterMap = [
         name: 'order',
         component: () => import('/@/views/index/order.vue')
    
+      }, 
+      {
+        path: 'cart',
+        name: 'cart',
+        component: () => import('/@/views/index/cart.vue')
+   
       }, {
         path: 'done',
         name: 'done',

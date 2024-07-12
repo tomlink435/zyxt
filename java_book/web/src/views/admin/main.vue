@@ -48,6 +48,11 @@
             <layout-outlined/>
             <span>分类管理</span>
           </a-menu-item>
+          <a-menu-item key="echarts">
+            <layout-outlined/>
+            <!-- <span><a href="https://babybrotherzb.github.io/my-datav/build/index.html" target="">数据可视化</a></span> -->
+            <span><a href="#" onclick="window.open('https://babybrotherzb.github.io/my-datav/build/index.html', '_blank')">数据可视化</a></span>
+          </a-menu-item>
           <!-- <a-menu-item key="tag">
             <tag-outlined/>
             <span>审批</span>

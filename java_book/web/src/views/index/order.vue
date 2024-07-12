@@ -1,7 +1,7 @@
 <template>
     <Header/>
   <div class="form-container">
-    <el-form  :model="form" label-width="100px" label-position="right">
+    <el-form  :model="form" label-width="200px" label-position="left">
       <!-- 基本信息 -->
       <el-card class="box-card" header="基本信息">
         <el-form-item
@@ -31,7 +31,7 @@
       </el-card>
 
       <!-- 用途信息 -->
-      <el-card class="box-card" header="用途信息">
+      <el-card class="box-card" header="用途信息" style="padding-bottom: 5%;">
         <el-form-item
           label="数据使用用途"
           :rules="[{ required: true, message: '请输入数据使用用途（不少于20字）', trigger: 'blur', min: 20 }]"
@@ -59,11 +59,12 @@
             <!-- 可添加更多选项 -->
           </el-select>
         </el-form-item>
+        <el-button type="primary" @click="onSubmit" style="float: right;">提交</el-button>
+
       </el-card>
 
       <!-- 按钮区域 -->
       <div class="button-container">
-        <el-button type="primary" @click="onSubmit">提交</el-button>
         <!-- <el-button type="warning" @click="onReset">清空</el-button> -->
       </div>
     </el-form>

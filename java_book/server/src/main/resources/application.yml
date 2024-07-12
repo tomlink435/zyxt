@@ -3,7 +3,7 @@
 server.servlet.context-path: /api
 
 
-BASE_LOCATION: D:\code\Java\code\JavaWeb\zyxt\java_book
+BASE_LOCATION: /Users/teresa/Program/Code/zyxt/java_book
 #DB_NAME: java_book
 
 springfox:
