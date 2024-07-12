@@ -74,6 +74,7 @@
 <script setup>
 import Header from '/@/views/index/components/header.vue'
 import Footer from '/@/views/index/components/footer.vue'
+import { saveApi } from "/@/api/application";
 const router = useRouter();
 const route = useRoute();
   
@@ -92,7 +93,7 @@ const route = useRoute();
 
     // // 提交表单
     const onSubmit=()=> {
-      
+      saveApi(form)
           alert('提交成功！');
           console.log('提交的数据：', form);
           // this.$router.push({ name: 'done', params: { form: this.form } });
