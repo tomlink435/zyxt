@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header />
+    
     <el-main>
       <el-card class="box-card">
         <div class="success-message">
@@ -30,12 +31,33 @@
               <el-input v-model="form.projectType" disabled></el-input>
             </el-form-item>
           </el-form>
-          <el-button type="primary" @click="goToList">资源列表</el-button>
+          <el-button type="primary" @click="dialogVisible = true">支付</el-button>
+         
         </div>
       </el-card>
+      <el-dialog
+    v-model="dialogVisible"
+    title="请付款"
+    width="700"
+  
+  >
+    <span><img style="width: 45%;" src="/src/views/images/IMG_3598.JPG"></span>
+    <span><img style="width: 45%; margin-left: 10%;" src="/src/views/images/IMG_3599.JPG"></span>
+    <template #footer>
+      <div class="dialog-footer">
+        <!-- <el-button @click="dialogVisible = false">关闭</el-button> -->
+        <el-button type="primary" @click="dialogVisible = false">
+          关闭
+        </el-button>
+      </div>
+    </template>
+  </el-dialog>
+
     </el-main>
+   
     <Footer />
   </div>
+ 
 </template>
 
 <script setup>
@@ -45,6 +67,8 @@ import Header from '/@/views/index/components/header.vue'
 import Footer from '/@/views/index/components/footer.vue'
 import { Check } from '@element-plus/icons-vue';
 import { reactive } from 'vue';
+const dialogVisible = ref(false);
+import { useRouter, useRoute } from 'vue-router';
 const router = useRouter();
 const route = useRoute();
 const form = reactive({
@@ -77,6 +101,11 @@ const form = reactive({
     
     };
   
+  const pay = () => {
+    
+    dialogVisible.value=true;
+    console.log('-----', dialogVisible.value);
+  };
 </script>
 
 <style scoped>

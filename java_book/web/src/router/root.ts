@@ -136,7 +136,8 @@ const constantRouterMap = [
   {
     path: '/admin',
     name: 'admin',
-    redirect: '/admin/overview',
+    // redirect: '/admin/overview',
+    redirect: '/admin/thing',
     component: () => import('/@/views/admin/main.vue'),
     children: [
       { path: 'overview', name: 'overview', component: () => import('/@/views/admin/overview.vue') },

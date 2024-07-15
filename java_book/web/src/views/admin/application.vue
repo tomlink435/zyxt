@@ -214,7 +214,6 @@ const handleAdd = () => {
 };
 const handleEdit = (record: any) => {
   console.log(record.id)
-  debugger
   passApi({id:record.id})
   .then((res) => {
     getDataList();

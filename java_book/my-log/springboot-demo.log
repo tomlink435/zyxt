@@ -1468,3 +1468,11 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'java_book2.B_classification'
 2024-07-12 17:17:08.236 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 41 ] - 展示数据key:null, sort:recommend, c:null, tag:null
 2024-07-12 17:31:32.606 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 41 ] - 展示数据key:null, sort:recommend, c:null, tag:null
 2024-07-12 17:32:50.892 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 41 ] - 展示数据key:null, sort:recommend, c:null, tag:null
+2024-07-12 17:33:22.990 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 41 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-07-12 17:33:23.012 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 41 ] - 展示数据key:null, sort:recommend, c:null, tag:null
+2024-07-12 17:33:23.534 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 41 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-07-12 19:10:37.722 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 41 ] - 展示数据key:null, sort:recommend, c:null, tag:null
+2024-07-12 19:10:38.357 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 41 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-07-12 19:10:39.278 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 41 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-07-12 23:25:16.071 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-07-12 23:25:16.080 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed

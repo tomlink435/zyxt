@@ -3,6 +3,8 @@
 
     <nav>
       <ul>
+        <img src="/src/views/images/zjn.png " style="width: 3%; margin-right: 2%;" />
+  
         <li><router-link to="/">首页</router-link></li>
         <li><router-link to="echarts">数据资源</router-link></li>
         <li><router-link to="/physical-resources">实物资源</router-link></li>

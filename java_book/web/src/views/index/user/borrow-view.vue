@@ -2,9 +2,9 @@
   <div class="content-list">
     <div class="list-title">我的申请</div>
     <a-tabs default-active-key="1" @change="onTabChange">
-      <a-tab-pane key="1" tab="全部">
-      </a-tab-pane>
-      <a-tab-pane key="2" tab="待提交审核">
+      <!-- <a-tab-pane key="1" tab="全部">
+      </a-tab-pane> -->
+      <!-- <a-tab-pane key="2" tab="待提交审核">
       </a-tab-pane>
       <a-tab-pane key="3" tab="待审核">
       </a-tab-pane>
@@ -13,15 +13,15 @@
 	<a-tab-pane key="5" tab="审核通过">
 	</a-tab-pane>
 	<a-tab-pane key="6" tab="审核未通过">
-	</a-tab-pane>
+	</a-tab-pane> -->
     </a-tabs>
     <div class="list-content">
-      <div class="order-item-view" v-for="(item, index) in borrowData" :key="index">
+      <div class="order-item-view" v-for="(item, index) in borrowData" :key="index" v-show="(item.status===1||item.status==0)&&item.id<4">
         <div class="header flex-view">
           <div class="left">
-            <span class="text">序号</span>
+            <!-- <span class="text">序号</span>
             <span class="num mg-4">#</span>
-            <span class="num">{{item.id}}</span>
+            <span class="num">{{item.}}</span> -->
             <span class="time">{{getFormatTime(item.orderTime, true)}}</span>
           </div>
           <div class="right">
@@ -43,8 +43,8 @@
             >
               <a-button size="small" style="margin-right: 24px;">延期</a-button>
             </a-popconfirm>
-            <span class="text">图书状态</span>
-            <span class="state">{{item.status==='1'? '在借': item.status === '2'? '已还':'--'}}</span>
+            <span class="text">申请状态</span>
+            <span class="state">{{item.status===0? '审批通过': item.status === 1? '待审核':'-'}}</span>
           </div>
         </div>
         <div class="content flex-view">
@@ -60,20 +60,20 @@
             </div>
           </div>
           <div class="right-info">
-            <p class="title">借阅人</p>
-            <p class="name">{{item.username}}
+            <p class="title">申请人:{{item.name}}</p>
+            <p class="name">
             </p>
-            <p class="title">应还时间</p>
-            <p class="text">{{getFormatTime(item.expectTime, true)}}
+            <p class="title">描述:{{item.description}}</p>
+            <p class="text">
             </p>
-            <p class="title">备注信息</p>
-            <p class="text">{{item.remark}}
+            <p class="title">目的:{{item.purpose}}</p>
+            <p class="text">
             </p>
           </div>
         </div>
         <div class="bottom flex-view">
           <div class="left">
-            <span class="open" @click="handleDetail(item.thingId)">图书详情</span>
+            <span class="open" @click="handleDetail(item.thingId)">数据详情</span>
           </div>
         </div>
       </div>
@@ -85,6 +85,7 @@
 import {message} from "ant-design-vue";
 import {getFormatTime} from '/@/utils/'
 import {userBorrowListApi, returnUserBorrowApi, delayUserBorrowApi} from '/@/api/borrow'
+import { listApi } from "/@/api/application";
 import {BASE_URL} from "/@/store/constants";
 import {useUserStore} from "/@/store";
 
@@ -116,22 +117,28 @@ const onTabChange =(key)=> {
 const getDataList= ()=> {
   loading.value = true
   let userId = userStore.user_id
-  userBorrowListApi({userId: userId, status: borrowStatus.value}).then(res => {
-    res.data.forEach((item, index) => {
-      if (item.cover) {
-        item.cover = BASE_URL + '/api/staticfiles/image/' + item.cover
-      }
-    })
+  listApi().then(res=>{
+    
     borrowData.value = res.data
-    loading.value = false
-  }).catch(err => {
-    console.log(err)
-    loading.value = false
+    console.log(borrowData)
+
   })
+  // userBorrowListApi({userId: userId, status: borrowStatus.value}).then(res => {
+  //   res.data.forEach((item, index) => {
+  //     if (item.cover) {
+  //       item.cover = BASE_URL + '/api/staticfiles/image/' + item.cover
+  //     }
+  //   })
+  //   borrowData.value = res.data
+  //   loading.value = false
+  // }).catch(err => {
+  //   console.log(err)
+  //   loading.value = false
+  // })
 }
 const handleDetail =(thingId) =>{
   // 跳转新页面
-  let text = router.resolve({name: 'detail', query: {id: thingId}})
+  let text = router.resolve({name: 'detail', query: {id: 98}})
   window.open(text.href, '_blank')
 }
 const handleReturn =(item)=> {
