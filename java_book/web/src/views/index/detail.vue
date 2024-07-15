@@ -414,7 +414,7 @@ const downloadFile=()=> {
 
     }
     const addToCart=()=>{
-  router.push({name: 'cart'})
+  router.push({name: 'myCart'})
 }
 </script>
 <style scoped lang="less">

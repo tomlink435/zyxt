@@ -32,11 +32,15 @@
       </div>
     </div> -->
     <div class="order-box" >
-      <div class="title">申请中心</div>
+      <div class="title">数据中心</div>
       <div class="list">
         <div class="mine-item flex-view" @click="clickMenu('borrowView')">
           <img :src="MyOrderImg">
           <span>我的申请</span>
+        </div>
+        <div class="mine-item flex-view" @click="clickMenu('myCart')">
+          <img :src="MyOrderImg">
+          <span>我的资源车</span>
         </div>
         <!-- <div class="mine-item flex-view" @click="clickMenu('commentView')">
           <img :src="CommentIconImg">

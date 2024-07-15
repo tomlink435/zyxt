@@ -85,6 +85,11 @@ const constantRouterMap = [
             component: () => import('/@/views/index/user/borrow-view.vue')
           },
           {
+            path: 'myCart',
+            name: 'myCart',
+            component: () => import('/@/views/index/user/cart.vue')
+          },
+          {
             path: 'userInfoEditView',
             name: 'userInfoEditView',
             component: () => import('/@/views/index/user/userinfo-edit-view.vue')
