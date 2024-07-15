@@ -200,7 +200,7 @@ const addToCart=()=>{
 
 const downloadFile=(item)=> {
   console.log(item)
-  debugger
+  // debugger
   if(item.id%2==1){
     let userId = userStore.user_id
   if (userId) {
