@@ -52,9 +52,9 @@ server:
 
 spring:
   datasource:
-    url : jdbc:mysql://123.60.10.11:3306/java_book2
+    url : jdbc:mysql://59.110.91.184:3306/java_book2
     username : root
-    password : Zhlyc123.
+    password : zygj7478
     driverClassName : com.mysql.cj.jdbc.Driver
 
 zyxt:

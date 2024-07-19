@@ -45,7 +45,7 @@
               <p class="authors"> {{item.author}} </p>
               <p class="translators" v-if="item.description"> {{item.description}} </p>
               <div class="button-container">
-            <el-button type="success" icon="el-icon-shopping-cart" @click="addToCart(item)">加入资源车</el-button>
+            <el-button type="success"  @click="addToCart(item)">加入资源车</el-button>
             <el-button type="primary" @click="downloadFile(item)">在线下载</el-button>
             <el-button type="warning">收藏数据集 </el-button>
           </div></div>

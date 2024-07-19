@@ -19,7 +19,7 @@
           <p>CSTR标识符: <a href="#">15732.11.nesdc.ecodb.rs.2023.016</a></p>
           <p>DOI标识符: <a href="#">10.12199/nesdc.ecodb.rs.2023.016</a></p>
           <div class="button-container">
-            <el-button type="success" icon="el-icon-shopping-cart" @click="addToCart()">加入资源车</el-button>
+            <el-button type="success" @click="addToCart()">加入资源车</el-button>
             <el-button type="primary" @click="downloadFile">在线下载</el-button>
             <el-button type="warning">收藏数据集</el-button>
           </div>
@@ -107,8 +107,9 @@
 					  </el-menu>
 					  <br />
 					<!-- 数据项 -->
-					<div v-if=" PageIndex == 1 ">
+					<div v-if=" PageIndex.value == 1 ">
 					     <el-table :data="resourceInfo" border style="width: 100%">
+                
 					        <el-table-column true prop="name" label="name" width="180" />
 					        <el-table-column prop="application" label="application" width="180" />
 					        <el-table-column prop="updateCycle" label="updateCycle" />
@@ -165,6 +166,15 @@
 						资源评价
 					</div>
 				</div>
+        <div style="width: auto;">摘要：中国作为陆地生态系统的重要组成部分，其碳收支情况将会对全球碳循环
+产生深刻影响。本文通过收集整理期刊文献中的碳密度数据，同时结合课题组相
+关实验测试数据，构建了一套全面系统的植被和土壤碳密度数据集。本数据集覆
+盖了森林、草地、农田、湿地和灌丛等主要生态系统类型，包含了植被地上碳密
+度、植被地下碳密度和不同深度（0–20 cm 和 0–100 cm）土壤有机碳密度。2010s
+中国陆地生态系统碳密度数据集的建立和共享，为区域植被生物量和生态系统碳
+储量评估，生态系统质量评估，以及模型优化提供了重要的基础数据。
+关键词：中国；陆地生态系统；碳密度</div>
+
 			</div>
 		</div>
     <Footer/>
@@ -177,6 +187,7 @@
 	const handleSelect = (index)=>{
 		// 动态渲染页面--根据index
 		PageIndex.value = index;
+    
 	}
 	const files = ref([
 	        { format: 'CSV', name: '药品生产许可证信息查询_20240622085343.csv', size: '274B', updateDate: '2024-06-22' },

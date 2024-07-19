@@ -16,7 +16,7 @@
 	</a-tab-pane> -->
     </a-tabs>
     <div class="list-content">
-      <div class="order-item-view" v-for="(item, index) in borrowData" :key="index" v-show="(item.status===1||item.status==0)&&item.id<4">
+      <div class="order-item-view" v-for="(item, index) in borrowData  " :key="index" v-show="(item.status===1||item.status==0)&&item.id>=28">
         <div class="header flex-view">
           <div class="left">
             <!-- <span class="text">序号</span>
@@ -44,13 +44,14 @@
               <a-button size="small" style="margin-right: 24px;">延期</a-button>
             </a-popconfirm>
             <span class="text">申请状态</span>
-            <span class="state">{{item.status===0? '审批通过': item.status === 1? '待审核':'-'}}</span>
+            <span class="state">{{item.status===0? '待审批': item.status === 1? '审批通过':'审批未通过'}}</span>
           </div>
         </div>
         <div class="content flex-view">
           <div class="left-list">
             <div class="list-item flex-view">
-              <img :src="item.cover" class="thing-img">
+              <!-- <img :src="item.cover" class="thing-img"> -->
+              <img src="/src/views/images/1.png" style="width: 15%;height: 100%;" class="thing-img">
               <div class="detail flex-between flex-view">
                 <div class="flex-between flex-top flex-view">
                   <h2 class="name">{{item.title}}</h2>
@@ -118,9 +119,17 @@ const getDataList= ()=> {
   loading.value = true
   let userId = userStore.user_id
   listApi().then(res=>{
-    
+    res.data.forEach((item, index) => {
+      
+        // console.log('index',index)
+        // item.cover = BASE_URL + '/api/staticfiles/image/' + '1.png'
+        // item.cover = BASE_URL + '/api/staticfiles/image/' + '1.png'
+        // console.log(item.cover)
+      })
     borrowData.value = res.data
     console.log(borrowData)
+    // borrowData.value=borrowData.value.slice().reverse()
+    // console.log(borrowData)
 
   })
   // userBorrowListApi({userId: userId, status: borrowStatus.value}).then(res => {

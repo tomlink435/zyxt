@@ -4,7 +4,7 @@
     <nav>
       <ul>
         <img src="/src/views/images/zjn.png " style="width: 3%; margin-right: 2%;" />
-  
+        <span style="font-size:20px; color: aliceblue; padding-right: 10%;">生态资源数据共享服务平台</span>
         <li><router-link to="/">首页</router-link></li>
         <li><router-link to="echarts">数据资源</router-link></li>
         <li><router-link to="/physical-resources">实物资源</router-link></li>
@@ -15,7 +15,7 @@
       </ul>
     </nav>
     <div class="auth-links">
-      <router-link to="/physical-resources">关于我们</router-link>
+      <router-link to="/physical-resources" ></router-link>
       <!-- <router-link to="/register">注册</router-link> | <router-link to="/login">登录</router-link> -->
       <template v-if="userStore.user_token">
         <a-dropdown>
@@ -183,7 +183,7 @@ nav a {
 .auth-links a {
   color: white;
   text-decoration: none;
-  margin-left: 10px;
+  /* margin-left: -94px; */
 }
 
 nav a.router-link-active {

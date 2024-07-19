@@ -1,11 +1,11 @@
 <template>
   <div class="footer-view">
     <div class="foot-link-box flex-view">
-      <a href="" class="foot-link" target="_blank">系统文档</a>
+      <!-- <a href="" class="foot-link" target="_blank">系统文档</a>
       <div class="link-split"></div>
       <a href="/admin" class="foot-link" target="_blank">后台管理</a>
       <div class="link-split"></div>
-      <a href="" class="foot-link" target="_blank">关于我们</a>
+      <a href="" class="foot-link" target="_blank">关于我们</a> -->
     </div>
     <div class="footer-infos">
       <span>

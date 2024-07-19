@@ -9,7 +9,7 @@
             <Check />
           </el-icon>
           <!-- <p>您的公开共享数据订单 (ODJC20240704144930638) 已提交，您可以到 <a href="#"><router-link to="usercenter/borrowView">个人中心</router-link></a> 里下载数据（15天内有效）。</p> -->
-          <p>您的公开共享数据订单 (ODJC20240704144930638) 已提交，您可以在审核通过后下载数据（15天内有效）。</p>
+          <p>您的公开共享数据订单 (ODJC20240704144930638) 已提交，您可以在审核通过后下载数据（15天内有效）。点击跳转<a :href="'usercenter/borrowView'">个人中心</a></p>
         </div>
         <el-steps :active="2" finish-status="success" class="steps">
           <el-step title="选择数据"></el-step>

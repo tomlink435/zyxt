@@ -28,12 +28,17 @@
         <template #bodyCell="{ text, record, index, column }">
           <template v-if="column.key === 'operation'">
             <span>
-              <a @click="handleEdit(record)">通过</a>
+              <!-- <a @click="handleEdit(record)">通过</a>
               <a-divider type="vertical" />
-              <a @click="reject(record)">否决</a>
-              <!-- <a-popconfirm title="确定删除?" ok-text="是" cancel-text="否" @confirm="confirmDelete(record)"> -->
-                <!-- <a href="#">否决</a> -->
-              <!-- </a-popconfirm> -->
+              <a @click="reject(record)">否决</a> -->
+              <a-popconfirm title="确定通过?" ok-text="是" cancel-text="否" @confirm="handleEdit(record)">
+                <a href="#">通过</a>
+              </a-popconfirm>
+              <a-divider type="vertical" />
+
+              <a-popconfirm title="确定不通过?" ok-text="是" cancel-text="否" @confirm="reject(record)">
+                <a href="#">不通过</a>
+              </a-popconfirm>
             </span>
           </template>
         </template>
