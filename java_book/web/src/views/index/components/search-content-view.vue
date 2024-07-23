@@ -89,7 +89,7 @@ const getThingList = (data) => {
   listThingList(data).then(res => {
     res.data.forEach((item, index) => {
       if (item.cover) {
-        item.cover = BASE_URL + '/api/staticfiles/image/' + item.cover
+        item.cover =  item.cover
       }
     })
     tData.thingData = res.data

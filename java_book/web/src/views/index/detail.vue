@@ -284,7 +284,7 @@ const getThingDetail =()=> {
     detailData.value = res.data
     console.log('-----',detailData.value.id)
     // debugger
-    detailData.value.cover = BASE_URL + '/api/staticfiles/image/' + detailData.value.cover
+    detailData.value.cover =  detailData.value.cover
 
    
 
@@ -341,7 +341,7 @@ const getRecommendThing =()=> {
   listThingList({sort: 'recommend'}).then(res => {
     res.data.forEach((item, index) => {
       if (item.cover) {
-        item.cover = BASE_URL + '/api/staticfiles/image/' + item.cover
+        item.cover =  item.cover
       }
     })
     console.log(res)
