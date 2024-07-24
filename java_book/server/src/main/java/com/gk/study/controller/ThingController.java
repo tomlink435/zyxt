@@ -6,6 +6,7 @@ import com.gk.study.entity.Thing;
 import com.gk.study.permission.Access;
 import com.gk.study.permission.AccessLevel;
 import com.gk.study.service.ThingService;
+import com.gk.study.utils.AliOssUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,6 +34,9 @@ public class ThingController {
     @Autowired
     ThingService service;
 
+    @Autowired
+    private AliOssUtil aliOssUtil;
+
     @Value("${File.uploadPath}")
     private String uploadPath;
 
@@ -49,11 +53,17 @@ public class ThingController {
         return new APIResponse(ResponeCode.SUCCESS, "查询成功", thing);
     }
 
+    /**
+     * 上传数据
+     * @param thing
+     * @return
+     * @throws IOException
+     */
     @Access(level = AccessLevel.ADMIN)
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @Transactional
     public APIResponse create(Thing thing) throws IOException {
-        String url = saveThing(thing);
+        String url = uploadImage(thing.getImageFile());
         if(!StringUtils.isEmpty(url)) {
             thing.cover = url;
         }
@@ -73,16 +83,21 @@ public class ThingController {
         return new APIResponse(ResponeCode.SUCCESS, "删除成功");
     }
 
+    /**
+     * 更新数据
+     * @param thing
+     * @return
+     * @throws IOException
+     */
     @Access(level = AccessLevel.ADMIN)
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     @Transactional
     public APIResponse update(Thing thing) throws IOException {
         System.out.println(thing);
-        String url = saveThing(thing);
+        String url = uploadImage(thing.getImageFile());
         if(!StringUtils.isEmpty(url)) {
             thing.cover = url;
         }
-
         service.updateThing(thing);
         return new APIResponse(ResponeCode.SUCCESS, "更新成功");
     }
@@ -109,4 +124,22 @@ public class ThingController {
         return newFileName;
     }
 
+    //上传图片
+    public String uploadImage(MultipartFile file){
+        log.info("上传图片:{}", file);
+
+        try {
+            //原始文件名
+            String originalFilename = file.getOriginalFilename();
+            //截取原始文件名后缀 img.png
+            String extension = originalFilename.substring(originalFilename.lastIndexOf("."));
+            //构造新文件名称
+            String objectName = UUID.randomUUID().toString() + extension;
+            //文件的请求路径
+            String filePath = aliOssUtil.upload(file.getBytes(), objectName);
+            return filePath;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
