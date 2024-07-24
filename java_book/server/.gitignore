@@ -18,6 +18,7 @@ target/
 *.iml
 *.ipr
 *.yml
+java_book/server/src/main/resources/application.yml
 
 ### NetBeans ###
 /nbproject/private/
