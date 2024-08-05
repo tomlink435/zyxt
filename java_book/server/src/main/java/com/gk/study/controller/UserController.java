@@ -288,7 +288,7 @@ public class UserController {
 
     @PostMapping("/userLogout")
     public APIResponse logout(HttpServletRequest request){
-        log.info("用户登出:{}", request);
+        log.info("用户登出:test{}", request);
         userService.logout(request);
         return new APIResponse(ResponeCode.SUCCESS, "登出成功");
     }
