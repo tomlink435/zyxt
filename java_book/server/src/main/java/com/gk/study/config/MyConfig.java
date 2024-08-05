@@ -1,11 +1,13 @@
 package com.gk.study.config;
 
-import com.gk.study.interceptor.AccessInterceptor;
 //import lombok.Value;
 
+import com.gk.study.interceptor.LoginInterceptor;
+import com.gk.study.interceptor.RefreshTokenInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -14,7 +16,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class MyConfig implements WebMvcConfigurer {
-
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
@@ -38,15 +41,16 @@ public class MyConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        // 自定义拦截器
-        registry.addInterceptor(new AccessInterceptor());
+        registry.addInterceptor(new RefreshTokenInterceptor(stringRedisTemplate)).order(0);
+        registry.addInterceptor(new LoginInterceptor(stringRedisTemplate))
+                        .excludePathPatterns(
+                                "/user/**"
+                        ).order(1);
 
     }
 
 
     @Value("${File.uploadPath}")
     private String uploadpath;
-
-
 
 }

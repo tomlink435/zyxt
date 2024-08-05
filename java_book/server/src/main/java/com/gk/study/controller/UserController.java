@@ -7,6 +7,7 @@ import com.gk.study.common.ResponeCode;
 import com.gk.study.entity.User;
 import com.gk.study.permission.Access;
 import com.gk.study.permission.AccessLevel;
+import com.gk.study.pojo.DTO.LoginFormDTO;
 import com.gk.study.pojo.DTO.UserLoginDTO;
 import com.gk.study.pojo.VO.UserLoginVO;
 import com.gk.study.pojo.entity.UserLogin;
@@ -75,10 +76,11 @@ public class UserController {
         }
     }
 
-//    // 普通用户登录
-//    @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
-//    public APIResponse userLogin(User user){
-//        log.info("用户登录{}", user);
+//    @PostMapping("/userLogin")
+//    public APIResponse userLogin(UserLoginDTO userLoginDTO){
+//        log.info("用户登录{}", userLoginDTO);
+//        User user = new User();
+//        BeanUtils.copyProperties(userLoginDTO, user);
 //
 //        //用户输入账密
 //        user.setPassword(DigestUtils.md5DigestAsHex((user.getPassword() + salt).getBytes()));
@@ -86,42 +88,23 @@ public class UserController {
 //
 //        //验证账密
 //        if(responseUser != null) {
-//            return new APIResponse(ResponeCode.SUCCESS, "查询成功", responseUser);
+//            //为用户生成Jwt令牌
+//            HashMap<String, Object> claims = new HashMap<>();
+//            claims.put("userId", responseUser.getId());
+//            String token = JwtUtil.createJWT(jwtProperties.getUserSecretKey(), jwtProperties.getUserTtl(), claims);
+//
+//            UserLoginVO userLoginVO = UserLoginVO.builder()
+//                    .username(user.getUsername())
+//                    .password(user.getPassword())
+//                    .token(token)
+//                    .id(responseUser.getId())
+//                    .build();
+//
+//            return new APIResponse(ResponeCode.SUCCESS, "查询成功", userLoginVO);
 //        }else {
 //            return new APIResponse(ResponeCode.FAIL, "用户名或密码错误");
 //        }
 //    }
-
-    @PostMapping("/userLogin")
-    public APIResponse userLogin(UserLoginDTO userLoginDTO){
-        log.info("用户登录{}", userLoginDTO);
-
-        User user = new User();
-        BeanUtils.copyProperties(userLoginDTO, user);
-
-        //用户输入账密
-        user.setPassword(DigestUtils.md5DigestAsHex((user.getPassword() + salt).getBytes()));
-        User responseUser =  userService.getNormalUser(user);
-
-        //验证账密
-        if(responseUser != null) {
-            //为用户生成Jwt令牌
-            HashMap<String, Object> claims = new HashMap<>();
-            claims.put("userId", responseUser.getId());
-            String token = JwtUtil.createJWT(jwtProperties.getUserSecretKey(), jwtProperties.getUserTtl(), claims);
-
-            UserLoginVO userLoginVO = UserLoginVO.builder()
-                    .username(user.getUsername())
-                    .password(user.getPassword())
-                    .token(token)
-                    .id(responseUser.getId())
-                    .build();
-
-            return new APIResponse(ResponeCode.SUCCESS, "查询成功", userLoginVO);
-        }else {
-            return new APIResponse(ResponeCode.FAIL, "用户名或密码错误");
-        }
-    }
 
     // 普通用户注册
     @RequestMapping(value = "/userRegister", method = RequestMethod.POST)
@@ -152,8 +135,6 @@ public class UserController {
             }
             // 设置角色
             user.setRole(String.valueOf(User.NormalUser));
-            // 设置状态
-            user.setStatus("0");
             user.setCreateTime(String.valueOf(System.currentTimeMillis()));
 
             userService.createUser(user);
@@ -285,5 +266,22 @@ public class UserController {
             user.avatar = newFileName;
         }
         return newFileName;
+    }
+
+
+    /**
+     * 发送手机验证码
+     * @return
+     */
+    @PostMapping("/code/{phone}")
+    public APIResponse sendCode(@PathVariable("phone") String phone){
+        log.info("发送手机验证码:{}", phone);
+        return userService.sendCode(phone);
+    }
+
+    @PostMapping("/userLogin")
+    public APIResponse login(@RequestBody LoginFormDTO loginFormDTO){
+        log.info("用户登录:{}", loginFormDTO);
+        return userService.login(loginFormDTO);
     }
 }
