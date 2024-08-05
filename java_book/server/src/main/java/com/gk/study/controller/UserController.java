@@ -25,6 +25,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
@@ -284,4 +285,12 @@ public class UserController {
         log.info("用户登录:{}", loginFormDTO);
         return userService.login(loginFormDTO);
     }
+
+    @PostMapping("/userLogout")
+    public APIResponse logout(HttpServletRequest request){
+        log.info("用户登出:{}", request);
+        userService.logout(request);
+        return new APIResponse(ResponeCode.SUCCESS, "登出成功");
+    }
+
 }

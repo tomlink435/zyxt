@@ -23,6 +23,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
@@ -129,11 +130,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         stringRedisTemplate.opsForValue().set("user:phone:" + phone, code, 5, TimeUnit.MINUTES);
 
         //5.发送验证码
-        try {
-            sendSmsUtils.sendCode(phone, code);
-        } catch (Exception e) {
-            return new APIResponse(ResponeCode.FAIL, "验证码发送失败");
-        }
+//        try {
+//            sendSmsUtils.sendCode(phone, code);
+//        } catch (Exception e) {
+//            return new APIResponse(ResponeCode.FAIL, "验证码发送失败");
+//        }
         return new APIResponse(ResponeCode.SUCCESS);
     }
 
@@ -191,5 +192,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
                 .token(token)
                 .build();
         return new APIResponse(ResponeCode.SUCCESS, userVO);
+    }
+
+    /**
+     * 用户登出
+     * @param request
+     */
+    @Override
+    public void logout(HttpServletRequest request) {
+        String token = request.getHeader("authorization");
+        stringRedisTemplate.delete("login:token:" + token);
     }
 }

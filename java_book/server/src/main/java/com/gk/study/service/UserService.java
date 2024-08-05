@@ -5,6 +5,7 @@ import com.gk.study.common.APIResponse;
 import com.gk.study.entity.User;
 import com.gk.study.pojo.DTO.LoginFormDTO;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -25,4 +26,6 @@ public interface UserService {
     APIResponse sendCode(String phone);
 
     APIResponse login(LoginFormDTO loginFormDTO);
+
+    void logout(HttpServletRequest request);
 }
