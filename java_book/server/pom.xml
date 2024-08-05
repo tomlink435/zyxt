@@ -117,6 +117,27 @@
             <artifactId>hutool-all</artifactId>
             <version>5.7.17</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>dysmsapi20170525</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>tea-openapi</artifactId>
+            <version>0.3.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>tea-console</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>tea-util</artifactId>
+            <version>0.2.22</version>
+        </dependency>
     </dependencies>
 
     <build>

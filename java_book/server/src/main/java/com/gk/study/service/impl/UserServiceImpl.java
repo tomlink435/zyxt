@@ -16,6 +16,7 @@ import com.gk.study.service.UserService;
 import com.gk.study.entity.User;
 import com.gk.study.mapper.UserMapper;
 import com.gk.study.utils.RegexUtils;
+import com.gk.study.utils.SendSmsUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
+
+    @Autowired
+    private SendSmsUtils sendSmsUtils;
 
 
     @Override
@@ -125,7 +129,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         stringRedisTemplate.opsForValue().set("user:phone:" + phone, code, 5, TimeUnit.MINUTES);
 
         //5.发送验证码
-        return new APIResponse(ResponeCode.SUCCESS, code);
+        try {
+            sendSmsUtils.sendCode(phone, code);
+        } catch (Exception e) {
+            return new APIResponse(ResponeCode.FAIL, "验证码发送失败");
+        }
+        return new APIResponse(ResponeCode.SUCCESS);
     }
 
     @Override
