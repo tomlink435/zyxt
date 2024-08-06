@@ -34,7 +34,7 @@ public class SendSmsUtils {
         //3.创建SendSmsRequest实例
         SendSmsRequest sendSmsRequest = new SendSmsRequest()
                 .setSignName("中旸新碳数字科技")
-                .setTemplateCode("SMS_471445095")
+                .setTemplateCode("SMS_471475188")
                 .setPhoneNumbers(phone)
                 .setTemplateParam("{\"code\":"+ code+ "}");
 
