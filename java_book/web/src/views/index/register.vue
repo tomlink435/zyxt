@@ -19,6 +19,27 @@
       </div>
       <div class="regist-padding">
         <div class="common-input">
+          <img :src="MailIcon" class="left-icon">
+          <div class="input-view">
+            <input placeholder="请输入手机号" v-model="tData.loginForm.phone" type="text" class="input">
+            <p class="err-view">
+            </p>
+            <el-button type="primary" class="send-code-btn" @click="sendSMS()">发送验证码</el-button>
+          </div>
+        </div>
+      </div>
+      <div class="regist-padding">
+        <div class="common-input">
+          <img :src="PwdIcon" class="left-icon">
+          <div class="input-view">
+            <input placeholder="请输入验证码" v-model="tData.loginForm.repassword" type="password" class="input">
+            <p class="err-view">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="regist-padding">
+        <div class="common-input">
           <img :src="PwdIcon" class="left-icon">
           <div class="input-view">
             <input placeholder="请输入密码" v-model="tData.loginForm.password" type="password" class="input">
@@ -47,16 +68,18 @@
 </template>
 
 <script setup lang="ts">
-import {userRegisterApi} from '/@/api/user'
+import {userRegisterApi,sendCodeApi} from '/@/api/user'
 import {message} from "ant-design-vue";
 import MailIcon from '/@/assets/images/mail-icon.svg';
 import PwdIcon from '/@/assets/images/pwd-icon.svg';
+
 
 const router = useRouter();
 
 const tData = reactive({
   loginForm: {
     username: '',
+    phone:'',
     password: '',
     repassword: ''
   }
@@ -66,15 +89,17 @@ const handleRegister = () => {
   console.log('login')
   if(tData.loginForm.username === ''
     || tData.loginForm.password === ''
-    || tData.loginForm.repassword === ''){
+    || tData.loginForm.repassword === ''|| tData.loginForm.phone === ''){
     message.warn('不能为空！')
     return;
   }
+ 
 
   userRegisterApi({
     username: tData.loginForm.username,
     password: tData.loginForm.password,
-    rePassword: tData.loginForm.repassword
+    rePassword: tData.loginForm.repassword,
+    phone: tData.loginForm.phone
   }).then(res => {
     message.success('注册成功！')
     router.push({name: 'login'})
@@ -83,7 +108,17 @@ const handleRegister = () => {
   })
 }
 
+const sendSMS = () => {
+  sendCodeApi({
+    phone: tData.loginForm.phone
+  }).then(res => {
+    message.success('发送成功！')
+  }).catch(err => {
+    message.error(err.msg || '发送失败')
+  })
+}
 
+  
 </script>
 
 <style scoped lang="less">

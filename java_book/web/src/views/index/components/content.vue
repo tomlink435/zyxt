@@ -205,6 +205,7 @@ const addToCart=()=>{
 const downloadFile=(item)=> {
   console.log(item)
   // debugger
+  //非公开
   if(item.id%2==1){
     let userId = userStore.user_id
   if (userId) {
@@ -215,14 +216,22 @@ const downloadFile=(item)=> {
 	console.log('下载文件')
   } 
   else {
-    message.warn('请先登录！')
+    alert('请登录后下载！')
     router.push({name: 'login'})
   }
     }
     else{
+      let userId = userStore.user_id
+      if(userId){
+        window.open('https://gitee.com/WananRd/TrainTicketSystem/raw/master/%E3%80%90%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3%E3%80%912018-2024%E5%B9%B4%E4%B8%AD%E5%9B%BD10%E7%B1%B3%E7%A9%BA%E9%97%B4%E5%88%86%E8%BE%A8%E7%8E%87%E5%86%AC%E5%B0%8F%E9%BA%A6%E8%AF%86%E5%88%AB%E6%95%B0%E6%8D%AE%E9%9B%86.xls')
+
+      }
+      else{
+        alert('请登录后下载！')
+    router.push({name: 'login'})
+      }
       // window.open("src/views/index/resources/【数据说明文档】2010s中国陆地生态系统碳密度数据集.xls")
       // window.open('https://gitee.com/WananRd/TrainTicketSystem/raw/master/%E3%80%90%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3%E3%80%912018-2024%E5%B9%B4%E4%B8%AD%E 5%9B%BD10%E7%B1%B3%E7%A9%BA%E9%97%B4%E5%88%86%E8%BE%A8%E7%8E%87%E5%86%AC%E5%B0%8F%E9%BA%A6%E8%AF%86%E5%88%AB%E6%95%B0%E6%8D%AE%E9%9B%86.xl','_blank')
-    window.open('https://gitee.com/WananRd/TrainTicketSystem/raw/master/%E3%80%90%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3%E3%80%912018-2024%E5%B9%B4%E4%B8%AD%E5%9B%BD10%E7%B1%B3%E7%A9%BA%E9%97%B4%E5%88%86%E8%BE%A8%E7%8E%87%E5%86%AC%E5%B0%8F%E9%BA%A6%E8%AF%86%E5%88%AB%E6%95%B0%E6%8D%AE%E9%9B%86.xls')
     }
 	
 

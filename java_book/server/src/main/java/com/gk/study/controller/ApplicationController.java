@@ -21,6 +21,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/application")
+@CrossOrigin
 public class ApplicationController {
 
     @Autowired

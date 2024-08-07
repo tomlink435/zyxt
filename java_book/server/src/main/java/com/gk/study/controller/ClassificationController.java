@@ -6,10 +6,12 @@ import com.gk.study.entity.Classification;
 import com.gk.study.permission.Access;
 import com.gk.study.permission.AccessLevel;
 import com.gk.study.service.ClassificationService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +24,8 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/classification")
+@Slf4j
+@CrossOrigin
 public class ClassificationController {
 
     private final static Logger logger = LoggerFactory.getLogger(ClassificationController.class);
@@ -31,6 +35,7 @@ public class ClassificationController {
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public APIResponse list(){
+        log.info("分类查询");
         List<Classification> list =  service.getClassificationList();
         return new APIResponse(ResponeCode.SUCCESS, "查询成功", list);
     }

@@ -39,6 +39,7 @@ import java.util.UUID;
 @Slf4j
 @RestController
 @RequestMapping("/user")
+@CrossOrigin
 public class UserController {
     @Autowired
     private JwtProperties jwtProperties;
