@@ -37,7 +37,9 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         registry.addInterceptor(new RefreshTokenInterceptor(stringRedisTemplate)).order(0);
 
         registry.addInterceptor(new LoginInterceptor(stringRedisTemplate))
-                .excludePathPatterns("/user/**").order(1);
+                .excludePathPatterns("/user/**")
+                .excludePathPatterns("/**/list")
+                .order(1);
 
     }
 
