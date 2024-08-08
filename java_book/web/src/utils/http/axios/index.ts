@@ -5,6 +5,7 @@ import { IResponse } from './type';
 import { getToken } from '/@/utils/auth';
 import { TokenPrefix } from '/@/utils/auth';
 import {ADMIN_USER_TOKEN, USER_TOKEN, BASE_URL} from '/@/store/constants'
+import router from '/@/router';
 
 const service: AxiosInstance = axios.create({
   // baseURL: import.meta.env.BASE_URL + '',
@@ -14,10 +15,26 @@ const service: AxiosInstance = axios.create({
 
 // axios实例拦截请求
 service.interceptors.request.use(
-  (config: InternalAxiosRequestConfig) => {
+  (config: any) => {
+    console.log('urlllll', window.location.href.includes('/index/portal'))
+    
+    config.headers.Authorization=localStorage.getItem(USER_TOKEN)
+    if (localStorage.getItem(USER_TOKEN)) {
+      config.headers.Authorization=localStorage.getItem(USER_TOKEN)
 
-    config.headers.ADMINTOKEN = localStorage.getItem(ADMIN_USER_TOKEN)
-    config.headers.TOKEN = localStorage.getItem(USER_TOKEN)
+    } else if (!localStorage.getItem(USER_TOKEN)  &&  !window.location.href.includes('/index/portal')&&  !window.location.href.includes('/index/login') ) {
+      
+      window.location.href = '/index/login'
+      // router.push({name:'login'})
+      // debugger
+      return false
+    }
+
+    // config.headers.ADMINTOKEN = localStorage.getItem(ADMIN_USER_TOKEN)
+    // config.headers.TOKEN = localStorage.getItem(USER_TOKEN)
+    console.log(config)
+    // debugger
+    // console.log(config.headers.TOKEN)
 
     return config;
   },

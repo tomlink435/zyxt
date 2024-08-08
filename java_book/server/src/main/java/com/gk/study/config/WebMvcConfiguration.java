@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
@@ -21,12 +22,23 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
+//    @Override
+//    public void addCorsMappings(CorsRegistry registry) {
+//        registry.addMapping("/**")
+//                .allowedOrigins("*")
+//                .allowedMethods("GET", "HEAD", "POST", "PUT", "DELETE", "OPTIONS")
+//                .allowCredentials(true)
+//                .maxAge(3600)
+//                .allowedHeaders("*");
+//    }
+
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new RefreshTokenInterceptor(stringRedisTemplate)).order(0);
 
         registry.addInterceptor(new LoginInterceptor(stringRedisTemplate))
                 .excludePathPatterns("/user/**").order(1);
+
     }
 
     /**

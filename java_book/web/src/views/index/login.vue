@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="login-page pc-style">
-      <img :src="LogoIcon" alt="logo" class="logo-icon">
+      <!-- <img :src="LogoIcon" alt="logo" class="logo-icon"> -->
       <div class="login-tab">
         <div class="tab-selected">
-          <span>邮箱登录</span>
+          <span>手机号登录</span>
           <span class="tabline tabline-width"></span>
         </div>
       </div>
@@ -12,20 +12,40 @@
         <div class="common-input">
           <img :src="MailIcon" class="left-icon">
           <div class="input-view">
-            <input placeholder="请输入注册邮箱" v-model="pageData.loginForm.username" type="text" class="input">
+            <input placeholder="请输入手机号" v-model="pageData.loginForm.phone" type="text" class="input">
             <p class="err-view">
             </p>
           </div>
-          <!---->
         </div>
         <div class="common-input">
           <img :src="PwdIcon" class="left-icon">
           <div class="input-view">
-            <input placeholder="请输入密码" v-model="pageData.loginForm.password" type="password" class="input">
+            <input placeholder="请输入验证码" v-model="pageData.loginForm.code" type="text" class="input">
             <p class="err-view">
             </p>
           </div>
-         <!-- <img src="@/assets/pwd-hidden.svg" class="right-icon"> -->
+          <div class="input-group mb-3 px-5">
+      <!-- <span class="input-group-text">验证码</span> -->
+      <!-- <input
+        type="text"
+        v-model="pageData.loginForm.code"
+        class="form-control"
+        aria-label="Amount (to the nearest dollar)"
+        required
+      /> -->
+      <button
+        type="button"
+        @click="getCode"
+        :disabled="isDisposed"
+        class="btn btn-primary"
+      >
+        {{ isDisposed ? `${time}s后重新获取` : "获取验证码" }}
+      </button>
+    </div>
+
+          <!-- <button type="primary" class="right-btn" @click="getCode">获取验证码</button> -->
+       
+          <!-- <img src="@/assets/pwd-hidden.svg" class="right-icon"> -->
           <!---->
         </div>
         <div class="next-btn-view">
@@ -33,8 +53,8 @@
         </div>
       </div>
       <div class="operation">
-        <a @click="handleCreateUser" class="forget-pwd" style="text-align: left;">注册新帐号</a>
-        <a class="forget-pwd" style="text-align: right;">忘记密码？</a>
+        <!-- <a @click="handleCreateUser" class="forget-pwd" style="text-align: left;">注册新帐号</a> -->
+        <!-- <a class="forget-pwd" style="text-align: right;">忘记密码？</a> -->
       </div>
     </div>
   </div>
@@ -53,15 +73,45 @@ const userStore = useUserStore();
 
 const pageData = reactive({
   loginForm: {
-    username: '',
-    password: ''
+    phone: '',
+    code: ''
   }
 })
+const handleTimeChange = () => {
+      if (time.value <= 0) {
+        isDisposed.value = false;
+        time.value = 60;
+      } else {
+        setTimeout(() => {
+          time.value--;
+          handleTimeChange();
+        }, 1000);
+      }
+    };
+
+    const time = ref(60);
+    const isDisposed = ref(false);
+
+const getCode = () => {
+  userStore.getCode({
+    phone: pageData.loginForm.phone
+  }).then(res=> {
+    message.success('验证码已发送')
+
+    isDisposed.value = true;
+    handleTimeChange();
+
+  }).catch(err => {
+    console.log(pageData.loginForm.phone)
+    message.warn(err.msg || '获取验证码失败')
+  })
+
+}
 
 const handleLogin = ()=> {
   userStore.login({
-    username: pageData.loginForm.username,
-    password: pageData.loginForm.password
+    phone: pageData.loginForm.phone,
+    code: pageData.loginForm.code
   }).then(res=> {
     loginSuccess()
     console.log('success==>', userStore.user_name)
@@ -71,6 +121,16 @@ const handleLogin = ()=> {
     message.warn(err.msg || '登录失败')
   })
 }
+// const getCode = ()=> {
+//   userStore.getCode({
+//     phone: pageData.loginForm.phone
+//   }).then(res=> {
+//     message.success('验证码已发送')
+//   }).catch(err => {
+//     console.log(pageData.loginForm.phone)
+//     message.warn(err.msg || '获取验证码失败')
+//   })
+// }
 
 const handleCreateUser = () => {
   router.push({name:'register'})

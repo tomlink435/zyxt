@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import {loginApi as adminLogin, userLoginApi} from '/@/api/user';
+import {userLogoutApi,sendCodeApi,loginApi as adminLogin, userLoginApi} from '/@/api/user';
 import { setToken, clearToken } from '/@/utils/auth';
 import { UserState } from './types';
 import {USER_ID, USER_NAME, USER_TOKEN, ADMIN_USER_ID,ADMIN_USER_NAME,ADMIN_USER_TOKEN} from "/@/store/constants";
@@ -16,6 +16,13 @@ export const useUserStore = defineStore('user', {
   }),
   getters: {},
   actions: {
+ //获取验证码
+    async getCode(phone) {
+     const result= await sendCodeApi(phone);
+      return result;
+    },
+
+
     // 用户登录
     async login(loginForm) {
       const result = await userLoginApi(loginForm);
@@ -38,6 +45,8 @@ export const useUserStore = defineStore('user', {
     },
     // 用户登出
     async logout() {
+
+      const result = await userLogoutApi();
       // await userLogout();
       this.$patch((state)=>{
         localStorage.removeItem(USER_ID)
@@ -47,6 +56,8 @@ export const useUserStore = defineStore('user', {
         state.user_id = undefined
         state.user_name = undefined
         state.user_token = undefined
+
+        return result
       })
     },
 

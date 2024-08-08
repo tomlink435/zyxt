@@ -135,7 +135,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 //        } catch (Exception e) {
 //            return new APIResponse(ResponeCode.FAIL, "验证码发送失败");
 //        }
-        return new APIResponse(ResponeCode.SUCCESS);
+        return new APIResponse(ResponeCode.SUCCESS,code);
     }
 
     @Override
