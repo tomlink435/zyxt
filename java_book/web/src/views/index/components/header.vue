@@ -36,6 +36,10 @@
             </a-menu>
           </template>
         </a-dropdown>
+       
+        <!-- <audio ref="audioVo2" controls hidden>
+          <source src="@/assets/reminder.mp3" type="audio/mp3" />
+        </audio> -->
       </template>
       <template v-else>
         <button class="login btn hidden-sm" @click="goLogin()">登录</button>
@@ -61,6 +65,10 @@ import SearchIcon from '/@/assets/images/search-icon.svg';
 import AvatarIcon from '/@/assets/images/avatar.jpg';
 import MessageIcon from '/@/assets/images/message-icon.svg';
 
+import { ref, provide } from 'vue';
+
+const audioVo = ref(null);
+provide('audioVo', audioVo);
 
 const router = useRouter();
 const route = useRoute();

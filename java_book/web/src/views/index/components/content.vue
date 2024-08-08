@@ -180,11 +180,8 @@ const getThingList = (data) => {
     res.data.forEach((item, index) => {
       if (item.cover) {
         // item.cover = BASE_URL + '/api/staticfiles/image/' +  item.cover
-<<<<<<< HEAD
         item.cover = item.cover
-=======
-        item.cover =  item.cover
->>>>>>> master
+      
         console.log('item.cover:'+item.cover)
      
       }

@@ -49,5 +49,6 @@ export default ({ command }: ConfigEnv): UserConfig => {
       https: false, // 禁用https
       // proxy,
     },
+    assetsInclude: ['**/*.gltf', '**/*.glb', '**/*.bin', '**/*.woff', '**/*.woff2', '**/*.ttf','**/*.JPG'],
   };
 };
