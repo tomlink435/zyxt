@@ -7,6 +7,7 @@ import com.gk.study.common.ResponeCode;
 import com.gk.study.entity.User;
 import com.gk.study.permission.Access;
 import com.gk.study.permission.AccessLevel;
+import com.gk.study.pojo.DTO.AdminLoginDTO;
 import com.gk.study.pojo.DTO.LoginFormDTO;
 import com.gk.study.pojo.DTO.UserLoginDTO;
 import com.gk.study.pojo.VO.UserLoginVO;
@@ -68,13 +69,12 @@ public class UserController {
 
     // 后台用户登录
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public APIResponse login(User user){
-        user.setPassword(DigestUtils.md5DigestAsHex((user.getPassword() + salt).getBytes()));
-        User responseUser =  userService.getAdminUser(user);
-        if(responseUser != null) {
-            return new APIResponse(ResponeCode.SUCCESS, "查询成功", responseUser);
-        }else {
-            return new APIResponse(ResponeCode.FAIL, "用户名或密码错误");
+    public APIResponse login(@RequestBody AdminLoginDTO adminLoginDTO){
+        log.info("管理员登录{}", adminLoginDTO);
+        if("admin123".equals(adminLoginDTO.getUsername()) && ("admin123".equals(adminLoginDTO.getPassword()))){
+            return new APIResponse(ResponeCode.SUCCESS, "登录成功", adminLoginDTO);
+        }else{
+            return new APIResponse(ResponeCode.FAIL, "登录失败");
         }
     }
 

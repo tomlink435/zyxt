@@ -27,10 +27,10 @@ public class ApplicationTask {
     /**
      * 自动审核通过
      */
-    @Scheduled(cron = "0/15 * * * * ?")
+    @Scheduled(cron = "0/10 * * * * ?")
     public void processApplicationPass(){
 
-        LocalDateTime time = LocalDateTime.now().plusSeconds(-15);
+        LocalDateTime time = LocalDateTime.now().plusSeconds(-10);
 
         //SELECT * FROM b_application where status=0 and application_time < time
 
@@ -40,7 +40,7 @@ public class ApplicationTask {
             for (Application application : applicationList) {
                 log.info("自动审核通过{}",application);
                 application.setStatus(1);
-                applicationMapper.update(application, new UpdateWrapper<>());
+                applicationMapper.updateById(application);
 
                 Map map = new HashMap<>();
 

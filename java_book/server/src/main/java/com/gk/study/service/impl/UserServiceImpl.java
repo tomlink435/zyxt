@@ -126,15 +126,17 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         String code = RandomUtil.randomNumbers(6);
         log.info("手机号:{}, 验证码:{}", phone, code);
 
+        //4.redis如果存在phone，刪除
+        stringRedisTemplate.delete("user:phone"+ phone);
         //4.保存至redis
         stringRedisTemplate.opsForValue().set("user:phone:" + phone, code, 5, TimeUnit.MINUTES);
 
         //5.发送验证码
-//        try {
-//            sendSmsUtils.sendCode(phone, code);
-//        } catch (Exception e) {
-//            return new APIResponse(ResponeCode.FAIL, "验证码发送失败");
-//        }
+        try {
+            sendSmsUtils.sendCode(phone, code);
+        } catch (Exception e) {
+            return new APIResponse(ResponeCode.FAIL, "验证码发送失败");
+        }
         return new APIResponse(ResponeCode.SUCCESS,code);
     }
 

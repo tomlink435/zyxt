@@ -1,0 +1,798 @@
+2024-08-08 16:23:22.914 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 10804 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:23:22.917 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:23:24.463 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:23:24.464 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:23:24.465 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:23:24.574 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:23:24.833 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:23:24.943 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:23:25.121 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:23:25.121 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:23:25.506 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:23:25.527 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:23:25.781 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:23:26.079 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:23:26.461 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.026 seconds (JVM running for 4.778)
+2024-08-08 16:23:28.320 [ http-nio-9100-exec-4 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:23:28.364 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:23:28.372 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:23:29.393 [ http-nio-9100-exec-3 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @3c46e67a
+2024-08-08 16:23:33.210 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:23:33.210 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:23:37.359 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:23:37.359 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:24:58.484 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.UserController : 280 ] - 发送手机验证码:13915325889
+2024-08-08 16:24:58.491 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.service.impl.UserServiceImpl : 127 ] - 手机号:13915325889, 验证码:324722
+2024-08-08 16:25:06.290 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=324722)
+2024-08-08 16:25:06.560 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:25:06.563 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:25:13.813 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:25:13.814 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:25:25.583 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:25:25.584 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:26:08.570 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:26:08.696 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:26:13.901 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 12548 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:26:13.904 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:26:15.205 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:26:15.206 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:26:15.206 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:26:15.305 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:26:15.576 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:26:15.680 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:26:15.867 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:26:15.867 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:26:16.329 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:26:16.354 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:26:16.622 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:26:16.894 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:26:17.257 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.75 seconds (JVM running for 4.363)
+2024-08-08 16:26:17.918 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:27:08.977 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:27:08.977 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:27:55.098 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:27:55.099 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:28:16.693 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:28:16.694 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:28:36.501 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:28:36.502 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:28:43.226 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:28:43.238 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:28:43.297 [ http-nio-9100-exec-5 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @3c46e67a
+2024-08-08 16:28:48.479 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:28:48.547 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:28:48.578 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 36 ] - 保存申请Application(id=null, name=111, email=, phone=, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=null)
+2024-08-08 16:29:15.034 [ scheduling-1 ] - [ INFO  ] [ com.gk.study.task.ApplicationTask : 41 ] - 自动审核通过Application(id=134, name=111, email=, phone=, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=2024-08-08T03:28:49)
+2024-08-08 16:29:30.645 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:29:30.733 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:29:34.559 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 7336 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:29:34.561 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:29:35.865 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:29:35.865 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:29:35.866 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:29:35.970 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:29:36.244 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:29:36.355 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:29:36.534 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:29:36.535 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:29:36.934 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:29:36.955 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:29:37.203 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:29:37.524 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:29:37.909 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.718 seconds (JVM running for 4.282)
+2024-08-08 16:29:39.980 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:29:44.668 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:29:44.700 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 36 ] - 保存申请Application(id=null, name=123456, email=, phone=, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=null)
+2024-08-08 16:30:00.036 [ scheduling-1 ] - [ INFO  ] [ com.gk.study.task.ApplicationTask : 41 ] - 自动审核通过Application(id=135, name=123456, email=, phone=, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=2024-08-08T03:29:45)
+2024-08-08 16:30:13.500 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:30:13.500 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:30:13.501 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:30:13.502 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:30:25.169 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:30:25.173 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:30:25.242 [ http-nio-9100-exec-4 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @3c46e67a
+2024-08-08 16:30:31.567 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:30:31.567 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 36 ] - 保存申请Application(id=null, name=123, email=, phone=, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=null)
+2024-08-08 16:30:50.044 [ scheduling-1 ] - [ INFO  ] [ com.gk.study.task.ApplicationTask : 41 ] - 自动审核通过Application(id=136, name=123, email=, phone=, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=2024-08-08T03:30:32)
+2024-08-08 16:30:54.843 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:30:54.843 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:31:12.301 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:31:12.302 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:31:12.302 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:31:22.899 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:31:27.881 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:31:52.697 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:32:03.321 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:32:03.322 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:32:04.210 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:32:04.305 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:32:08.189 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 13112 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:32:08.192 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:32:09.517 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:32:09.518 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:32:09.518 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:32:09.614 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:32:09.891 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:32:09.999 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:32:10.196 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:32:10.196 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:32:10.609 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:32:10.630 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:32:10.902 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:32:11.175 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:32:11.530 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.74 seconds (JVM running for 4.353)
+2024-08-08 16:32:14.601 [ http-nio-9100-exec-3 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:32:14.628 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:32:14.628 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:32:14.628 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:32:14.628 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:32:19.347 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:32:19.347 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:32:26.685 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:32:26.685 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:32:31.267 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:32:31.268 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:32:31.269 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:32:31.269 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:32:35.569 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:32:35.628 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:32:38.039 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 11184 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:32:38.042 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:32:39.343 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:32:39.344 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:32:39.345 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:32:39.442 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:32:39.707 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:32:39.809 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:32:39.987 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:32:39.987 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:32:40.386 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:32:40.407 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:32:40.664 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:32:40.935 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:32:41.300 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.694 seconds (JVM running for 4.255)
+2024-08-08 16:32:48.104 [ http-nio-9100-exec-4 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:32:48.125 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:32:48.125 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:32:48.126 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:32:48.126 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:32:52.787 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:32:52.788 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:33:06.775 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:33:06.842 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:33:09.351 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 16216 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:33:09.353 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:33:10.612 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:33:10.613 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:33:10.614 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:33:10.715 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:33:10.975 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:33:11.079 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:33:11.261 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:33:11.262 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:33:11.665 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:33:11.685 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:33:11.957 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:33:12.244 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:33:12.616 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.629 seconds (JVM running for 4.207)
+2024-08-08 16:33:18.412 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:33:18.436 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:33:18.436 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:33:18.437 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:33:18.437 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:33:23.276 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:33:23.276 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:33:27.243 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:33:27.244 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:33:27.244 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:33:27.244 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:34:35.442 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:34:35.509 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:34:40.892 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 1200 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:34:40.895 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:34:42.272 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:34:42.272 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:34:42.273 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:34:42.381 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:34:42.682 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:34:42.814 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:34:43.050 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:34:43.051 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:34:43.588 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:34:43.615 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:34:43.964 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:34:44.317 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:34:44.744 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.352 seconds (JVM running for 5.25)
+2024-08-08 16:34:49.572 [ http-nio-9100-exec-4 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:34:49.601 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:34:49.601 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:34:49.602 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:34:49.602 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:34:53.847 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:34:53.848 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:35:20.422 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:35:20.480 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:36:03.951 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 2856 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:36:03.956 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:36:07.704 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:36:07.704 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:36:07.705 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:36:07.850 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:36:08.495 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:36:08.653 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:36:08.925 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:36:08.926 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:36:09.560 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:36:09.591 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:36:10.011 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:36:10.345 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:36:10.776 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 7.809 seconds (JVM running for 9.537)
+2024-08-08 16:36:15.454 [ http-nio-9100-exec-3 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:36:15.511 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:36:15.517 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:36:16.254 [ http-nio-9100-exec-7 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @3c46e67a
+2024-08-08 16:36:24.953 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.UserController : 280 ] - 发送手机验证码:13915325889
+2024-08-08 16:36:24.959 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.service.impl.UserServiceImpl : 127 ] - 手机号:13915325889, 验证码:887919
+2024-08-08 16:36:29.322 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=887919)
+2024-08-08 16:36:29.550 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:36:29.550 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:36:35.931 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:36:35.931 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:37:08.179 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:37:08.179 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:38:23.860 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:38:23.946 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:38:26.488 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 3852 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:38:26.491 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:38:27.762 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:38:27.762 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:38:27.762 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:38:27.859 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:38:28.123 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:38:28.272 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:38:28.480 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:38:28.480 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:38:28.910 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:38:28.930 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:38:29.200 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:38:29.864 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.763 seconds (JVM running for 4.386)
+2024-08-08 16:38:29.908 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:38:29.909 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:38:35.072 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 13604 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:38:35.074 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:38:36.608 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:38:36.609 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:38:36.609 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:38:36.724 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:38:37.117 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:38:37.241 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:38:37.455 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:38:37.456 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:38:37.899 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:38:37.928 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:38:38.223 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:38:38.543 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:38:38.975 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.307 seconds (JVM running for 5.564)
+2024-08-08 16:38:42.931 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:38:42.958 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:38:45.652 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 14884 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:38:45.654 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:38:47.050 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:38:47.051 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:38:47.051 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:38:47.161 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:38:47.469 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:38:47.589 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:38:47.781 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:38:47.782 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:38:48.218 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:38:48.241 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:38:48.520 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:38:48.833 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:38:49.215 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.043 seconds (JVM running for 4.922)
+2024-08-08 16:38:55.792 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:39:03.744 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:39:03.750 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:39:04.780 [ http-nio-9100-exec-4 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @fa4c865
+2024-08-08 16:40:16.493 [ http-nio-9100-exec-11 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:40:16.493 [ http-nio-9100-exec-11 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:40:16.493 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:40:16.495 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:40:16.520 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:40:16.530 [ http-nio-9100-exec-9 ] - [ ERROR ] [ org.apache.tomcat.websocket.pojo.PojoEndpointBase : 175 ] - No error handling configured for [com.gk.study.websocket.WebSocketServer] and the following error occurred
+java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:46)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:330)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:296)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:259)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:417)
+	at org.apache.tomcat.util.net.NioChannel.read(NioChannel.java:160)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1316)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1206)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:75)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:183)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:162)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:156)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-08-08 16:40:16.530 [ http-nio-9100-exec-3 ] - [ ERROR ] [ org.apache.tomcat.websocket.pojo.PojoEndpointBase : 175 ] - No error handling configured for [com.gk.study.websocket.WebSocketServer] and the following error occurred
+java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:46)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:330)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:296)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:259)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:417)
+	at org.apache.tomcat.util.net.NioChannel.read(NioChannel.java:160)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1316)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1206)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:75)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:183)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:162)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:156)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-08-08 16:40:16.547 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:40:39.210 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:40:39.210 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:40:46.396 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:40:46.459 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:40:46.503 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 36 ] - 保存申请Application(id=null, name=小黑子, email=111, phone=111, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=null)
+2024-08-08 16:41:00.052 [ scheduling-1 ] - [ INFO  ] [ com.gk.study.task.ApplicationTask : 41 ] - 自动审核通过Application(id=137, name=小黑子, email=111, phone=111, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=2024-08-08T03:40:47)
+2024-08-08 16:41:11.843 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:41:11.843 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 36 ] - 保存申请Application(id=null, name=, email=, phone=, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=null)
+2024-08-08 16:41:30.051 [ scheduling-1 ] - [ INFO  ] [ com.gk.study.task.ApplicationTask : 41 ] - 自动审核通过Application(id=138, name=, email=, phone=, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=2024-08-08T03:41:12)
+2024-08-08 16:41:38.567 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:41:38.567 [ http-nio-9100-exec-11 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:41:42.054 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:41:42.054 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:41:57.994 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:, sort:null, c:null, tag:null
+2024-08-08 16:41:57.995 [ http-nio-9100-exec-11 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:42:10.719 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:42:10.720 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:, sort:null, c:null, tag:null
+2024-08-08 16:42:11.206 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:42:14.278 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:42:14.279 [ http-nio-9100-exec-11 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:, sort:null, c:null, tag:null
+2024-08-08 16:43:41.362 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:43:41.514 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:43:46.817 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 4548 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:43:46.819 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:43:48.152 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:43:48.152 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:43:48.152 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:43:48.280 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:43:48.597 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:43:48.719 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:43:48.923 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:43:48.924 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:43:49.365 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:43:49.389 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:43:49.677 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:43:49.990 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:43:50.151 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:43:50.471 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.108 seconds (JVM running for 4.944)
+2024-08-08 16:43:50.788 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.UserController : 72 ] - 管理员登录User(id=null, username=null, password=null, rePassword=null, nickname=null, mobile=null, email=null, description=null, role=null, score=null, avatar=null, avatarFile=null, token=null, createTime=null, pushEmail=null, pushSwitch=null)
+2024-08-08 16:43:50.788 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.UserController : 72 ] - 管理员登录User(id=null, username=null, password=null, rePassword=null, nickname=null, mobile=null, email=null, description=null, role=null, score=null, avatar=null, avatarFile=null, token=null, createTime=null, pushEmail=null, pushSwitch=null)
+2024-08-08 16:44:14.787 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.UserController : 72 ] - 管理员登录User(id=null, username=null, password=null, rePassword=null, nickname=null, mobile=null, email=null, description=null, role=null, score=null, avatar=null, avatarFile=null, token=null, createTime=null, pushEmail=null, pushSwitch=null)
+2024-08-08 16:44:17.732 [ http-nio-9100-exec-4 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 33 ] - 异常信息：Request method 'GET' not supported
+2024-08-08 16:46:34.556 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.UserController : 72 ] - 管理员登录User(id=null, username=null, password=null, rePassword=null, nickname=null, mobile=null, email=null, description=null, role=null, score=null, avatar=null, avatarFile=null, token=null, createTime=null, pushEmail=null, pushSwitch=null)
+2024-08-08 16:46:35.738 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.UserController : 72 ] - 管理员登录User(id=null, username=null, password=null, rePassword=null, nickname=null, mobile=null, email=null, description=null, role=null, score=null, avatar=null, avatarFile=null, token=null, createTime=null, pushEmail=null, pushSwitch=null)
+2024-08-08 16:46:36.378 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.UserController : 72 ] - 管理员登录User(id=null, username=null, password=null, rePassword=null, nickname=null, mobile=null, email=null, description=null, role=null, score=null, avatar=null, avatarFile=null, token=null, createTime=null, pushEmail=null, pushSwitch=null)
+2024-08-08 16:46:41.653 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:46:41.718 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:46:45.011 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 3732 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:46:45.013 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:46:49.197 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 17500 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:46:49.200 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:46:50.456 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:46:50.457 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:46:50.457 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:46:50.575 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:46:50.883 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:46:50.995 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:46:51.210 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:46:51.211 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:46:51.691 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:46:51.719 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:46:52.038 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:46:52.358 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:46:52.747 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.962 seconds (JVM running for 4.601)
+2024-08-08 16:46:53.478 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:46:54.025 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.UserController : 72 ] - 管理员登录User(id=null, username=null, password=null, rePassword=null, nickname=null, mobile=null, email=null, description=null, role=null, score=null, avatar=null, avatarFile=null, token=null, createTime=null, pushEmail=null, pushSwitch=null)
+2024-08-08 16:47:02.049 [ http-nio-9100-exec-2 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 33 ] - 异常信息：Request method 'GET' not supported
+2024-08-08 16:47:26.045 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.UserController : 72 ] - 管理员登录User(id=null, username=null, password=null, rePassword=null, nickname=null, mobile=null, email=null, description=null, role=null, score=null, avatar=null, avatarFile=null, token=null, createTime=null, pushEmail=null, pushSwitch=null)
+2024-08-08 16:47:28.619 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.UserController : 72 ] - 管理员登录User(id=null, username=null, password=null, rePassword=null, nickname=null, mobile=null, email=null, description=null, role=null, score=null, avatar=null, avatarFile=null, token=null, createTime=null, pushEmail=null, pushSwitch=null)
+2024-08-08 16:47:37.365 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.UserController : 72 ] - 管理员登录User(id=null, username=null, password=null, rePassword=null, nickname=null, mobile=null, email=null, description=null, role=null, score=null, avatar=null, avatarFile=null, token=null, createTime=null, pushEmail=null, pushSwitch=null)
+2024-08-08 16:47:46.598 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:47:46.638 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:47:54.556 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 13280 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:47:54.560 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:47:55.924 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:47:55.925 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:47:55.925 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:47:56.034 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:47:56.335 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:47:56.455 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:47:56.650 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:47:56.651 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:47:57.089 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:47:57.112 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:47:57.369 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:47:57.667 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:47:58.042 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.937 seconds (JVM running for 4.633)
+2024-08-08 16:48:05.928 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:48:06.492 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.UserController : 72 ] - 管理员登录User(id=null, username=null, password=null, rePassword=null, nickname=null, mobile=null, email=null, description=null, role=null, score=null, avatar=null, avatarFile=null, token=null, createTime=null, pushEmail=null, pushSwitch=null)
+2024-08-08 16:48:07.706 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.UserController : 72 ] - 管理员登录User(id=null, username=null, password=null, rePassword=null, nickname=null, mobile=null, email=null, description=null, role=null, score=null, avatar=null, avatarFile=null, token=null, createTime=null, pushEmail=null, pushSwitch=null)
+2024-08-08 16:49:54.237 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:49:54.269 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:49:58.887 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 10288 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:49:58.890 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:50:00.166 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:50:00.166 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:50:00.166 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:50:00.266 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:50:00.529 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:50:00.635 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:50:00.814 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:50:00.814 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:50:01.216 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:50:01.235 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:50:01.482 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:50:01.758 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:50:02.134 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.625 seconds (JVM running for 4.29)
+2024-08-08 16:50:03.263 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:50:03.787 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.UserController : 73 ] - 管理员登录com.gk.study.pojo.DTO.AdminLoginDTO@70afe9f4
+2024-08-08 16:50:07.385 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.UserController : 73 ] - 管理员登录com.gk.study.pojo.DTO.AdminLoginDTO@36d4b81f
+2024-08-08 16:50:27.495 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:50:27.535 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:50:31.971 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 12172 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:50:31.974 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:50:33.302 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:50:33.303 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:50:33.303 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:50:33.400 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:50:33.658 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:50:33.760 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:50:33.940 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:50:33.940 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:50:34.575 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:50:34.598 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:50:35.037 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:50:35.445 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:50:35.992 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.423 seconds (JVM running for 4.999)
+2024-08-08 16:50:39.177 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:50:39.682 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.UserController : 73 ] - 管理员登录com.gk.study.pojo.DTO.AdminLoginDTO@4d8c8971
+2024-08-08 16:50:39.705 [ http-nio-9100-exec-1 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 33 ] - 异常信息：Type definition error: [simple type, class com.gk.study.pojo.DTO.AdminLoginDTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.gk.study.pojo.DTO.AdminLoginDTO and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.gk.study.common.APIResponse["data"])
+2024-08-08 16:50:41.777 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.UserController : 73 ] - 管理员登录com.gk.study.pojo.DTO.AdminLoginDTO@74c5fdc2
+2024-08-08 16:50:41.777 [ http-nio-9100-exec-2 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 33 ] - 异常信息：Type definition error: [simple type, class com.gk.study.pojo.DTO.AdminLoginDTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.gk.study.pojo.DTO.AdminLoginDTO and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.gk.study.common.APIResponse["data"])
+2024-08-08 16:50:56.143 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:50:56.183 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:51:08.671 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 16484 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:51:08.675 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:51:09.994 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:51:09.994 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:51:09.994 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:51:10.091 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:51:10.368 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:51:10.477 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:51:10.657 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:51:10.658 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:51:11.100 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:51:11.122 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:51:11.381 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:51:11.652 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:51:12.026 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.778 seconds (JVM running for 4.456)
+2024-08-08 16:51:18.616 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:51:19.193 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.UserController : 73 ] - 管理员登录com.gk.study.pojo.DTO.AdminLoginDTO@657cb77e
+2024-08-08 16:51:19.217 [ http-nio-9100-exec-1 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 33 ] - 异常信息：Type definition error: [simple type, class com.gk.study.pojo.DTO.AdminLoginDTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.gk.study.pojo.DTO.AdminLoginDTO and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.gk.study.common.APIResponse["data"])
+2024-08-08 16:52:01.192 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:52:01.223 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:52:05.390 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 13224 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:52:05.392 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:52:06.806 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:52:06.807 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:52:06.807 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:52:06.920 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:52:07.209 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:52:07.316 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:52:07.519 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:52:07.520 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:52:08.040 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:52:08.065 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:52:08.359 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:52:08.655 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:52:09.070 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.075 seconds (JVM running for 4.687)
+2024-08-08 16:52:15.551 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:52:16.107 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.UserController : 73 ] - 管理员登录AdminLoginDTO(username=null, password=null)
+2024-08-08 16:52:16.436 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:, sort:null, c:null, tag:null
+2024-08-08 16:52:16.443 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:52:16.583 [ http-nio-9100-exec-2 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @3c46e67a
+2024-08-08 16:52:38.212 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:52:39.539 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:52:39.540 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:, sort:null, c:null, tag:null
+2024-08-08 16:52:42.457 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:52:48.452 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:52:48.516 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:52:57.522 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:52:57.526 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:53:08.534 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:53:08.597 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:53:08.632 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 36 ] - 保存申请Application(id=null, name=123, email=, phone=, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=null)
+2024-08-08 16:53:20.051 [ scheduling-1 ] - [ INFO  ] [ com.gk.study.task.ApplicationTask : 41 ] - 自动审核通过Application(id=139, name=123, email=, phone=, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=2024-08-08T03:53:09)
+2024-08-08 16:53:24.353 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:53:24.354 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:53:24.420 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:53:24.420 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:53:40.356 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:53:40.358 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:54:53.989 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:54:54.115 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:55:03.061 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 14788 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:55:03.063 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:55:04.613 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:55:04.614 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:55:04.614 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:55:04.730 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:55:05.058 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:55:05.194 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:55:05.456 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:55:05.456 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:55:05.910 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:55:05.932 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:55:06.196 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:55:06.487 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:55:07.160 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.629 seconds (JVM running for 5.445)
+2024-08-08 16:55:11.894 [ http-nio-9100-exec-2 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:55:12.533 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:55:12.547 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:55:12.863 [ http-nio-9100-exec-8 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @3c46e67a
+2024-08-08 16:55:17.233 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.UserController : 295 ] - 用户登出:testorg.apache.catalina.connector.RequestFacade@1492350a
+2024-08-08 16:55:23.095 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:55:23.095 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:55:27.633 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 16:55:27.729 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 16:55:30.460 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 7568 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 16:55:30.462 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 16:55:31.778 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:55:31.778 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 16:55:31.778 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 16:55:31.876 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 16:55:32.145 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 16:55:32.247 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 16:55:32.430 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 16:55:32.431 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 16:55:32.881 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 16:55:32.903 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 16:55:33.176 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 16:55:33.457 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 16:55:33.998 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.904 seconds (JVM running for 4.558)
+2024-08-08 16:55:34.026 [ http-nio-9100-exec-3 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 16:55:34.063 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:55:34.069 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:55:34.754 [ http-nio-9100-exec-4 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @3c46e67a
+2024-08-08 16:55:42.686 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:55:42.686 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:55:52.195 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.UserController : 283 ] - 发送手机验证码:13915325889
+2024-08-08 16:55:52.202 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.service.impl.UserServiceImpl : 127 ] - 手机号:13915325889, 验证码:437711
+2024-08-08 16:55:55.580 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.UserController : 289 ] - 用户登录:LoginFormDTO(phone=13915325889, code=437711)
+2024-08-08 16:55:55.818 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:55:55.819 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:56:00.855 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:56:00.857 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:56:19.247 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 16:56:19.249 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 16:56:19.250 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:19.301 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:19.302 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:recommend, c:null, tag:null
+2024-08-08 16:56:26.105 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:26.105 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:26.156 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:recommend, c:null, tag:null
+2024-08-08 16:56:26.158 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:26.158 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:29.537 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:29.590 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:29.591 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:29.591 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:recommend, c:null, tag:null
+2024-08-08 16:56:33.824 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:33.824 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:33.874 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:recommend, c:null, tag:null
+2024-08-08 16:56:33.876 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:33.876 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:51.499 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:51.554 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:56:51.562 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 36 ] - 保存申请Application(id=null, name=小黑子, email=111, phone=111, address=null, description=null, company=露出鸡脚, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=null)
+2024-08-08 16:57:10.043 [ scheduling-1 ] - [ INFO  ] [ com.gk.study.task.ApplicationTask : 41 ] - 自动审核通过Application(id=140, name=小黑子, email=111, phone=111, address=null, description=null, company=露出鸡脚, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=2024-08-08T03:56:52)
+2024-08-08 16:59:00.510 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:, sort:null, c:null, tag:null
+2024-08-08 16:59:00.523 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:59:07.930 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.UserController : 73 ] - 管理员登录AdminLoginDTO(username=null, password=null)
+2024-08-08 16:59:08.074 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:59:08.074 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:, sort:null, c:null, tag:null
+2024-08-08 16:59:16.497 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 16:59:16.497 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 16:59:23.221 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:59:23.221 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:59:23.221 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:recommend, c:null, tag:null
+2024-08-08 16:59:28.660 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:59:28.661 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 36 ] - 保存申请Application(id=null, name=123, email=, phone=, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=null)
+2024-08-08 16:59:40.046 [ scheduling-1 ] - [ INFO  ] [ com.gk.study.task.ApplicationTask : 41 ] - 自动审核通过Application(id=141, name=123, email=, phone=, address=null, description=null, company=, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=2024-08-08T03:59:29)
+2024-08-08 16:59:43.366 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:59:43.367 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:59:43.418 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 16:59:43.418 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 17:00:02.731 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 17:00:02.848 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 17:02:00.180 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 13108 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 17:02:00.184 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 17:02:02.067 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 17:02:02.068 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 17:02:02.068 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 17:02:02.176 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 17:02:02.458 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 17:02:02.574 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 17:02:02.780 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 17:02:02.781 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 17:02:03.241 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 17:02:03.262 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 17:02:03.673 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 17:02:04.275 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 17:02:04.788 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 5.171 seconds (JVM running for 6.348)
+2024-08-08 17:02:07.500 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 17:02:08.072 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 17:02:08.077 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 17:02:08.921 [ http-nio-9100-exec-6 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @3c46e67a
+2024-08-08 17:02:15.220 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.UserController : 292 ] - 用户登出:testorg.apache.catalina.connector.RequestFacade@1492350a
+2024-08-08 17:02:23.854 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.UserController : 280 ] - 发送手机验证码:13915325889
+2024-08-08 17:02:23.855 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.service.impl.UserServiceImpl : 127 ] - 手机号:13915325889, 验证码:475321
+2024-08-08 17:02:24.236 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.UserController : 280 ] - 发送手机验证码:13915325889
+2024-08-08 17:02:24.236 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.service.impl.UserServiceImpl : 127 ] - 手机号:13915325889, 验证码:834443
+2024-08-08 17:02:24.469 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.utils.SendSmsUtils : 45 ] - 发送结果:{"headers":{"access-control-allow-origin":"*","date":"Thu, 08 Aug 2024 09:02:24 GMT","content-length":"131","keep-alive":"timeout=25","x-acs-request-id":"82562481-7843-547F-8FA8-79463E3597AD","connection":"keep-alive","content-type":"application/json;charset=utf-8","etag":"1Q+cg23uFTORewkWnSYpqOw7","access-control-expose-headers":"*","x-acs-trace-id":"ac6136bfddd52533a3b40e792d1a616b"},"statusCode":200,"body":{"code":"isv.BUSINESS_LIMIT_CONTROL","message":"触发分钟级流控Permits:1","requestId":"82562481-7843-547F-8FA8-79463E3597AD"}}
+2024-08-08 17:02:24.531 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.utils.SendSmsUtils : 45 ] - 发送结果:{"headers":{"access-control-allow-origin":"*","date":"Thu, 08 Aug 2024 09:02:24 GMT","content-length":"110","keep-alive":"timeout=25","x-acs-request-id":"921CE3D2-1F8E-56EA-AF09-E75E0C3ADA8E","connection":"keep-alive","content-type":"application/json;charset=utf-8","etag":"17eD9TNtzAUQS9/uzWYUHHQ0","access-control-expose-headers":"*","x-acs-trace-id":"2fe9a54559b6a9dbd08d49e65147bbfd"},"statusCode":200,"body":{"bizId":"482524823107744094^0","code":"OK","message":"OK","requestId":"921CE3D2-1F8E-56EA-AF09-E75E0C3ADA8E"}}
+2024-08-08 17:02:54.756 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=475321)
+2024-08-08 17:03:23.324 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.UserController : 280 ] - 发送手机验证码:13915325889
+2024-08-08 17:03:23.324 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.service.impl.UserServiceImpl : 127 ] - 手机号:13915325889, 验证码:833140
+2024-08-08 17:03:23.672 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.utils.SendSmsUtils : 45 ] - 发送结果:{"headers":{"access-control-allow-origin":"*","date":"Thu, 08 Aug 2024 09:03:23 GMT","content-length":"110","keep-alive":"timeout=25","x-acs-request-id":"21554ED9-919B-5CE2-AE72-0C916F430736","connection":"keep-alive","content-type":"application/json;charset=utf-8","etag":"1B3Qz4KdZCv7wgNoAgvakvQ0","access-control-expose-headers":"*","x-acs-trace-id":"b1af6d7cc051c456a42f71672cc58646"},"statusCode":200,"body":{"bizId":"449519623107803394^0","code":"OK","message":"OK","requestId":"21554ED9-919B-5CE2-AE72-0C916F430736"}}
+2024-08-08 17:03:39.477 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=833140)
+2024-08-08 17:03:39.699 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 17:03:39.701 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 17:03:43.786 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.UserController : 292 ] - 用户登出:testorg.apache.catalina.connector.RequestFacade@73eb7078
+2024-08-08 17:03:54.140 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=833140)
+2024-08-08 17:03:54.341 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 17:03:54.343 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 17:04:02.949 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 17:04:03.015 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 17:04:03.026 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 36 ] - 保存申请Application(id=null, name=小黑子, email=111, phone=111, address=null, description=null, company=露出鸡脚, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=null)
+2024-08-08 17:04:20.036 [ scheduling-1 ] - [ INFO  ] [ com.gk.study.task.ApplicationTask : 41 ] - 自动审核通过Application(id=142, name=小黑子, email=111, phone=111, address=null, description=null, company=露出鸡脚, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=2024-08-08T04:04:03)
+2024-08-08 17:04:28.686 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 17:04:28.818 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 17:05:09.335 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 3976 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 17:05:09.339 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 17:05:10.746 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 17:05:10.746 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 17:05:10.746 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 17:05:10.844 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 17:05:11.107 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 17:05:11.217 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 17:05:11.403 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 17:05:11.404 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 17:05:11.841 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 17:05:11.865 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 17:05:12.342 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 17:05:12.689 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 17:05:13.065 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.216 seconds (JVM running for 4.891)
+2024-08-08 17:05:17.061 [ http-nio-9100-exec-4 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 17:05:17.648 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 17:05:17.658 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 17:05:18.409 [ http-nio-9100-exec-8 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @3c46e67a
+2024-08-08 17:05:22.173 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.UserController : 292 ] - 用户登出:testorg.apache.catalina.connector.RequestFacade@2e7fdadd
+2024-08-08 17:05:28.591 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.UserController : 280 ] - 发送手机验证码:13915325889
+2024-08-08 17:05:28.592 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.service.impl.UserServiceImpl : 127 ] - 手机号:13915325889, 验证码:985963
+2024-08-08 17:05:29.082 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.utils.SendSmsUtils : 45 ] - 发送结果:{"headers":{"access-control-allow-origin":"*","date":"Thu, 08 Aug 2024 09:05:28 GMT","content-length":"110","keep-alive":"timeout=25","x-acs-request-id":"A4BF7276-9010-5AF7-B421-DEE11F8F8427","connection":"keep-alive","content-type":"application/json;charset=utf-8","etag":"1t72aEOWbOMpg0+WgF5VmlA0","access-control-expose-headers":"*","x-acs-trace-id":"928e9ec2f8dd54addf3b6ca38b539bab"},"statusCode":200,"body":{"bizId":"484322623107928770^0","code":"OK","message":"OK","requestId":"A4BF7276-9010-5AF7-B421-DEE11F8F8427"}}
+2024-08-08 17:05:33.484 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=985963)
+2024-08-08 17:05:33.682 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 17:05:33.683 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 17:05:53.052 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 17:05:53.108 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 17:05:53.115 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 36 ] - 保存申请Application(id=null, name=小黑子, email=111, phone=111, address=null, description=null, company=露出鸡脚, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=null)
+2024-08-08 17:06:10.049 [ scheduling-1 ] - [ INFO  ] [ com.gk.study.task.ApplicationTask : 41 ] - 自动审核通过Application(id=143, name=小黑子, email=111, phone=111, address=null, description=null, company=露出鸡脚, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=2024-08-08T04:05:53)
+2024-08-08 17:15:07.744 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 17:15:27.800 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 17:31:36.045 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 6484 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 17:31:36.047 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 17:31:37.503 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 17:31:37.504 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 17:31:37.505 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 17:31:37.619 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 17:31:37.967 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 17:31:38.084 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 17:31:38.290 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 17:31:38.290 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 17:31:38.756 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 17:31:38.782 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 17:31:39.060 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 17:31:39.375 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 17:31:39.760 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.14 seconds (JVM running for 4.967)
+2024-08-08 17:32:09.345 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 17:32:09.377 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 17:35:26.152 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 5596 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 17:35:26.155 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 17:35:27.564 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 17:35:27.565 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 17:35:27.565 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 17:35:27.668 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 17:35:27.933 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 17:35:28.036 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 17:35:28.225 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 17:35:28.225 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 17:35:28.650 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 17:35:28.670 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 17:35:28.929 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 17:35:29.198 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 17:35:29.544 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.797 seconds (JVM running for 4.428)
+2024-08-08 17:36:04.743 [ http-nio-9100-exec-3 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 17:36:05.306 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 17:36:05.313 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 17:36:05.476 [ http-nio-9100-exec-6 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @3c46e67a
+2024-08-08 17:36:10.659 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.UserController : 292 ] - 用户登出:testorg.apache.catalina.connector.RequestFacade@18921211
+2024-08-08 17:37:35.218 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2024-08-08 17:37:35.277 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2024-08-08 17:37:38.276 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.10 on DESKTOP-T04M4T8 with PID 14732 (D:\code\Java\code\JavaWeb\zyxt\java_book\server\target\classes started by 32791 in D:\code\Java\code\JavaWeb\zyxt)
+2024-08-08 17:37:38.279 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2024-08-08 17:37:39.631 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2024-08-08 17:37:39.632 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2024-08-08 17:37:39.633 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2024-08-08 17:37:39.737 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2024-08-08 17:37:40.020 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2024-08-08 17:37:40.129 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2024-08-08 17:37:40.331 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2024-08-08 17:37:40.332 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2024-08-08 17:37:40.755 [ main ] - [ INFO  ] [ com.gk.study.config.OssConfiguration : 14 ] - 开始创建阿里云文件上传工具类对象:AliOssProperties(endpoint=oss-cn-shanghai.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo, bucketName=zyxt-data-share)
+2024-08-08 17:37:40.778 [ main ] - [ INFO  ] [ com.gk.study.config.SmsConfiguration : 15 ] - 开始创建阿里云短信发送工具类对象:SmsProperties(endpoint=dysmsapi.aliyuncs.com, accessKeyId=LTAI5tE1fJKiFdA5gmhB5tfb, accessKeySecret=iNSfVFMyocDlzWr6U5ChQBjnstcMpo)
+2024-08-08 17:37:41.044 [ main ] - [ INFO  ] [ com.gk.study.config.WebMvcConfiguration : 61 ] - 扩展消息转化器
+2024-08-08 17:37:41.315 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2024-08-08 17:37:41.796 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 3.925 seconds (JVM running for 4.581)
+2024-08-08 17:38:25.842 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-08 17:38:25.880 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.controller.UserController : 280 ] - 发送手机验证码:13915325889
+2024-08-08 17:38:25.887 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.service.impl.UserServiceImpl : 127 ] - 手机号:13915325889, 验证码:452475
+2024-08-08 17:38:26.691 [ http-nio-9100-exec-2 ] - [ INFO  ] [ com.gk.study.utils.SendSmsUtils : 45 ] - 发送结果:{"headers":{"access-control-allow-origin":"*","date":"Thu, 08 Aug 2024 09:38:26 GMT","content-length":"131","keep-alive":"timeout=25","x-acs-request-id":"52518C22-B3DD-505E-B905-6FB51E60E3B1","connection":"keep-alive","content-type":"application/json;charset=utf-8","etag":"17bJ9WZ7ObeZOjEx1w4nZ3Q7","access-control-expose-headers":"*","x-acs-trace-id":"b06ebf056e83b36013a2ac3e66c8f149"},"statusCode":200,"body":{"code":"isv.BUSINESS_LIMIT_CONTROL","message":"触发小时级流控Permits:5","requestId":"52518C22-B3DD-505E-B905-6FB51E60E3B1"}}
+2024-08-08 17:38:46.956 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=123153)
+2024-08-08 17:38:58.206 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=123153)
+2024-08-08 17:39:13.099 [ http-nio-9100-exec-6 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=123153)
+2024-08-08 17:39:46.563 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=123153)
+2024-08-08 17:39:56.626 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=123153)
+2024-08-08 17:40:55.967 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=452475)
+2024-08-08 17:40:56.626 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 17:40:56.629 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 17:40:56.751 [ http-nio-9100-exec-3 ] - [ WARN  ] [ c.b.m.core.toolkit.support.ReflectLambdaMeta : 41 ] - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @3c46e67a
+2024-08-08 17:41:06.461 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 17:41:06.461 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 17:41:06.461 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:null
+2024-08-08 17:41:06.462 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 25 ] - 请求被Login拦截器拦截
+2024-08-08 17:41:06.523 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:recommend, c:null, tag:null
+2024-08-08 17:41:17.742 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 17:41:17.802 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.interceptor.LoginInterceptor : 23 ] - 用户:UserDTO(id=18, mobile=13915325889)
+2024-08-08 17:41:17.811 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.ApplicationController : 36 ] - 保存申请Application(id=null, name=小黑子, email=111, phone=111, address=null, description=null, company=露出鸡脚, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=null)
+2024-08-08 17:41:30.036 [ scheduling-1 ] - [ INFO  ] [ com.gk.study.task.ApplicationTask : 41 ] - 自动审核通过Application(id=146, name=小黑子, email=111, phone=111, address=null, description=null, company=露出鸡脚, purpose=, projectLeader=, projectType=, status=0, userId=null, createTime=2024-08-08T04:41:18)
+2024-08-08 17:41:35.487 [ http-nio-9100-exec-5 ] - [ INFO  ] [ com.gk.study.controller.UserController : 292 ] - 用户登出:testorg.apache.catalina.connector.RequestFacade@798558e8
+2024-08-08 17:41:35.535 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 17:41:35.535 [ http-nio-9100-exec-8 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 17:42:03.005 [ http-nio-9100-exec-9 ] - [ INFO  ] [ com.gk.study.controller.UserController : 286 ] - 用户登录:LoginFormDTO(phone=13915325889, code=452475)
+2024-08-08 17:42:03.212 [ http-nio-9100-exec-1 ] - [ INFO  ] [ com.gk.study.controller.ClassificationController : 38 ] - 分类查询
+2024-08-08 17:42:03.213 [ http-nio-9100-exec-3 ] - [ INFO  ] [ com.gk.study.controller.ThingController : 47 ] - 展示数据key:null, sort:null, c:null, tag:null
+2024-08-08 17:42:21.947 [ http-nio-9100-exec-4 ] - [ INFO  ] [ com.gk.study.controller.UserController : 73 ] - 管理员登录AdminLoginDTO(username=null, password=null)
+2024-08-08 17:42:23.057 [ http-nio-9100-exec-7 ] - [ INFO  ] [ com.gk.study.controller.UserController : 73 ] - 管理员登录AdminLoginDTO(username=null, password=null)
+2024-08-08 17:43:16.041 [ http-nio-9100-exec-10 ] - [ INFO  ] [ com.gk.study.controller.UserController : 73 ] - 管理员登录AdminLoginDTO(username=null, password=null)
