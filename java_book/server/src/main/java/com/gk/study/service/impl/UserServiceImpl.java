@@ -3,6 +3,9 @@ package com.gk.study.service.impl;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.bean.copier.CopyOptions;
 import cn.hutool.core.util.RandomUtil;
+import com.aliyun.dysmsapi20170525.models.SendSmsRequest;
+import com.aliyun.dysmsapi20170525.models.SendSmsResponse;
+import com.aliyun.teautil.Common;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -22,6 +25,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -116,6 +120,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      * @return
      */
     @Override
+    @Transactional
     public APIResponse sendCode(String phone) {
         //1.校验手机号
         if(RegexUtils.isPhoneInvalid(phone)){
@@ -126,14 +131,18 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         String code = RandomUtil.randomNumbers(6);
         log.info("手机号:{}, 验证码:{}", phone, code);
 
-        //4.redis如果存在phone，刪除
-        stringRedisTemplate.delete("user:phone"+ phone);
-        //4.保存至redis
-        stringRedisTemplate.opsForValue().set("user:phone:" + phone, code, 5, TimeUnit.MINUTES);
-
-        //5.发送验证码
+        //4.发送验证码
         try {
-            sendSmsUtils.sendCode(phone, code);
+            SendSmsResponse response = sendSmsUtils.sendCode(phone, code);
+            String bodyCode = response.getBody().code;
+            log.info("bodyCode:{}", bodyCode);
+            if("isv.BUSINESS_LIMIT_CONTROL".equals(bodyCode)){
+                return new APIResponse(ResponeCode.FAIL, "发送验证码次数过多，请稍后重新再试");
+            }
+            //5.redis如果存在phone，刪除
+            stringRedisTemplate.delete("user:phone"+ phone);
+            //5.保存至redis
+            stringRedisTemplate.opsForValue().set("user:phone:" + phone, code, 5, TimeUnit.MINUTES);
         } catch (Exception e) {
             return new APIResponse(ResponeCode.FAIL, "验证码发送失败");
         }

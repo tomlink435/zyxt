@@ -22,7 +22,7 @@ public class SendSmsUtils {
     /**
      * 发送验证码
      */
-    public void sendCode(String phone, String code) throws Exception {
+    public SendSmsResponse sendCode(String phone, String code) throws Exception {
         //1.配置config
         Config config = new Config()
                 .setEndpoint(endpoint)
@@ -43,6 +43,7 @@ public class SendSmsUtils {
         try{
             SendSmsResponse response = client.sendSmsWithOptions(sendSmsRequest, runtime);
             log.info("发送结果:{}", Common.toJSONString(response));
+            return response;
         } catch (TeaException error){
             // 此处仅做打印展示，请谨慎对待异常处理，在工程项目中切勿直接忽略异常。
             // 错误 message
@@ -59,5 +60,6 @@ public class SendSmsUtils {
             System.out.println(error.getData().get("Recommend"));
             com.aliyun.teautil.Common.assertAsString(error.message);
         }
+        return null;
     }
 }
