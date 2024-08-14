@@ -2,31 +2,16 @@
   <div class="content-list">
     <div class="list-title">我的申请</div>
     <a-tabs default-active-key="1" @change="onTabChange">
-      <!-- <a-tab-pane key="1" tab="全部">
-      </a-tab-pane> -->
-      <!-- <a-tab-pane key="2" tab="待提交审核">
-      </a-tab-pane>
-      <a-tab-pane key="3" tab="待审核">
-      </a-tab-pane>
-	  <a-tab-pane key="4" tab="审核中">
-	  </a-tab-pane>
-	<a-tab-pane key="5" tab="审核通过">
-	</a-tab-pane>
-	<a-tab-pane key="6" tab="审核未通过">
-	</a-tab-pane> -->
+     
     </a-tabs>
-    <div class="list-content">
-      <!-- <div class="order-item-view" v-for="(item, index) in borrowData  " :key="index" v-show="(item.status===1||item.status==0)&&item.id>=28"> -->
+    <div class="">
       <div class="order-item-view" v-for="(item, index) in borrowData  " :key="index" v-show="(item.status===1||item.status==0)">
         <div class="header flex-view">
           <div class="left">
-            <!-- <span class="text">序号</span>
-            <span class="num mg-4">#</span>
-            <span class="num">{{item.}}</span> -->
             <span class="time">{{getFormatTime(item.orderTime, true)}}</span>
           </div>
           <div class="right">
-            <a-popconfirm
+            <!-- <a-popconfirm
                 v-if="item.status==='1'"
                 title="确定还书？"
                 ok-text="是"
@@ -43,34 +28,30 @@
                 @confirm="handleDelay(item)"
             >
               <a-button size="small" style="margin-right: 24px;">延期</a-button>
-            </a-popconfirm>
+            </a-popconfirm> -->
             <span class="text">申请状态</span>
             <span class="state">{{item.status===0? '待审批': item.status === 1? '审批通过':'审批未通过'}}</span>
           </div>
         </div>
-        <div class="content flex-view">
+        <div class="content flex-view" style="height: 260px;">
           <div class="left-list">
             <div class="list-item flex-view">
-              <!-- <img :src="item.cover" class="thing-img"> -->
-              <img src="/src/views/images/1.png" style="width: 15%;height: 100%;" class="thing-img">
+              <img :src="item.cover" class="thing-img">
               <div class="detail flex-between flex-view">
-                <div class="flex-between flex-top flex-view">
-                  <h2 class="name">{{item.title}}</h2>
-                  <span class="count">{{item.author}}</span>
-                </div>
+                <!-- <div class="flex-between flex-top flex-view"> -->
+                  <div class="name">{{item.title}}</div>
+                  <div class="count">{{item.description}}</div>
+                <!-- </div> -->
               </div>
             </div>
           </div>
           <div class="right-info">
-            <p class="title">申请人:{{item.name}}</p>
-            <p class="name">
-            </p>
-            <p class="title">描述:{{item.description}}</p>
-            <p class="text">
-            </p>
-            <p class="title">目的:{{item.purpose}}</p>
-            <p class="text">
-            </p>
+            <p class="title" >申请人:{{item.name}}</p>
+           
+            <p class="title">申请用途:{{item.purpose}}</p>
+           
+            <p class="title">课题名称:{{item.projectName}}</p>
+            
           </div>
         </div>
         <div class="bottom flex-view">
@@ -87,7 +68,7 @@
 import {message} from "ant-design-vue";
 import {getFormatTime} from '/@/utils/'
 import {userBorrowListApi, returnUserBorrowApi, delayUserBorrowApi} from '/@/api/borrow'
-import { listApi } from "/@/api/application";
+import { listApi,listByUserApi } from "/@/api/application";
 import {BASE_URL} from "/@/store/constants";
 import {useUserStore} from "/@/store";
 
@@ -119,7 +100,9 @@ const onTabChange =(key)=> {
 const getDataList= ()=> {
   loading.value = true
   let userId = userStore.user_id
-  listApi().then(res=>{
+  console.log(userId)
+  listByUserApi(userId)
+  .then(res=>{
     res.data.forEach((item, index) => {
       
         // console.log('index',index)
@@ -246,23 +229,23 @@ const handleDelay =(item)=> {
 
     .left-list {
       overflow: hidden;
-      height: 132px;
+      // height: 132px;
       -webkit-box-flex: 2;
       -ms-flex: 2;
       flex: 2;
       padding-right: 16px;
 
       .list-item {
-        height: 60px;
+        // height: 60px;
         margin-bottom: 12px;
         overflow: hidden;
         cursor: pointer;
       }
 
       .thing-img {
-        width: 48px;
-        height: 100%;
-        margin-right: 12px;
+        width: 40%;
+        // height: 100%;
+        // margin-right: 12px;
       }
 
       .detail {
@@ -296,13 +279,23 @@ const handleDelay =(item)=> {
       .name {
         color: #152844;
         font-weight: 600;
-        font-size: 14px;
-        line-height: 18px;
+        // font-size: 14px;
+        // line-height: 18px;
+        margin: auto auto 10px auto;
       }
 
       .count {
         color: #484848;
+        width: 80%;
+        margin: auto;
         font-size: 12px;
+        -webkit-line-clamp:3;
+          text-overflow: ellipsis; 
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          // white-space: nowrap;
+          // -webkit-line-clamp: 3; 
       }
 
       .flex-between {
@@ -339,7 +332,13 @@ const handleDelay =(item)=> {
       font-size: 14px;
 
       .title {
+        height: 30%;
         color: #6f6f6f;
+        -webkit-line-clamp:3;
+          text-overflow: ellipsis; 
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
       }
 
       .name {

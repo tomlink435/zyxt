@@ -79,13 +79,14 @@ import { saveApi } from "/@/api/application";
 import { USER_ID } from '/@/store/constants';
 const router = useRouter();
 const route = useRoute();
+const formQuery = JSON.parse(route.query.form);
+
   onMounted(() => {
-    const formQuery = route.query.form;
-      if (formQuery) {
-        Object.assign(formQuery, JSON.parse(formQuery));
-      }
-      console.log('-----', formQuery);
-      debugger
+      // if (formQuery) {
+      //   Object.assign(formQuery, JSON.parse(formQuery));
+      // }
+      console.log('-----', formQuery.id);
+      // debugger
 
 
   });
@@ -99,18 +100,22 @@ const route = useRoute();
         projectLeader: '',
         projectType: '',
         userId:localStorage.getItem(USER_ID),
-        thingId:route.query.thingId,
+        thingId:formQuery.id,
      })
         
 
 
     // // 提交表单
     const onSubmit=()=> {
-      saveApi(form)
-          alert('提交成功！');
+      saveApi(form).then(res=>{
+      alert('提交成功！');
           console.log('提交的数据：', form);
           // this.$router.push({ name: 'done', params: { form: this.form } });
           router.push({ name: 'done', query: { form: JSON.stringify(form) } });
+      }).catch(err=>{
+        alert(err.trace)
+      })
+        
       }
     
 

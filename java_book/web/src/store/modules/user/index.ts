@@ -68,7 +68,7 @@ export const useUserStore = defineStore('user', {
 
         console.log(state)
         console.log(localStorage)
-        debugger
+        // debugger
 
         return result
       })
