@@ -39,6 +39,14 @@ export const useUserStore = defineStore('user', {
         localStorage.setItem(USER_TOKEN, result.data.token)
         localStorage.setItem(USER_NAME, result.data.username)
         localStorage.setItem(USER_ID, result.data.id)
+        const expire = 1000 * 0.12 * 60;
+        // setTimeout(() => {
+        //   localStorage.setItem(USER_TOKEN, result.data.token)
+        //   localStorage.setItem(USER_NAME, result.data.username)
+        //   localStorage.setItem(USER_ID, result.data.id)
+         
+        // }, expire);
+        
       }
 
       return result;
@@ -52,10 +60,15 @@ export const useUserStore = defineStore('user', {
         localStorage.removeItem(USER_ID)
         localStorage.removeItem(USER_NAME)
         localStorage.removeItem(USER_TOKEN)
+      
 
         state.user_id = undefined
         state.user_name = undefined
         state.user_token = undefined
+
+        console.log(state)
+        console.log(localStorage)
+        debugger
 
         return result
       })

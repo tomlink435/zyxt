@@ -42,6 +42,10 @@
           <img :src="MyOrderImg">
           <span>我的资源车</span>
         </div>
+        <div class="mine-item flex-view" @click="clickMenu('favorites')">
+          <img :src="MyOrderImg">
+          <span>我的收藏</span>
+        </div>
         <!-- <div class="mine-item flex-view" @click="clickMenu('commentView')">
           <img :src="CommentIconImg">
           <span>我的评论</span>

@@ -2,6 +2,10 @@
 import { get, post } from '/@/utils/http/axios';
 import { UserState } from '/@/store/modules/user/types';
 import { useUserStore } from '../store';
+import VueCookies from 'vue-cookies';
+
+const { cookies } = useCookies();
+import { useCookies } from "vue3-cookies";
 // import axios from 'axios';
 enum URL {
     login = '/api/user/login',
@@ -33,8 +37,28 @@ export interface LoginData2 {
 // if(userStore===null){
 //     userStore=useUserStore()
 // }
+// VueCookies.set("userInfo",result.data,0);
+cookies.set("userInfo2","test",30);
 
-const loginApi = async (data: LoginData) => post<any>({ url: URL.login, data,});
+const loginApi = async (data: LoginData) => {
+    const response = await post<LoginRes>({ url: URL.login, data });
+    
+    // if (response?.token) {
+        // 获取当前时间
+        const now = new Date();
+        // 计算到24小时后的剩余时间
+        const expires = new Date(now.getTime() + (24 * 60 * 60 * 1000) - (now.getHours() * 60 * 60 * 1000 + now.getMinutes() * 60 * 1000 + now.getSeconds() * 1000));
+        
+        // 设置 cookie，有效期为24小时减去当前时间
+        document.cookie = `token=${response.token}; expires=${expires.toUTCString()}; path=/`;
+    // }
+    
+    return response;
+};
+
+
+
+// const loginApi = async (data: LoginData) => post<any>({ url: URL.login, data,});
 const listApi = async (params: any) => get<any>({ url: URL.userList, params: params, data: {}, });
 const detailApi = async (params: any) => get<any>({ url: URL.detail, params: params, data: {},});
 const createApi = async (data: any) => post<any>({ url: URL.create, params: {}, data: data, headers: { 'Content-Type': 'multipart/form-data;charset=utf-8' } });

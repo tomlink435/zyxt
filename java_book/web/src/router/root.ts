@@ -85,6 +85,11 @@ const constantRouterMap = [
             component: () => import('/@/views/index/user/borrow-view.vue')
           },
           {
+            path: 'favorites',
+            name: 'favorites',
+            component: () => import('/@/views/index/user/favorites.vue')
+          },
+          {
             path: 'myCart',
             name: 'myCart',
             component: () => import('/@/views/index/user/cart.vue')

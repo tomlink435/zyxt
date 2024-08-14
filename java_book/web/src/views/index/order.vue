@@ -76,6 +76,7 @@
 import Header from '/@/views/index/components/header.vue'
 import Footer from '/@/views/index/components/footer.vue'
 import { saveApi } from "/@/api/application";
+import { USER_ID } from '/@/store/constants';
 const router = useRouter();
 const route = useRoute();
   
@@ -88,6 +89,8 @@ const route = useRoute();
         projectName: '',
         projectLeader: '',
         projectType: '',
+        userId:localStorage.getItem(USER_ID),
+        thingId:route.query.thingId,
      })
         
 

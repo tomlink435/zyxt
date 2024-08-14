@@ -66,6 +66,7 @@ import AvatarIcon from '/@/assets/images/avatar.jpg';
 import MessageIcon from '/@/assets/images/message-icon.svg';
 
 import { ref, provide } from 'vue';
+import { USER_TOKEN } from '/@/store/constants';
 
 const audioVo = ref(null);
 provide('audioVo', audioVo);
@@ -82,7 +83,40 @@ let msgData = ref([] as any)
 
 onMounted(()=>{
   getMessageList()
+  // console.log(localStorage.getItem(USER_TOKEN))
+  // debugger
+inactivityTime();
+
 })
+
+// 自动登出逻辑
+const inactivityTime=()=> {
+    let time: ReturnType<typeof setTimeout>;
+    const maxInactivityTime = 30 * 60 * 1000; // 设置为30分钟 (单位为毫秒)
+// debugger
+    function resetTimer() {
+        clearTimeout(time);
+        time = setTimeout(logout, maxInactivityTime);
+    }
+
+    function logout() {
+        alert("由于长时间未操作，您已自动退出。");
+        router.push({ name: 'login' }).catch((err) => {
+            console.error('路由跳转失败:', err);
+        });
+        // debugger
+        // localStorage.removeItem(USER_ID)
+        // localStorage.removeItem(USER_NAME)
+        localStorage.removeItem(USER_TOKEN)
+     
+    }
+
+    window.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onkeypress = resetTimer;
+    document.onscroll = resetTimer;
+    document.onclick = resetTimer;
+}
 
 const getMessageList = ()=> {
   loading.value = true

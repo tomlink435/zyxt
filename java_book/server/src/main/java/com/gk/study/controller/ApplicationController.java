@@ -31,10 +31,18 @@ public class ApplicationController {
      * @param applicationDTO
      * @return
      */
+<<<<<<< HEAD
     @PostMapping(value = "/save")
     public APIResponse post(@RequestBody ApplicationDTO applicationDTO){
         log.info("提交申请{}", applicationDTO);
         return applicationService.save(applicationDTO);
+=======
+    @PostMapping(value = "/save/")
+    public APIResponse post(@RequestBody Application application){
+        log.info("保存申请{}", application);
+        applicationService.save(application);
+        return new APIResponse(ResponeCode.SUCCESS, "保存成功");
+>>>>>>> 874c5de448ee35fb25bc518c516657333c1e060e
     }
 
     /**
