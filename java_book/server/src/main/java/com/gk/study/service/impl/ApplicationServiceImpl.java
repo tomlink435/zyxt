@@ -1,16 +1,20 @@
 package com.gk.study.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.gk.study.common.APIResponse;
 import com.gk.study.common.BaseException;
 import com.gk.study.common.ResponeCode;
+import com.gk.study.entity.Address;
 import com.gk.study.entity.Application;
 import com.gk.study.entity.Thing;
 import com.gk.study.entity.User;
+import com.gk.study.mapper.AddressMapper;
 import com.gk.study.mapper.ApplicationMapper;
 import com.gk.study.mapper.ThingMapper;
 import com.gk.study.mapper.UserMapper;
 import com.gk.study.pojo.DTO.ApplicationDTO;
+import com.gk.study.pojo.VO.MyApplicationVO;
 import com.gk.study.service.ApplicationService;
 import com.gk.study.utils.RegexUtils;
 import org.springframework.beans.BeanUtils;
@@ -18,10 +22,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ApplicationServiceImpl implements ApplicationService {
+public class ApplicationServiceImpl extends ServiceImpl<ApplicationMapper, Application> implements ApplicationService {
 
     @Autowired
     private ApplicationMapper applicationMapper;
@@ -159,5 +164,35 @@ public class ApplicationServiceImpl implements ApplicationService {
         queryWrapper.eq("user_id", applicationDTO.getUserId());
         List<Application> applicationList = applicationMapper.selectList(queryWrapper);
         return applicationList;
+    }
+
+    /**
+     * 根据用户姓名查询对应的申请
+     * @param id
+     * @return
+     */
+    @Override
+    public List<MyApplicationVO> getById(Long id) {
+        //根据用户查找到对应的申请
+        QueryWrapper<Application> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_id", id);
+        List<Application> list = applicationMapper.selectList(queryWrapper);
+
+        List<MyApplicationVO> applicationVOList = new ArrayList<>(list.size());
+        //根据申请找到对应的数据
+        for (int i = 0; i < list.size(); i++) {
+            Application application = list.get(i);
+            //注入申请信息
+            MyApplicationVO applicationVO = new MyApplicationVO();
+            BeanUtils.copyProperties(application, applicationVO);
+
+            //注入数据信息
+            Thing thing = thingMapper.selectById(application.getThingId());
+            applicationVO.setTitle(thing.getTitle());
+            applicationVO.setCover(thing.getCover());
+            applicationVO.setDescription(thing.getDescription());
+            applicationVOList.add(applicationVO);
+        }
+        return applicationVOList;
     }
 }

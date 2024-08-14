@@ -7,6 +7,7 @@ import com.gk.study.entity.Result;
 import com.gk.study.permission.Access;
 import com.gk.study.permission.AccessLevel;
 import com.gk.study.pojo.DTO.ApplicationDTO;
+import com.gk.study.pojo.VO.MyApplicationVO;
 import com.gk.study.service.ApplicationService;
 import javassist.tools.rmi.AppletServer;
 import lombok.extern.slf4j.Slf4j;
@@ -31,18 +32,10 @@ public class ApplicationController {
      * @param applicationDTO
      * @return
      */
-<<<<<<< HEAD
     @PostMapping(value = "/save")
     public APIResponse post(@RequestBody ApplicationDTO applicationDTO){
         log.info("提交申请{}", applicationDTO);
         return applicationService.save(applicationDTO);
-=======
-    @PostMapping(value = "/save/")
-    public APIResponse post(@RequestBody Application application){
-        log.info("保存申请{}", application);
-        applicationService.save(application);
-        return new APIResponse(ResponeCode.SUCCESS, "保存成功");
->>>>>>> 874c5de448ee35fb25bc518c516657333c1e060e
     }
 
     /**
@@ -90,5 +83,18 @@ public class ApplicationController {
     public APIResponse reject(Long id){
         applicationService.reject(id);
         return new APIResponse(ResponeCode.SUCCESS);
+    }
+
+
+    /**
+     * 根据用户id查询审核
+     * @param id
+     * @return
+     */
+    @GetMapping("/list/{id}")
+    public APIResponse getById(@PathVariable Long id){
+        log.info("查询用户的申请{}", id);
+        List<MyApplicationVO> applications = applicationService.getById(id);
+        return new APIResponse(ResponeCode.SUCCESS, applications);
     }
 }
