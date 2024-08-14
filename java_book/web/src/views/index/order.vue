@@ -79,7 +79,16 @@ import { saveApi } from "/@/api/application";
 import { USER_ID } from '/@/store/constants';
 const router = useRouter();
 const route = useRoute();
-  
+  onMounted(() => {
+    const formQuery = route.query.form;
+      if (formQuery) {
+        Object.assign(formQuery, JSON.parse(formQuery));
+      }
+      console.log('-----', formQuery);
+      debugger
+
+
+  });
      const form = reactive({
       name: '',
         email: '',

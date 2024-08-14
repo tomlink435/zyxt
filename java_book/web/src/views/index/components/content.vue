@@ -206,7 +206,7 @@ const downloadFile=(item)=> {
   if(item.id%2==1){
     let userId = userStore.user_id
   if (userId) {
-    router.push({name: 'order'},);
+    router.push({name: 'order',query:{form:JSON.stringify(item)}});
     // router.push({name: 'login'})
 
     // router.push({ name: 'order',query: {thingId: thingId.value} });
