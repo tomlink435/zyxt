@@ -16,7 +16,8 @@
 	</a-tab-pane> -->
     </a-tabs>
     <div class="list-content">
-      <div class="order-item-view" v-for="(item, index) in borrowData  " :key="index" v-show="(item.status===1||item.status==0)&&item.id>=28">
+      <!-- <div class="order-item-view" v-for="(item, index) in borrowData  " :key="index" v-show="(item.status===1||item.status==0)&&item.id>=28"> -->
+      <div class="order-item-view" v-for="(item, index) in borrowData  " :key="index" v-show="(item.status===1||item.status==0)">
         <div class="header flex-view">
           <div class="left">
             <!-- <span class="text">序号</span>
@@ -147,7 +148,7 @@ const getDataList= ()=> {
 }
 const handleDetail =(thingId) =>{
   // 跳转新页面
-  let text = router.resolve({name: 'detail', query: {id: 98}})
+  let text = router.resolve({name: 'detail', query: {id: thingId}})
   window.open(text.href, '_blank')
 }
 const handleReturn =(item)=> {

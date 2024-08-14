@@ -20,7 +20,9 @@
     "pinia-plugin-persistedstate": "^3.0.2",
     "qs": "^6.11.0",
     "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
+    "vue-cookies": "^1.8.4",
+    "vue-router": "^4.1.6",
+    "vue3-cookies": "^1.0.6"
   },
   "devDependencies": {
     "@types/qs": "^6.9.7",

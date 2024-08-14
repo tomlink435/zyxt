@@ -31,7 +31,7 @@ public class ApplicationController {
      * @param application
      * @return
      */
-    @PostMapping(value = "/save")
+    @PostMapping(value = "/save/")
     public APIResponse post(@RequestBody Application application){
         log.info("保存申请{}", application);
         applicationService.save(application);

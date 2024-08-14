@@ -115,7 +115,7 @@ const form = reactive({
     const handleTimeChange = () => {
       if (time.value <= 0) {
         isDisposed.value = false;
-        time.value = 20;
+        time.value = 30;
       } else {
         setTimeout(() => {
           time.value--;
@@ -124,7 +124,7 @@ const form = reactive({
       }
     };
 
-    const time = ref(20);
+    const time = ref(30);
     const goToList = () => {
 
       const formQuery = route.query.form;
@@ -152,6 +152,7 @@ const form = reactive({
   if ('WebSocket' in window) {
     //连接WebSocket节点
     websocket = new WebSocket("ws://localhost:9100/api/ws/" + clientId);
+    // websocket = new WebSocket("ws://59.110.91.184:9101/api/ws/" + clientId);
   }
   else {
     alert('Not support websocket')

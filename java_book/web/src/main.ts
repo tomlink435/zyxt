@@ -8,6 +8,8 @@ import bootstrap from './core/bootstrap';
 import '/@/styles/reset.less';
 import '/@/styles/index.less';
 import Antd from 'ant-design-vue';
+import VueCookies from 'vue-cookies';
+
 
 const app = createApp(App);
 
@@ -16,4 +18,9 @@ app.use(router);
 app.use(piniaStore);
 app.use(bootstrap);
 app.use(ElementPlus)
+app.use(VueCookies)
+
+
+
 app.mount('#app');
+// app.config.globalProperties.$cookies = VueCookies
