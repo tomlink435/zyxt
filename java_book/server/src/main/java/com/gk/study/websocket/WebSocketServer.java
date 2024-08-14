@@ -1,5 +1,6 @@
 package com.gk.study.websocket;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.websocket.OnClose;
@@ -17,6 +18,7 @@ import java.util.Map;
  */
 @Component
 @ServerEndpoint("/ws/{sid}")
+@Slf4j
 public class WebSocketServer {
 
     //存放会话对象
@@ -27,8 +29,9 @@ public class WebSocketServer {
      */
     @OnOpen
     public void onOpen(Session session, @PathParam("sid") String sid) {
-        System.out.println("客户端：" + sid + "建立连接");
+        log.info("客户端:{} 建立连接", sid);
         sessionMap.put(sid, session);
+
     }
 
     /**

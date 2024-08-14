@@ -2,6 +2,8 @@ package com.gk.study.config;
 
 import com.gk.study.interceptor.LoginInterceptor;
 import com.gk.study.interceptor.RefreshTokenInterceptor;
+import com.gk.study.interceptor.UVInterceptor;
+import com.gk.study.service.VisitorService;
 import com.gk.study.utils.JacksonObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,9 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
+    @Autowired
+    private VisitorService visitorService;
+
 //    @Override
 //    public void addCorsMappings(CorsRegistry registry) {
 //        registry.addMapping("/**")
@@ -34,13 +39,13 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
 
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new RefreshTokenInterceptor(stringRedisTemplate)).order(0);
+        registry.addInterceptor(new UVInterceptor(visitorService)).order(0);
+        registry.addInterceptor(new RefreshTokenInterceptor(stringRedisTemplate)).order(1);
 
         registry.addInterceptor(new LoginInterceptor(stringRedisTemplate))
                 .excludePathPatterns("/user/**")
                 .excludePathPatterns("/**/list")
-                .order(1);
-
+                .order(2);
     }
 
     /**

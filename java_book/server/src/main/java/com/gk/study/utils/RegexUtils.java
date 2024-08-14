@@ -4,6 +4,15 @@ import cn.hutool.core.util.StrUtil;
 
 public class RegexUtils {
     /**
+     * 是否姓名无效
+     * @param name
+     * @return
+     */
+    public static boolean isNameInvalid(String name){
+        return mismatch(name, RegexPatterns.NAME_REGEX);
+    }
+
+    /**
      * 是否是无效手机格式
      * @param phone 要校验的手机号
      * @return true:符合，false：不符合

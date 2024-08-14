@@ -21,4 +21,8 @@ public abstract class RegexPatterns {
      */
     public static final String VERIFY_CODE_REGEX = "^[a-zA-Z\\d]{6}$";
 
+    /**
+     * 姓名正则
+     */
+    public static final String NAME_REGEX = "[\\u4E00-\\u9FA5]{2,5}(?:·[\\u4E00-\\u9FA5]{2,5})*";
 }

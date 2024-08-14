@@ -133,12 +133,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
         //4.发送验证码
         try {
-            SendSmsResponse response = sendSmsUtils.sendCode(phone, code);
-            String bodyCode = response.getBody().code;
-            log.info("bodyCode:{}", bodyCode);
-            if("isv.BUSINESS_LIMIT_CONTROL".equals(bodyCode)){
-                return new APIResponse(ResponeCode.FAIL, "发送验证码次数过多，请稍后重新再试");
-            }
+//            SendSmsResponse response = sendSmsUtils.sendCode(phone, code);
+//            String bodyCode = response.getBody().code;
+//            if("isv.BUSINESS_LIMIT_CONTROL".equals(bodyCode)){
+//                return new APIResponse(ResponeCode.FAIL, "发送验证码次数过多，请稍后重新再试");
+//            }
             //5.redis如果存在phone，刪除
             stringRedisTemplate.delete("user:phone"+ phone);
             //5.保存至redis

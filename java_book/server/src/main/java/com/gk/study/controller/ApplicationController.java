@@ -28,14 +28,13 @@ public class ApplicationController {
     private ApplicationService applicationService;
     /**
      * 保存表单
-     * @param application
+     * @param applicationDTO
      * @return
      */
     @PostMapping(value = "/save")
-    public APIResponse post(@RequestBody Application application){
-        log.info("保存申请{}", application);
-        applicationService.save(application);
-        return new APIResponse(ResponeCode.SUCCESS, "保存成功");
+    public APIResponse post(@RequestBody ApplicationDTO applicationDTO){
+        log.info("提交申请{}", applicationDTO);
+        return applicationService.save(applicationDTO);
     }
 
     /**
@@ -44,6 +43,7 @@ public class ApplicationController {
      */
     @GetMapping(value = "/list")
     public APIResponse list(){
+        log.info("查询申请");
         List<Application> applicationList = applicationService.list();
         return new APIResponse(ResponeCode.SUCCESS, "查询成功", applicationList);
     }

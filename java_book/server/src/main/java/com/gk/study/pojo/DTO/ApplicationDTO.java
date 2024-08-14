@@ -10,5 +10,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ApplicationDTO {
-    private int userId;
+    private String name;
+    private String email;
+    private String phone;
+    private String company;
+    private String purpose;
+    private String projectName;
+    private String projectLeader;
+    private String projectType;
+    private Long userId;
+    private Long thingId;
 }

@@ -10,4 +10,5 @@ public interface UserMapper extends BaseMapper<User> {
 
     @Select("select * from java_book2.b_user where phone=#{phone}")
     User selectByPhone(String phone);
+
 }

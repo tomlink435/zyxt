@@ -20,9 +20,10 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {//1.获取请求头中的token
         //1.判断是否需要拦截(ThreadLocal中是否有用户)
-        log.info("用户:{}", UserHolder.getUser());
+        String url = request.getServletPath();
+        String token = request.getHeader("authorization");
         if(UserHolder.getUser() == null){
-            log.info("请求被Login拦截器拦截");
+            log.info("请求:{}, token:{}, 被Login拦截器拦截", url, token);
 //            response.setStatus(401);
             return false;
         }
