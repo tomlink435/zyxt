@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gk.study.mapper.ApplicationMapper">
+
+    <select id="selectByUserId" resultType="com.gk.study.pojo.VO.MyApplicationVO">
+        SELECT t.cover, t.title, t.`description`, a.status, a.name, a.purpose, a.project_name, a.thing_id
+        FROM b_application a
+                 JOIN b_thing t
+                      ON a.thing_id = t.id
+        WHERE a.user_id = #{userId};
+    </select>
+</mapper>

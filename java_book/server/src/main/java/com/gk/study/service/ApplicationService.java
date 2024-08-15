@@ -19,5 +19,5 @@ public interface ApplicationService {
 
     List<Application> query(ApplicationDTO applicationDTO);
 
-    List<MyApplicationVO> getById(Long id);
+    List<MyApplicationVO> getByUserId(Long userId);
 }
