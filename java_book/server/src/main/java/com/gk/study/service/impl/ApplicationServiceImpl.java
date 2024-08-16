@@ -168,31 +168,13 @@ public class ApplicationServiceImpl extends ServiceImpl<ApplicationMapper, Appli
 
     /**
      * 根据用户姓名查询对应的申请
-     * @param id
+     * @param userId
      * @return
      */
     @Override
-    public List<MyApplicationVO> getById(Long id) {
+    public List<MyApplicationVO> getByUserId(Long userId) {
         //根据用户查找到对应的申请
-        QueryWrapper<Application> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("user_id", id);
-        List<Application> list = applicationMapper.selectList(queryWrapper);
-
-        List<MyApplicationVO> applicationVOList = new ArrayList<>(list.size());
-        //根据申请找到对应的数据
-        for (int i = 0; i < list.size(); i++) {
-            Application application = list.get(i);
-            //注入申请信息
-            MyApplicationVO applicationVO = new MyApplicationVO();
-            BeanUtils.copyProperties(application, applicationVO);
-
-            //注入数据信息
-            Thing thing = thingMapper.selectById(application.getThingId());
-            applicationVO.setTitle(thing.getTitle());
-            applicationVO.setCover(thing.getCover());
-            applicationVO.setDescription(thing.getDescription());
-            applicationVOList.add(applicationVO);
-        }
-        return applicationVOList;
+        List<MyApplicationVO> myApplicationVOList = applicationMapper.selectByUserId(userId);
+        return myApplicationVOList;
     }
 }

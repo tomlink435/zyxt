@@ -95,9 +95,9 @@ public class ApplicationController {
      * @return
      */
     @GetMapping("/list/{id}")
-    public APIResponse getById(@PathVariable Long id){
+    public APIResponse getByUserId(@PathVariable Long id){
         log.info("查询用户的申请{}", id);
-        List<MyApplicationVO> applications = applicationService.getById(id);
+        List<MyApplicationVO> applications = applicationService.getByUserId(id);
         return new APIResponse(ResponeCode.SUCCESS, applications);
     }
 }
