@@ -85,14 +85,15 @@ onMounted(()=>{
   getMessageList()
   // console.log(localStorage.getItem(USER_TOKEN))
   // debugger
-inactivityTime();
+  // 自动登出
+// inactivityTime();
 
 })
 
 // 自动登出逻辑
 const inactivityTime=()=> {
     let time: ReturnType<typeof setTimeout>;
-    const maxInactivityTime = 30 * 60 * 1000; // 设置为30分钟 (单位为毫秒)
+    const maxInactivityTime = 0.5 * 60 * 1000; // 设置为30分钟 (单位为毫秒)
 // debugger
     function resetTimer() {
         clearTimeout(time);

@@ -2,7 +2,7 @@ import {createRouter, createWebHistory} from 'vue-router';
 import root from './root';
 
 import { ADMIN_USER_TOKEN, USER_TOKEN } from '/@/store/constants'
-
+import { endActiveCheck, startActiveCheck } from '../utils/activeCheck';
 // 路由权限白名单
 const allowList = ['adminLogin', 'login', 'register', 'portal', 'search', 'detail', '403', '404']
 // 前台登录地址
@@ -15,7 +15,14 @@ const router = createRouter({
   history: createWebHistory(),
   routes: root,
 });
-
+router.afterEach((to) => {
+  // NProgress.done();
+  if (to.path.includes('/login') ) {
+    endActiveCheck()
+  } else {
+    startActiveCheck()
+  }
+});
 router.beforeEach(async (to, from, next) => {
   console.log(to, from)
 
