@@ -5,6 +5,9 @@ import com.gk.study.common.ResponeCode;
 import com.gk.study.entity.Thing;
 import com.gk.study.permission.Access;
 import com.gk.study.permission.AccessLevel;
+import com.gk.study.pojo.VO.BlockTransactionInfoVO;
+import com.gk.study.service.BannerService;
+import com.gk.study.service.BassService;
 import com.gk.study.service.ThingService;
 import com.gk.study.utils.AliOssUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -35,6 +38,10 @@ public class ThingController {
 
     @Autowired
     ThingService service;
+
+    @Autowired
+    private BassService bassService;
+
 
     @Autowired
     private AliOssUtil aliOssUtil;
@@ -90,11 +97,11 @@ public class ThingController {
      * @param id
      * @return
      */
-    @GetMapping("/getById")
+    @GetMapping("/getByTxId")
     public APIResponse getById(String id){
         log.info("获取上链数据:{}", id);
-        service.getById(id);
-        return new APIResponse(ResponeCode.SUCCESS, "删除成功");
+        BlockTransactionInfoVO vo = bassService.getDetailByTxId(id);
+        return new APIResponse(ResponeCode.SUCCESS, "证书生成成功", vo);
     }
 
     /**

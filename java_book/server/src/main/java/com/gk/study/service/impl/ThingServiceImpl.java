@@ -152,37 +152,6 @@ public class ThingServiceImpl extends ServiceImpl<ThingMapper, Thing> implements
         mapper.updateById(thing);
     }
 
-    @Override
-    public void getById(String id) {
-        String url = "http://59.110.93.238:30880/kapis/transactioncontroller.kubesphere.io/v1alpha1/transactions/getInDetail";
-
-//        Map<String, String> map = new HashMap<>();
-//        map.put("nameSpaceName", "trustedblockchain");
-//        map.put("channelName", "trustedblockchainchannel");
-//        map.put("TxId", "32e8b86411adbd6c32c345483e576c1b70f7bf5cef66dd1f4995109c3bfcbcf4");
-//
-//        ResponseEntity<Block> response = restTemplate.getForEntity(url, Block.class, map);
-
-        HttpHeaders headers = new HttpHeaders();
-        // set `content-type` header
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        // set `accept` header
-        headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-
-        Map<String, String> map = new HashMap<>();
-
-        map.put("namespace", "trustedblockchain");
-        map.put("channelName", "trustedblockchainchannel");
-        map.put("TxId", "32e8b86411adbd6c32c345483e576c1b70f7bf5cef66dd1f4995109c3bfcbcf4");
-
-        HttpEntity<Map<String, String>> request = new HttpEntity<>(map, headers);
-
-
-        ResponseEntity<String> response = restTemplate.postForEntity(url, request, String.class);
-
-        System.out.println(response);
-    }
-
     public void setThingTags(Thing thing) {
         // 删除tag
         Map<String, Object> map = new HashMap<>();

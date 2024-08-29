@@ -2,6 +2,7 @@ package com.gk.study.service;
 
 
 import com.gk.study.entity.Thing;
+import com.gk.study.pojo.VO.BlockTransactionInfoVO;
 import com.gk.study.pojo.VO.BlockTransactionVO;
 
 /**
@@ -16,5 +17,5 @@ public interface BassService {
     String save(Thing thing);
 
     //根据txId获取数据详情
-    void getDetailByTxId(String TxId);
+    BlockTransactionInfoVO getDetailByTxId(String TxId);
 }

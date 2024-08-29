@@ -2,6 +2,7 @@ package com.gk.study.service.impl;
 
 
 import com.gk.study.entity.Thing;
+import com.gk.study.pojo.VO.BlockTransactionInfoVO;
 import com.gk.study.pojo.VO.BlockTransactionVO;
 import com.gk.study.service.BassService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,7 +61,17 @@ public class BassServiceImpl implements BassService {
     }
 
     @Override
-    public void getDetailByTxId(String TxId) {
+    public BlockTransactionInfoVO getDetailByTxId(String TxId) {
+        String url = "http://59.110.93.238:30880/kapis/blockcontroller.kubesphere.io/v1alpha1/GetBlockByTxID?nameSpaceName={nameSpaceName}&channelName={channelName}&TxID={TxId}";
+
+        Map<String, String> map = new HashMap<>();
+        map.put("nameSpaceName", "trustedblockchain");
+        map.put("channelName", "trustedblockchainchannel");
+        map.put("TxId", "32e8b86411adbd6c32c345483e576c1b70f7bf5cef66dd1f4995109c3bfcbcf4");
+
+        ResponseEntity<BlockTransactionInfoVO> response = restTemplate.getForEntity(url, BlockTransactionInfoVO.class, map);
+
+        return response.getBody();
 
     }
 }
