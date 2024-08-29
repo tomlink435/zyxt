@@ -152,8 +152,8 @@ const form = reactive({
   //判断当前浏览器是否支持WebSocket
   if ('WebSocket' in window) {
     //连接WebSocket节点
-    websocket = new WebSocket("ws://localhost:9100/api/ws/" + clientId);
-    // websocket = new WebSocket("ws://59.110.91.184:9101/api/ws/" + clientId);
+    // websocket = new WebSocket("ws://localhost:9100/api/ws/" + clientId);
+    websocket = new WebSocket("ws://59.110.91.184:9101/api/ws/" + clientId);
   }
   else {
     alert('Not support websocket')

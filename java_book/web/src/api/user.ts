@@ -19,7 +19,7 @@ enum URL {
     updateUserPwd = '/api/user/updatePwd',
     updateUserInfo = '/api/user/updateUserInfo',
     sendCode = '/api/user/code',
-    userLogout= '/api/user/userLogout',
+    userLogout = '/api/user/userLogout',
 }
 interface LoginRes {
     token: string;
@@ -38,21 +38,21 @@ export interface LoginData2 {
 //     userStore=useUserStore()
 // }
 // VueCookies.set("userInfo",result.data,0);
-cookies.set("userInfo2","test",30);
+cookies.set("userInfo2", "test", 30);
 
 const loginApi = async (data: LoginData) => {
     const response = await post<LoginRes>({ url: URL.login, data });
-    
+
     // if (response?.token) {
-        // 获取当前时间
-        const now = new Date();
-        // 计算到24小时后的剩余时间
-        const expires = new Date(now.getTime() + (24 * 60 * 60 * 1000) - (now.getHours() * 60 * 60 * 1000 + now.getMinutes() * 60 * 1000 + now.getSeconds() * 1000));
-        
-        // 设置 cookie，有效期为24小时减去当前时间
-        document.cookie = `token=${response.token}; expires=${expires.toUTCString()}; path=/`;
+    // 获取当前时间
+    const now = new Date();
+    // 计算到24小时后的剩余时间
+    const expires = new Date(now.getTime() + (24 * 60 * 60 * 1000) - (now.getHours() * 60 * 60 * 1000 + now.getMinutes() * 60 * 1000 + now.getSeconds() * 1000));
+
+    // 设置 cookie，有效期为24小时减去当前时间
+    document.cookie = `token=${response.token}; expires=${expires.toUTCString()}; path=/`;
     // }
-    
+
     return response;
 };
 
@@ -60,7 +60,7 @@ const loginApi = async (data: LoginData) => {
 
 // const loginApi = async (data: LoginData) => post<any>({ url: URL.login, data,});
 const listApi = async (params: any) => get<any>({ url: URL.userList, params: params, data: {}, });
-const detailApi = async (params: any) => get<any>({ url: URL.detail, params: params, data: {},});
+const detailApi = async (params: any) => get<any>({ url: URL.detail, params: params, data: {}, });
 const createApi = async (data: any) => post<any>({ url: URL.create, params: {}, data: data, headers: { 'Content-Type': 'multipart/form-data;charset=utf-8' } });
 const updateApi = async (data: any) => post<any>({ url: URL.update, data: data, headers: { 'Content-Type': 'multipart/form-data;charset=utf-8' } });
 const deleteApi = async (params: any) => post<any>({ url: URL.delete, params: params, headers: {} });
@@ -70,4 +70,4 @@ const updateUserPwdApi = async (params: any) => post<any>({ url: URL.updateUserP
 const updateUserInfoApi = async (data: any) => post<any>({ url: URL.updateUserInfo, data: data, headers: { 'Content-Type': 'multipart/form-data;charset=utf-8' } });
 const sendCodeApi = async (data: LoginData2) => post<any>({ url: `${URL.sendCode}/${data.phone}`, data: {}, headers: {} });
 const userLogoutApi = async () => post<any>({ url: URL.userLogout, data: {}, headers: {} });
-export {userLogoutApi, sendCodeApi, loginApi, listApi, detailApi, createApi, updateApi, deleteApi, userLoginApi, userRegisterApi, updateUserPwdApi, updateUserInfoApi};
+export { userLogoutApi, sendCodeApi, loginApi, listApi, detailApi, createApi, updateApi, deleteApi, userLoginApi, userRegisterApi, updateUserPwdApi, updateUserInfoApi };

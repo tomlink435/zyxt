@@ -1,5 +1,5 @@
-// const BASE_URL = 'http://59.110.91.184:9101'
-const BASE_URL = 'http://127.0.0.1:9100'
+const BASE_URL = 'http://59.110.91.184:9101'
+// const BASE_URL = 'http://127.0.0.1:9100'
 
 const USER_ID = 'user_id'
 const USER_NAME = 'user_name'
