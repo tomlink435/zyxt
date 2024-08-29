@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    
+
     <el-main>
       <el-card class="box-card">
         <div class="success-message">
@@ -33,41 +33,34 @@
             </el-form-item>
           </el-form>
           <!-- <el-button type="primary" @click="dialogVisible = true">支付</el-button> -->
-         
+
         </div>
       </el-card>
       <!-- <div id="message">
   </div> -->
-      <el-dialog
-    v-model="dialogVisible"
-    title="请付款"
-    width="700"
-    :close-on-click-modal="false"
-    :close-on-press-escape="false"
-    :show-close="false"
-  
-  >
-    <!-- <span><img style="width: 45%;" src="/src/views/images/IMG_3598.JPG"></span>
+      <el-dialog v-model="dialogVisible" title="请付款" width="700" :close-on-click-modal="false"
+        :close-on-press-escape="false" :show-close="false">
+        <!-- <span><img style="width: 45%;" src="/src/views/images/IMG_3598.JPG"></span>
     <span><img style="width: 45%; margin-left: 10%;" src="/src/views/images/IMG_3599.JPG"></span>
      -->
-    <p> 支付功能待开发...正在审核中（请等待{{ `${time}秒`  }}） </p>
-    <template #footer>
-      <div class="dialog-footer">
-        <!-- <el-button type="primary" @click="dialogVisible = false">
+        <p> 支付功能待开发...正在审核中（请等待{{ `${time}秒` }}） </p>
+        <template #footer>
+          <div class="dialog-footer">
+            <!-- <el-button type="primary" @click="dialogVisible = false">
           关闭
         </el-button> -->
-      </div>
-      <audio id="audio" controls hidden>
-          <source src='/@/assets/audio/application.mp3' type='audio/mp3' />
-        </audio>
-    </template>
-  </el-dialog>
+          </div>
+          <audio id="audio" controls hidden>
+            <source src='/@/assets/audio/application.mp3' type='audio/mp3' />
+          </audio>
+        </template>
+      </el-dialog>
 
     </el-main>
-   
+
     <Footer />
   </div>
- 
+
 </template>
 
 <script setup>
@@ -92,131 +85,131 @@ const open1 = () => {
 
 const audioVo = inject('audioVo');
 
-const isOn=ref(false);
+const isOn = ref(false);
 const router = useRouter();
 const route = useRoute();
 const form = reactive({
-      name: '',
-        email: '',
-        phone: '',
-        company: '',
-        purpose: '',
-        projectName: '',
-        projectLeader: '',
-        projectType: '',
-     })
+  name: '',
+  email: '',
+  phone: '',
+  company: '',
+  purpose: '',
+  projectName: '',
+  projectLeader: '',
+  projectType: '',
+})
 
-      onMounted(() => {
-        goToList()
-      
-     
-    });
-    //倒计时
-    const handleTimeChange = () => {
-      if (time.value <= 0) {
-        isDisposed.value = false;
-        time.value = 30;
-      } else {
-        setTimeout(() => {
-          time.value--;
-          handleTimeChange();
-        }, 1000);
-      }
-    };
-
-    const time = ref(30);
-    const goToList = () => {
-
-      const formQuery = route.query.form;
-      if (formQuery) {
-        Object.assign(form, JSON.parse(formQuery));
-      }
-      console.log('-----', form);
-      // debugger
+onMounted(() => {
+  goToList()
 
 
-
-    
-    };
-  
-  const pay = () => {
-    
-    dialogVisible.value=true;
-    console.log('-----', dialogVisible.value);
-  };
-
-
-  var websocket = null;
-  var clientId = Math.random().toString(36).substr(2);
-
-  //判断当前浏览器是否支持WebSocket
-  if ('WebSocket' in window) {
-    //连接WebSocket节点
-    // websocket = new WebSocket("ws://localhost:9100/api/ws/" + clientId);
-    websocket = new WebSocket("ws://59.110.91.184:9101/api/ws/" + clientId);
+});
+//倒计时
+const handleTimeChange = () => {
+  if (time.value <= 0) {
+    isDisposed.value = false;
+    time.value = 30;
+  } else {
+    setTimeout(() => {
+      time.value--;
+      handleTimeChange();
+    }, 1000);
   }
-  else {
-    alert('Not support websocket')
+};
+
+const time = ref(30);
+const goToList = () => {
+
+  const formQuery = route.query.form;
+  if (formQuery) {
+    Object.assign(form, JSON.parse(formQuery));
   }
+  console.log('-----', form);
+  // debugger
 
-  //连接发生错误的回调方法
-  websocket.onerror = function () {
-    setMessageInnerHTML("error");
-  };
 
-  //连接成功建立的回调方法
-  websocket.onopen = function () {
-    setMessageInnerHTML("连接成功");
-    handleTimeChange();
-    console.log("连接成功！！")
-  }
 
-  //接收到消息的回调方法
-  websocket.onmessage = function (event) {
-    setMessageInnerHTML(event.data);
-    console.log(isOn)
-    if(isOn.value==false){
+
+};
+
+const pay = () => {
+
+  dialogVisible.value = true;
+  console.log('-----', dialogVisible.value);
+};
+
+
+var websocket = null;
+var clientId = Math.random().toString(36).substr(2);
+
+//判断当前浏览器是否支持WebSocket
+if ('WebSocket' in window) {
+  //连接WebSocket节点
+  websocket = new WebSocket("ws://localhost:9100/api/ws/" + clientId);
+  //  websocket = new WebSocket("ws://59.110.91.184:9101/api/ws/" + clientId);
+}
+else {
+  alert('Not support websocket')
+}
+
+//连接发生错误的回调方法
+websocket.onerror = function () {
+  setMessageInnerHTML("error");
+};
+
+//连接成功建立的回调方法
+websocket.onopen = function () {
+  setMessageInnerHTML("连接成功");
+  handleTimeChange();
+  console.log("连接成功！！")
+}
+
+//接收到消息的回调方法
+websocket.onmessage = function (event) {
+  setMessageInnerHTML(event.data);
+  console.log(isOn)
+  if (isOn.value == false) {
     open1();
     document.getElementById("audio").currentTime = 0
     document.getElementById("audio").play()
-    dialogVisible.value=false;
+    dialogVisible.value = false;
     // 
   }
-    isOn.value=true;
+  isOn.value = true;
 
-    // alert("审核通过");
-  
-    // audioVo.value.play();
-    // audioVo.play();
+  // alert("审核通过");
+
+  // audioVo.value.play();
+  // audioVo.play();
 
 
-  }
+}
 
-  //连接关闭的回调方法
-  websocket.onclose = function () {
-    setMessageInnerHTML("close");
-  }
+//连接关闭的回调方法
+websocket.onclose = function () {
+  setMessageInnerHTML("close");
+}
 
-  //监听窗口关闭事件，当窗口关闭时，主动去关闭websocket连接，防止连接还没断开就关闭窗口，server端会抛异常。
-  window.onbeforeunload = function () {
-    websocket.close();
-  }
+//监听窗口关闭事件，当窗口关闭时，主动去关闭websocket连接，防止连接还没断开就关闭窗口，server端会抛异常。
+window.onbeforeunload = function () {
+  websocket.close();
+}
 
-  //将消息显示在网页上
-  function setMessageInnerHTML (innerHTML) {
-    // document.getElementById('message').innerHTML += innerHTML + '<br/>';
-  }
+//将消息显示在网页上
+function setMessageInnerHTML(innerHTML) {
+  // document.getElementById('message').innerHTML += innerHTML + '<br/>';
+}
 
-  //发送消息
-  // function send () {
-  //   var message = document.getElementById('text').value;
-  //   websocket.send(message);
-  // }
+//发送消息
+// function send () {
+//   var message = document.getElementById('text').value;
+//   websocket.send(message);
+// }
 
-  //关闭连接
-  function closeWebSocket () {
-    websocket.close();
-  }
+//关闭连接
+function closeWebSocket() {
+  websocket.close();
+}
 
 
 // window.AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -232,7 +225,7 @@ const form = reactive({
 //  oscillator.start(audioCtx.currentTime);
 //  gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1);
 //  oscillator.stop(audioCtx.currentTime + 1);
- 
+
 
 
 </script>

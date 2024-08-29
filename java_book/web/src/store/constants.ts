@@ -1,5 +1,5 @@
-const BASE_URL = 'http://59.110.91.184:9101'
-// const BASE_URL = 'http://127.0.0.1:9100'
+// const BASE_URL = 'http://59.110.91.184:9101'
+const BASE_URL = 'http://127.0.0.1:9100'
 
 const USER_ID = 'user_id'
 const USER_NAME = 'user_name'
@@ -10,4 +10,4 @@ const ADMIN_USER_NAME = 'admin_user_name'
 const ADMIN_USER_TOKEN = 'admin_user_token'
 
 
-export {BASE_URL, USER_TOKEN, USER_NAME, USER_ID, ADMIN_USER_ID,ADMIN_USER_NAME,ADMIN_USER_TOKEN }
+export { BASE_URL, USER_TOKEN, USER_NAME, USER_ID, ADMIN_USER_ID, ADMIN_USER_NAME, ADMIN_USER_TOKEN }
