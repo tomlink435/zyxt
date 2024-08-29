@@ -19,11 +19,11 @@ public class UVInterceptor implements HandlerInterceptor {
         this.visitorService = visitorService;
     }
 
-    // TODO
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-//        log.info(Arrays.toString(request.getCookies()));
-//        visitorService.saveUV(request);
+        String ip = request.getRemoteAddr();
+        log.info("用户ip:{}", ip);
+        visitorService.saveIP(ip);
         return true;
     }
 }

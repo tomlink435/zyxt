@@ -12,8 +12,8 @@ import java.time.LocalDateTime;
 @Builder
 public class Visitor {
     private Long id;
-    private String uuid;
     private String ip;
     private String area;
+    private Long userId;
     private LocalDateTime visitTime;
 }

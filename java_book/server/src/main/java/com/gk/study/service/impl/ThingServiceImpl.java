@@ -3,27 +3,42 @@ package com.gk.study.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.gk.study.common.APIResponse;
 import com.gk.study.entity.Thing;
 import com.gk.study.entity.ThingTag;
 import com.gk.study.mapper.ThingMapper;
 import com.gk.study.mapper.ThingTagMapper;
+import com.gk.study.pojo.VO.Block;
+import com.gk.study.pojo.VO.BlockTransactionVO;
+import com.gk.study.service.BassService;
 import com.gk.study.service.ThingService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class ThingServiceImpl extends ServiceImpl<ThingMapper, Thing> implements ThingService {
+    private final RestTemplate restTemplate;
+
     @Autowired
     ThingMapper mapper;
 
     @Autowired
     ThingTagMapper thingTagMapper;
+
+    @Autowired
+    private BassService bassService;
 
     @Override
     public List<Thing> getThingList(String keyword, String sort, String c, String tag) {
@@ -92,6 +107,11 @@ public class ThingServiceImpl extends ServiceImpl<ThingMapper, Thing> implements
         if (thing.getWishCount() == null) {
             thing.setWishCount("0");
         }
+        //将thing保存至区块链bass平台
+        String TxId = bassService.save(thing);
+
+        thing.setTxId(TxId);
+
         mapper.insert(thing);
         // 更新tag
         setThingTags(thing);
@@ -130,6 +150,37 @@ public class ThingServiceImpl extends ServiceImpl<ThingMapper, Thing> implements
         Thing thing = mapper.selectById(thingId);
         thing.setCollectCount(String.valueOf(Integer.parseInt(thing.getCollectCount()) + 1));
         mapper.updateById(thing);
+    }
+
+    @Override
+    public void getById(String id) {
+        String url = "http://59.110.93.238:30880/kapis/transactioncontroller.kubesphere.io/v1alpha1/transactions/getInDetail";
+
+//        Map<String, String> map = new HashMap<>();
+//        map.put("nameSpaceName", "trustedblockchain");
+//        map.put("channelName", "trustedblockchainchannel");
+//        map.put("TxId", "32e8b86411adbd6c32c345483e576c1b70f7bf5cef66dd1f4995109c3bfcbcf4");
+//
+//        ResponseEntity<Block> response = restTemplate.getForEntity(url, Block.class, map);
+
+        HttpHeaders headers = new HttpHeaders();
+        // set `content-type` header
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        // set `accept` header
+        headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+
+        Map<String, String> map = new HashMap<>();
+
+        map.put("namespace", "trustedblockchain");
+        map.put("channelName", "trustedblockchainchannel");
+        map.put("TxId", "32e8b86411adbd6c32c345483e576c1b70f7bf5cef66dd1f4995109c3bfcbcf4");
+
+        HttpEntity<Map<String, String>> request = new HttpEntity<>(map, headers);
+
+
+        ResponseEntity<String> response = restTemplate.postForEntity(url, request, String.class);
+
+        System.out.println(response);
     }
 
     public void setThingTags(Thing thing) {

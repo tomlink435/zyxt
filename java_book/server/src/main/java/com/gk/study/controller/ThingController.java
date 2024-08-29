@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -27,6 +28,8 @@ import java.util.UUID;
 @Slf4j
 @CrossOrigin
 public class ThingController {
+    @Autowired
+    private RestTemplate restTemplate;
 
     private final static Logger logger = LoggerFactory.getLogger(ThingController.class);
 
@@ -41,7 +44,6 @@ public class ThingController {
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public APIResponse list(String keyword, String sort, String c, String tag){
-        log.info("展示数据key:{}, sort:{}, c:{}, tag:{}", keyword, sort, c, tag);
         List<Thing> list =  service.getThingList(keyword, sort, c, tag);
         return new APIResponse(ResponeCode.SUCCESS, "查询成功", list);
     }
@@ -62,6 +64,7 @@ public class ThingController {
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @Transactional
     public APIResponse create(Thing thing) throws IOException {
+        log.info("新增数据:{}", thing);
         String url = uploadImage(thing.getImageFile());
         if(!StringUtils.isEmpty(url)) {
             thing.cover = url;
@@ -79,6 +82,18 @@ public class ThingController {
         for (String id : arr) {
             service.deleteThing(id);
         }
+        return new APIResponse(ResponeCode.SUCCESS, "删除成功");
+    }
+
+    /**
+     * 获取交易数据
+     * @param id
+     * @return
+     */
+    @GetMapping("/getById")
+    public APIResponse getById(String id){
+        log.info("获取上链数据:{}", id);
+        service.getById(id);
         return new APIResponse(ResponeCode.SUCCESS, "删除成功");
     }
 

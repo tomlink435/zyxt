@@ -6,11 +6,13 @@ import com.gk.study.entity.Visitor;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Mapper
 public interface VisitorMapper extends BaseMapper<Visitor> {
 
-    @Select("select * from b_visitor where uuid=#{uuid};")
-    List<Visitor> selectByUUID(String uuid);
+    @Select("SELECT COUNT(*) count FROM b_visitor WHERE ip=#{ip} AND b_visitor.visit_time >= #{time}")
+    Integer countByIpAndGT(String ip, LocalDateTime time);
+
 }

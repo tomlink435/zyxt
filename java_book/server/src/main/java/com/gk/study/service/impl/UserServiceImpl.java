@@ -29,6 +29,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -128,16 +130,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return new APIResponse(ResponeCode.FAIL, "手机号格式错误");
         }
         //3.生成验证码
-        String code = RandomUtil.randomNumbers(6);
+        String code = RandomUtil.randomInt(1, 10) + RandomUtil.randomNumbers(5);
         log.info("手机号:{}, 验证码:{}", phone, code);
 
         //4.发送验证码
         try {
-//            SendSmsResponse response = sendSmsUtils.sendCode(phone, code);
-//            String bodyCode = response.getBody().code;
-//            if("isv.BUSINESS_LIMIT_CONTROL".equals(bodyCode)){
-//                return new APIResponse(ResponeCode.FAIL, "发送验证码次数过多，请稍后重新再试");
-//            }
+            SendSmsResponse response = sendSmsUtils.sendCode(phone, code);
+            String bodyCode = response.getBody().code;
+            if("isv.BUSINESS_LIMIT_CONTROL".equals(bodyCode)){
+                return new APIResponse(ResponeCode.FAIL, "发送验证码次数过多，请稍后重新再试");
+            }
             //5.redis如果存在phone，刪除
             stringRedisTemplate.delete("user:phone"+ phone);
             //5.保存至redis
@@ -178,6 +180,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if(user == null){
             user = User.builder()
                     .mobile(phone)
+                    .createTime(String.valueOf(LocalDateTime.now()))
                     .build();
             save(user);
         }

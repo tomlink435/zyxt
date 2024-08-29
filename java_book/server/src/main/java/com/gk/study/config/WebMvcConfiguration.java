@@ -39,13 +39,14 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
 
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new UVInterceptor(visitorService)).order(0);
         registry.addInterceptor(new RefreshTokenInterceptor(stringRedisTemplate)).order(1);
+
+        registry.addInterceptor(new UVInterceptor(visitorService)).order(2);
 
         registry.addInterceptor(new LoginInterceptor(stringRedisTemplate))
                 .excludePathPatterns("/user/**")
                 .excludePathPatterns("/**/list")
-                .order(2);
+                .order(3);
     }
 
     /**
