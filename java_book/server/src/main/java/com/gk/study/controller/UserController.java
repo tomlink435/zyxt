@@ -10,6 +10,7 @@ import com.gk.study.permission.AccessLevel;
 import com.gk.study.pojo.DTO.AdminLoginDTO;
 import com.gk.study.pojo.DTO.LoginFormDTO;
 import com.gk.study.pojo.DTO.UserLoginDTO;
+import com.gk.study.pojo.VO.AdminLoginVO;
 import com.gk.study.pojo.VO.UserLoginVO;
 import com.gk.study.pojo.entity.UserLogin;
 import com.gk.study.service.UserService;
@@ -70,10 +71,19 @@ public class UserController {
     // 后台用户登录
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public APIResponse login(@RequestBody AdminLoginDTO adminLoginDTO){
-        log.info("管理员登录{}", adminLoginDTO);
+        AdminLoginVO adminLoginVO = new AdminLoginVO();
+        //超级管理员
         if("admin123".equals(adminLoginDTO.getUsername()) && ("admin123".equals(adminLoginDTO.getPassword()))){
-            return new APIResponse(ResponeCode.SUCCESS, "登录成功", adminLoginDTO);
-        }else{
+            adminLoginVO.setUsername("admin123");
+            adminLoginVO.setRole(1);
+            return new APIResponse(ResponeCode.SUCCESS, "登录成功", adminLoginVO);
+        }//admin
+        else if("admin".equals(adminLoginDTO.getUsername()) && ("admin".equals(adminLoginDTO.getPassword()))){
+            adminLoginVO.setUsername("admin");
+            adminLoginVO.setRole(0);
+            return new APIResponse(ResponeCode.SUCCESS, "登录成功", adminLoginVO);
+        }
+        else{
             return new APIResponse(ResponeCode.FAIL, "登录失败");
         }
     }

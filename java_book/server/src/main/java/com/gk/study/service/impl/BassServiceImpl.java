@@ -67,7 +67,7 @@ public class BassServiceImpl implements BassService {
         Map<String, String> map = new HashMap<>();
         map.put("nameSpaceName", "trustedblockchain");
         map.put("channelName", "trustedblockchainchannel");
-        map.put("TxId", "32e8b86411adbd6c32c345483e576c1b70f7bf5cef66dd1f4995109c3bfcbcf4");
+        map.put("TxId", TxId);
 
         ResponseEntity<BlockTransactionInfoVO> response = restTemplate.getForEntity(url, BlockTransactionInfoVO.class, map);
 
