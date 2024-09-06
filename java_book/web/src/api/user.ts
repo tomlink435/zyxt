@@ -9,7 +9,7 @@ import { useCookies } from "vue3-cookies";
 // import axios from 'axios';
 enum URL {
     login = '/api/user/login',
-    userList = '/api/user/list',
+    userList = '/api/admin/list',
     detail = '/api/user/detail',
     create = '/api/user/create',
     update = '/api/user/update',

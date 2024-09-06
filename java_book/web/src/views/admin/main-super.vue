@@ -6,7 +6,7 @@
         <span class="header-title">数据共享管理系统</span>
         <div class="empty"></div>
         <a-button style="margin-right: 24px;" @click="handlePreview">前台预览</a-button>
-        <span>管理员[{{ userStore.admin_user_name }}]</span>
+        <span>超级管理员[{{ userStore.admin_user_name }}]</span>
         <a class="header-quit" @click="handleLogout">退出</a>
       </div>
     </a-layout-header>
@@ -14,73 +14,15 @@
       <a-layout-sider v-model="collapsed" collapsible>
         <a-menu style="overflow:auto; overflow-x: hidden;" v-model:selectedKeys="selectedKeys" theme="light"
           mode="inline" @click="handleClick">
-          <!-- <a-menu-item key="overview">
-            <home-outlined/>
-            <span>总览</span>
-          </a-menu-item> -->
-          <!-- <a-sub-menu> -->
-          <!-- <template #icon>
-		      <folder-outlined/>
-		    </template> -->
-          <!-- <template #title>资源管理</template> -->
-          <!-- <a-menu-item key="ad">
-		      <appstore-outlined/>
-		      <span>资源审批</span>
-		    </a-menu-item> -->
-          <!-- <a-menu-item key="notice">
-		      <appstore-outlined/>
-		      <span>数据审批</span>
-		    </a-menu-item> -->
-          <!-- <a-menu-item key="back">
-			  <appstore-outlined/>
-			  <span>审批回退</span>
-			</a-menu-item> -->
-          <!-- </a-sub-menu> -->
-          <a-menu-item key="thing">
-            <layout-outlined />
-            <span>数据集管理</span>
-          </a-menu-item>
-          <a-menu-item key="application">
-            <layout-outlined />
-            <span>审批管理</span>
-          </a-menu-item>
-          <a-menu-item key="classification">
-            <layout-outlined />
-            <span>分类管理</span>
-          </a-menu-item>
-          <a-menu-item key="echarts">
-            <layout-outlined />
-            <!-- <span><a href="https://babybrotherzb.github.io/my-datav/build/index.html" target="">数据可视化</a></span> -->
-            <span><a href="#" onclick="window.open('http://47.97.116.16:8080/Echarts-Demo/', '_blank')">数据可视化</a></span>
-          </a-menu-item>
-          <!-- <a-menu-item key="tag">
-            <tag-outlined/>
-            <span>审批</span>
-          </a-menu-item> -->
 
-          <!-- <a-menu-item key="pay">
-		    <home-outlined/>
-		    <span>支付</span>
-		  </a-menu-item> -->
-          <a-sub-menu>
-            <template #icon>
-              <folder-outlined />
-            </template>
-            <template #title>日志管理</template>
-            <a-menu-item key="loginLog">
-              <appstore-outlined />
-              <span>登录日志</span>
-            </a-menu-item>
-            <a-menu-item key="opLog">
-              <appstore-outlined />
-              <span>操作日志</span>
-            </a-menu-item>
-          </a-sub-menu>
 
-          <a-menu-item key="sysInfo">
-            <info-circle-outlined />
-            <span>系统信息</span>
+          <a-menu-item key="user">
+            <user-outlined />
+            <span>用户管理</span>
           </a-menu-item>
+
+
+
         </a-menu>
       </a-layout-sider>
       <a-layout-content :style="{ margin: '16px 16px', minHeight: '200px' }">

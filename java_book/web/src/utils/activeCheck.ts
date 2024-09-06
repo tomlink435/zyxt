@@ -24,12 +24,12 @@ export const startActiveCheck = () => {
       localStorage.removeItem(USER_TOKEN)
       console.log(localStorage)
       alert('已超时，请重新登陆')
-      debugger
+      // debugger
       clearInterval(checkActiveInterval)
       checkActiveInterval = null
       router.push({ name: 'login' }).catch((err) => {
         console.error('路由跳转失败:', err);
-    });
+      });
     }
   }, 30000);
 }

@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import root from './root';
 
 import { ADMIN_USER_TOKEN, USER_TOKEN } from '/@/store/constants'
@@ -17,7 +17,7 @@ const router = createRouter({
 });
 router.afterEach((to) => {
   // NProgress.done();
-  if (to.path.includes('/login') ) {
+  if (to.path.includes('/login')) {
     endActiveCheck()
   } else {
     startActiveCheck()
@@ -44,7 +44,23 @@ router.beforeEach(async (to, from, next) => {
     }
     // next()
   }
-
+  if (to.path.startsWith('/superadmin')) {
+    if (localStorage.getItem(ADMIN_USER_TOKEN)) {
+      if (to.path === adminLoginRoutePath) {
+        next({ path: '/' })
+      } else {
+        next()
+      }
+    } else {
+      if (allowList.includes(to.name as string)) {
+        // 在免登录名单，直接进入
+        next()
+      } else {
+        next({ path: adminLoginRoutePath, query: { redirect: to.fullPath } })
+      }
+    }
+    // next()
+  }
   /** 前台路由 **/
   if (to.path.startsWith('/index')) {
     if (localStorage.getItem(USER_TOKEN)) {

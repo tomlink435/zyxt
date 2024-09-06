@@ -36,24 +36,24 @@ const constantRouterMap = [
         path: 'order',
         name: 'order',
         component: () => import('/@/views/index/order.vue')
-   
-      }, 
+
+      },
       {
         path: 'cart',
         name: 'cart',
         component: () => import('/@/views/index/cart.vue')
-   
+
       }, {
         path: 'done',
         name: 'done',
         component: () => import('/@/views/index/done.vue')
-   
+
       },
       {
         path: 'search',
         name: 'search',
         component: () => import('/@/views/index/search.vue')
-      },{
+      }, {
         path: 'echarts',
         name: 'echarts',
         component: () => import('/@/views/index/echarts.vue')
@@ -154,7 +154,7 @@ const constantRouterMap = [
       { path: 'borrow', name: 'borrow', component: () => import('/@/views/admin/borrow.vue') },
       { path: 'thing', name: 'thing', component: () => import('/@/views/admin/thing.vue') },
       { path: 'comment', name: 'comment', component: () => import('/@/views/admin/comment.vue') },
-      { path: 'user', name: 'user', component: () => import('/@/views/admin/user.vue') },
+      // { path: 'user', name: 'user', component: () => import('/@/views/admin/user.vue') },
       { path: 'classification', name: 'classification', component: () => import('/@/views/admin/classification.vue') },
       { path: 'tag', name: 'tag', component: () => import('/@/views/admin/tag.vue') },
       { path: 'ad', name: 'ad', component: () => import('/@/views/admin/ad.vue') },
@@ -165,7 +165,17 @@ const constantRouterMap = [
       { path: 'errorLog', name: 'errorLog', component: () => import('/@/views/admin/error-log.vue') },
       { path: 'sysInfo', name: 'sysInfo', component: () => import('/@/views/admin/sys-info.vue') },
       { path: 'back', name: 'back', component: () => import('/@/views/admin/back.vue') },
-	  { path: 'pay', name: 'pay', component: () => import('/@/views/admin/pay.vue') },
+      { path: 'pay', name: 'pay', component: () => import('/@/views/admin/pay.vue') },
+    ]
+  },
+  {
+    path: '/admin/superadmin',
+    name: 'superadmin',
+    // redirect: '/admin/overview',
+    // redirect: '/admin/thing',
+    component: () => import('/@/views/admin/main-super.vue'),
+    children: [
+      { path: 'user', name: 'user', component: () => import('/@/views/admin/user.vue') },
     ]
   },
 ];

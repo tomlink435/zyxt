@@ -4,7 +4,7 @@ import { showMessage } from './status';
 import { IResponse } from './type';
 import { getToken } from '/@/utils/auth';
 import { TokenPrefix } from '/@/utils/auth';
-import {ADMIN_USER_TOKEN, USER_TOKEN, BASE_URL} from '/@/store/constants'
+import { ADMIN_USER_TOKEN, USER_TOKEN, BASE_URL } from '/@/store/constants'
 import router from '/@/router';
 
 const service: AxiosInstance = axios.create({
@@ -17,18 +17,18 @@ const service: AxiosInstance = axios.create({
 service.interceptors.request.use(
   (config: any) => {
     console.log('urlllll', window.location.href.includes('/index/portal'))
-    
-    config.headers.Authorization=localStorage.getItem(USER_TOKEN)
-    if (localStorage.getItem(USER_TOKEN)) {
-      config.headers.Authorization=localStorage.getItem(USER_TOKEN)
 
-    } else if (!localStorage.getItem(USER_TOKEN)  &&  !window.location.href.includes('/index/portal')&&  !window.location.href.includes('/index/login') ) {
-      
-      window.location.href = '/index/login'
-      // router.push({name:'login'})
-      // debugger
-      return false
+    config.headers.Authorization = localStorage.getItem(USER_TOKEN)
+    if (localStorage.getItem(USER_TOKEN)) {
+      config.headers.Authorization = localStorage.getItem(USER_TOKEN)
+
     }
+    // else if (!localStorage.getItem(USER_TOKEN)  &&  !window.location.href.includes('/index/portal')&&  !window.location.href.includes('/index/login') ) {
+
+    //   window.location.href = '/index/login'
+
+    //   return false
+    // }
 
     // config.headers.ADMINTOKEN = localStorage.getItem(ADMIN_USER_TOKEN)
     // config.headers.TOKEN = localStorage.getItem(USER_TOKEN)
@@ -46,10 +46,10 @@ service.interceptors.request.use(
 // axios实例拦截响应
 service.interceptors.response.use(
   (response: AxiosResponse) => {
-    if(response.status == 200) {
-      if(response.data.code == 0 || response.data.code == 200) {
+    if (response.status == 200) {
+      if (response.data.code == 0 || response.data.code == 200) {
         return response
-      }else {
+      } else {
         return Promise.reject(response.data)
       }
     } else {
@@ -59,9 +59,9 @@ service.interceptors.response.use(
   // 请求失败
   (error: any) => {
     console.log(error.response.status)
-    if(error.response.status == 404) {
+    if (error.response.status == 404) {
       // todo
-    } else if(error.response.status == 403) {
+    } else if (error.response.status == 403) {
       // todo
     }
     return Promise.reject(error)
