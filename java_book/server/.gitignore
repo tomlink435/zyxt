@@ -20,6 +20,8 @@ target/
 *.yml
 *.log
 java_book/server/src/main/resources/application.yml
+java_book/server/my-log/*
+
 
 ### NetBeans ###
 /nbproject/private/

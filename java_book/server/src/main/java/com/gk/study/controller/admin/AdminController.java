@@ -1,17 +1,22 @@
 package com.gk.study.controller.admin;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.gk.study.common.APIResponse;
 import com.gk.study.common.ResponeCode;
+import com.gk.study.pojo.DTO.AdminDTO;
 import com.gk.study.pojo.DTO.AdminLoginDTO;
 import com.gk.study.pojo.VO.AdminLoginVO;
+import com.gk.study.pojo.entity.Admin;
 import com.gk.study.service.AdminService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+
 @RestController
-@RequestMapping("/admin/")
+@RequestMapping("/admin")
 @Slf4j
 public class AdminController {
 
@@ -26,7 +31,8 @@ public class AdminController {
     @PostMapping("/login")
     public APIResponse login(@RequestBody AdminLoginDTO adminLoginDTO){
         log.info("员工登录:{}", adminLoginDTO);
-        return adminService.login(adminLoginDTO);
+        AdminLoginVO loginVO = adminService.login(adminLoginDTO);
+        return new APIResponse<>(ResponeCode.SUCCESS, "登录成功", loginVO);
     }
 
     /**
@@ -35,7 +41,7 @@ public class AdminController {
      */
     @GetMapping("/list")
     public APIResponse list(){
-        return new APIResponse();
+        return new APIResponse(ResponeCode.SUCCESS);
     }
 
     /**
@@ -49,14 +55,26 @@ public class AdminController {
     }
 
 
+    /**
+     * 启用/禁用用户
+     * @param status
+     * @param id
+     * @return
+     */
     @PostMapping("/startOrStop/{status}")
     public APIResponse startOrStop(@PathVariable Integer status, Long id){
-        return new APIResponse();
+        log.info("员工启用/禁用 id:{}, status:{}", id, status);
+        adminService.startOrStop(status, id);
+        return new APIResponse(ResponeCode.SUCCESS);
     }
 
-
-
-
-
-
+    /**
+     * 新增用户
+     */
+    @PostMapping
+    public APIResponse add(@RequestBody AdminDTO adminDTO){
+        log.info("新增管理员:{}", adminDTO);
+        adminService.add(adminDTO);
+        return new APIResponse(ResponeCode.SUCCESS);
+    }
 }

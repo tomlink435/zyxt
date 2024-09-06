@@ -19,5 +19,4 @@ public class Admin {
     private Integer status;
     private Integer role;
     private LocalDateTime createTime;
-
 }
