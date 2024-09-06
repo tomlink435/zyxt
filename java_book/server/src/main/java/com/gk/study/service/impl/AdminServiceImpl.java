@@ -79,9 +79,11 @@ public class AdminServiceImpl implements AdminService {
         if(!adminDTO.getPassword().equals(adminDTO.getRePassword())){
             throw new BaseException("两次密码输入不一致，请重新输入");
         }
+
         //插入成功
         admin = BeanUtil.copyProperties(adminDTO, Admin.class);
         admin.setCreateTime(LocalDateTime.now());
+        admin.setPassword(DigestUtils.md5DigestAsHex(adminDTO.getRePassword().getBytes()));
         adminMapper.insert(admin);
     }
 }
