@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class AdminServiceImpl implements AdminService {
@@ -86,4 +87,11 @@ public class AdminServiceImpl implements AdminService {
         admin.setPassword(DigestUtils.md5DigestAsHex(adminDTO.getRePassword().getBytes()));
         adminMapper.insert(admin);
     }
+
+    @Override
+    public List<Admin> list() {
+        return adminMapper.list();
+    }
+
+
 }

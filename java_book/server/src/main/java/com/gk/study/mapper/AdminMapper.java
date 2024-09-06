@@ -6,6 +6,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
+import java.util.List;
+
 @Mapper
 public interface AdminMapper {
 
@@ -16,4 +18,7 @@ public interface AdminMapper {
     @Insert("INSERT INTO admin(username, password, status, role, create_time)" +
             "VALUES (#{username}, #{password}, #{status}, #{role}, #{createTime});")
     void insert(Admin admin);
+
+    @Select("SELECT * FROM admin;")
+    List<Admin> list();
 }

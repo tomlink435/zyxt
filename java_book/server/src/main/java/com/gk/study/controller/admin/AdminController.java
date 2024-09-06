@@ -3,6 +3,7 @@ package com.gk.study.controller.admin;
 import cn.hutool.core.bean.BeanUtil;
 import com.gk.study.common.APIResponse;
 import com.gk.study.common.ResponeCode;
+import com.gk.study.entity.User;
 import com.gk.study.pojo.DTO.AdminDTO;
 import com.gk.study.pojo.DTO.AdminLoginDTO;
 import com.gk.study.pojo.VO.AdminLoginVO;
@@ -14,10 +15,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @RestController
 @RequestMapping("/admin")
 @Slf4j
+@CrossOrigin
 public class AdminController {
 
     @Autowired
@@ -41,7 +44,8 @@ public class AdminController {
      */
     @GetMapping("/list")
     public APIResponse list(){
-        return new APIResponse(ResponeCode.SUCCESS);
+        List<Admin> list =  adminService.list();
+        return new APIResponse(ResponeCode.SUCCESS, "查询成功", list);
     }
 
     /**
