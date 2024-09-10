@@ -171,7 +171,7 @@ const constantRouterMap = [
   {
     path: '/admin/superadmin',
     name: 'superadmin',
-    // redirect: '/admin/overview',
+    redirect: '/admin/superadmin/user',
     // redirect: '/admin/thing',
     component: () => import('/@/views/admin/main-super.vue'),
     children: [

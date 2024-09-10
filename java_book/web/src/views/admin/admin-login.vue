@@ -89,7 +89,7 @@ const handleLogin = () => {
     if (res.data.role == 1) {
       loginSuccess()
     }
-    if (res.data.role == 0) {
+    if (res.data.role == 2) {
       loginSuccesssuperadmin()
     }
 
